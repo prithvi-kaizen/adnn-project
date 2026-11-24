@@ -1,0 +1,3070 @@
+{
+  "id": "s1729_h3_threeway_mean_all_shuffle_110",
+  "condition": {
+    "seed": 1729,
+    "horizon": 3,
+    "binary": false,
+    "pooling": "mean",
+    "subset": "all",
+    "control": "shuffle_110"
+  },
+  "order": [
+    "reversible",
+    "partially_reversible",
+    "irreversible"
+  ],
+  "verb_mapping": null,
+  "train_ids": [
+    "sandbox-v4-delete_bin-004-a",
+    "sandbox-v4-delete_bin-004-b",
+    "sandbox-v4-delete_bin-005-a",
+    "sandbox-v4-delete_bin-005-b",
+    "sandbox-v4-delete_bin-020-a",
+    "sandbox-v4-delete_bin-020-b",
+    "sandbox-v4-delete_bin-022-a",
+    "sandbox-v4-delete_bin-022-b",
+    "sandbox-v4-delete_bin-028-a",
+    "sandbox-v4-delete_bin-028-b",
+    "sandbox-v4-delete_bin-036-a",
+    "sandbox-v4-delete_bin-036-b",
+    "sandbox-v4-delete_bin-041-a",
+    "sandbox-v4-delete_bin-041-b",
+    "sandbox-v4-delete_bin-042-a",
+    "sandbox-v4-delete_bin-042-b",
+    "sandbox-v4-delete_bin-044-a",
+    "sandbox-v4-delete_bin-044-b",
+    "sandbox-v4-delete_bin-049-a",
+    "sandbox-v4-delete_bin-049-b",
+    "sandbox-v4-delete_bin-050-a",
+    "sandbox-v4-delete_bin-050-b",
+    "sandbox-v4-delete_bin-052-a",
+    "sandbox-v4-delete_bin-052-b",
+    "sandbox-v4-delete_history-002-a",
+    "sandbox-v4-delete_history-002-b",
+    "sandbox-v4-delete_history-007-a",
+    "sandbox-v4-delete_history-007-b",
+    "sandbox-v4-delete_history-014-a",
+    "sandbox-v4-delete_history-014-b",
+    "sandbox-v4-delete_history-020-a",
+    "sandbox-v4-delete_history-020-b",
+    "sandbox-v4-delete_history-026-a",
+    "sandbox-v4-delete_history-026-b",
+    "sandbox-v4-delete_history-027-a",
+    "sandbox-v4-delete_history-027-b",
+    "sandbox-v4-delete_history-034-a",
+    "sandbox-v4-delete_history-034-b",
+    "sandbox-v4-delete_history-035-a",
+    "sandbox-v4-delete_history-035-b",
+    "sandbox-v4-delete_history-040-a",
+    "sandbox-v4-delete_history-040-b",
+    "sandbox-v4-delete_history-043-a",
+    "sandbox-v4-delete_history-043-b",
+    "sandbox-v4-delete_history-044-a",
+    "sandbox-v4-delete_history-044-b",
+    "sandbox-v4-delete_history-058-a",
+    "sandbox-v4-delete_history-058-b",
+    "sandbox-v4-delete_backup-000-a",
+    "sandbox-v4-delete_backup-000-b",
+    "sandbox-v4-delete_backup-006-a",
+    "sandbox-v4-delete_backup-006-b",
+    "sandbox-v4-delete_backup-007-a",
+    "sandbox-v4-delete_backup-007-b",
+    "sandbox-v4-delete_backup-009-a",
+    "sandbox-v4-delete_backup-009-b",
+    "sandbox-v4-delete_backup-014-a",
+    "sandbox-v4-delete_backup-014-b",
+    "sandbox-v4-delete_backup-019-a",
+    "sandbox-v4-delete_backup-019-b",
+    "sandbox-v4-delete_backup-027-a",
+    "sandbox-v4-delete_backup-027-b",
+    "sandbox-v4-delete_backup-031-a",
+    "sandbox-v4-delete_backup-031-b",
+    "sandbox-v4-delete_backup-033-a",
+    "sandbox-v4-delete_backup-033-b",
+    "sandbox-v4-delete_backup-038-a",
+    "sandbox-v4-delete_backup-038-b",
+    "sandbox-v4-delete_backup-047-a",
+    "sandbox-v4-delete_backup-047-b",
+    "sandbox-v4-delete_backup-054-a",
+    "sandbox-v4-delete_backup-054-b",
+    "sandbox-v4-remove_backup_inverse-002-a",
+    "sandbox-v4-remove_backup_inverse-002-b",
+    "sandbox-v4-remove_backup_inverse-004-a",
+    "sandbox-v4-remove_backup_inverse-004-b",
+    "sandbox-v4-remove_backup_inverse-007-a",
+    "sandbox-v4-remove_backup_inverse-007-b",
+    "sandbox-v4-remove_backup_inverse-010-a",
+    "sandbox-v4-remove_backup_inverse-010-b",
+    "sandbox-v4-remove_backup_inverse-011-a",
+    "sandbox-v4-remove_backup_inverse-011-b",
+    "sandbox-v4-remove_backup_inverse-018-a",
+    "sandbox-v4-remove_backup_inverse-018-b",
+    "sandbox-v4-remove_backup_inverse-020-a",
+    "sandbox-v4-remove_backup_inverse-020-b",
+    "sandbox-v4-remove_backup_inverse-021-a",
+    "sandbox-v4-remove_backup_inverse-021-b",
+    "sandbox-v4-remove_backup_inverse-027-a",
+    "sandbox-v4-remove_backup_inverse-027-b",
+    "sandbox-v4-remove_backup_inverse-038-a",
+    "sandbox-v4-remove_backup_inverse-038-b",
+    "sandbox-v4-remove_backup_inverse-039-a",
+    "sandbox-v4-remove_backup_inverse-039-b",
+    "sandbox-v4-remove_backup_inverse-051-a",
+    "sandbox-v4-remove_backup_inverse-051-b",
+    "sandbox-v4-remove_backup_history-001-a",
+    "sandbox-v4-remove_backup_history-001-b",
+    "sandbox-v4-remove_backup_history-003-a",
+    "sandbox-v4-remove_backup_history-003-b",
+    "sandbox-v4-remove_backup_history-011-a",
+    "sandbox-v4-remove_backup_history-011-b",
+    "sandbox-v4-remove_backup_history-012-a",
+    "sandbox-v4-remove_backup_history-012-b",
+    "sandbox-v4-remove_backup_history-014-a",
+    "sandbox-v4-remove_backup_history-014-b",
+    "sandbox-v4-remove_backup_history-016-a",
+    "sandbox-v4-remove_backup_history-016-b",
+    "sandbox-v4-remove_backup_history-035-a",
+    "sandbox-v4-remove_backup_history-035-b",
+    "sandbox-v4-remove_backup_history-041-a",
+    "sandbox-v4-remove_backup_history-041-b",
+    "sandbox-v4-remove_backup_history-047-a",
+    "sandbox-v4-remove_backup_history-047-b",
+    "sandbox-v4-remove_backup_history-050-a",
+    "sandbox-v4-remove_backup_history-050-b",
+    "sandbox-v4-remove_backup_history-058-a",
+    "sandbox-v4-remove_backup_history-058-b",
+    "sandbox-v4-remove_backup_history-059-a",
+    "sandbox-v4-remove_backup_history-059-b",
+    "sandbox-v4-overwrite_backup_history-008-a",
+    "sandbox-v4-overwrite_backup_history-008-b",
+    "sandbox-v4-overwrite_backup_history-016-a",
+    "sandbox-v4-overwrite_backup_history-016-b",
+    "sandbox-v4-overwrite_backup_history-020-a",
+    "sandbox-v4-overwrite_backup_history-020-b",
+    "sandbox-v4-overwrite_backup_history-022-a",
+    "sandbox-v4-overwrite_backup_history-022-b",
+    "sandbox-v4-overwrite_backup_history-030-a",
+    "sandbox-v4-overwrite_backup_history-030-b",
+    "sandbox-v4-overwrite_backup_history-032-a",
+    "sandbox-v4-overwrite_backup_history-032-b",
+    "sandbox-v4-overwrite_backup_history-039-a",
+    "sandbox-v4-overwrite_backup_history-039-b",
+    "sandbox-v4-overwrite_backup_history-044-a",
+    "sandbox-v4-overwrite_backup_history-044-b",
+    "sandbox-v4-overwrite_backup_history-046-a",
+    "sandbox-v4-overwrite_backup_history-046-b",
+    "sandbox-v4-overwrite_backup_history-048-a",
+    "sandbox-v4-overwrite_backup_history-048-b",
+    "sandbox-v4-overwrite_backup_history-050-a",
+    "sandbox-v4-overwrite_backup_history-050-b",
+    "sandbox-v4-overwrite_backup_history-056-a",
+    "sandbox-v4-overwrite_backup_history-056-b",
+    "sandbox-v4-wait_deadline-004-a",
+    "sandbox-v4-wait_deadline-004-b",
+    "sandbox-v4-wait_deadline-005-a",
+    "sandbox-v4-wait_deadline-005-b",
+    "sandbox-v4-wait_deadline-006-a",
+    "sandbox-v4-wait_deadline-006-b",
+    "sandbox-v4-wait_deadline-010-a",
+    "sandbox-v4-wait_deadline-010-b",
+    "sandbox-v4-wait_deadline-014-a",
+    "sandbox-v4-wait_deadline-014-b",
+    "sandbox-v4-wait_deadline-023-a",
+    "sandbox-v4-wait_deadline-023-b",
+    "sandbox-v4-wait_deadline-024-a",
+    "sandbox-v4-wait_deadline-024-b",
+    "sandbox-v4-wait_deadline-032-a",
+    "sandbox-v4-wait_deadline-032-b",
+    "sandbox-v4-wait_deadline-039-a",
+    "sandbox-v4-wait_deadline-039-b",
+    "sandbox-v4-wait_deadline-044-a",
+    "sandbox-v4-wait_deadline-044-b",
+    "sandbox-v4-wait_deadline-047-a",
+    "sandbox-v4-wait_deadline-047-b",
+    "sandbox-v4-wait_deadline-050-a",
+    "sandbox-v4-wait_deadline-050-b",
+    "sandbox-v5-second_transfer_rollback-002-a",
+    "sandbox-v5-second_transfer_rollback-002-b",
+    "sandbox-v5-second_transfer_rollback-011-a",
+    "sandbox-v5-second_transfer_rollback-011-b",
+    "sandbox-v5-second_transfer_rollback-014-a",
+    "sandbox-v5-second_transfer_rollback-014-b",
+    "sandbox-v5-cancel_horizon-002-a",
+    "sandbox-v5-cancel_horizon-002-b",
+    "sandbox-v5-cancel_horizon-008-a",
+    "sandbox-v5-cancel_horizon-008-b",
+    "sandbox-v5-cancel_horizon-014-a",
+    "sandbox-v5-cancel_horizon-014-b",
+    "sandbox-v5-edit_collateral_clock-002-a",
+    "sandbox-v5-edit_collateral_clock-002-b",
+    "sandbox-v5-edit_collateral_clock-003-a",
+    "sandbox-v5-edit_collateral_clock-003-b",
+    "sandbox-v5-edit_collateral_clock-011-a",
+    "sandbox-v5-edit_collateral_clock-011-b",
+    "sandbox-v5-read_collateral_clock-004-a",
+    "sandbox-v5-read_collateral_clock-004-b",
+    "sandbox-v5-read_collateral_clock-006-a",
+    "sandbox-v5-read_collateral_clock-006-b",
+    "sandbox-v5-read_collateral_clock-011-a",
+    "sandbox-v5-read_collateral_clock-011-b",
+    "sandbox-v5-read_pending_wallet-000-single",
+    "sandbox-v5-read_pending_wallet-002-single",
+    "sandbox-v5-read_pending_wallet-008-single",
+    "sandbox-v5-read_pending_wallet-014-single",
+    "sandbox-v5-read_pending_wallet-015-single",
+    "sandbox-v5-read_pending_wallet-027-single",
+    "sandbox-v5-edit_unaffordable-001-single",
+    "sandbox-v5-edit_unaffordable-004-single",
+    "sandbox-v5-edit_unaffordable-014-single",
+    "sandbox-v5-edit_unaffordable-015-single",
+    "sandbox-v5-edit_unaffordable-016-single",
+    "sandbox-v5-edit_unaffordable-029-single"
+  ],
+  "dev_ids": [
+    "sandbox-v4-edit_backup-001-a",
+    "sandbox-v4-edit_backup-001-b",
+    "sandbox-v4-edit_backup-006-a",
+    "sandbox-v4-edit_backup-006-b",
+    "sandbox-v4-edit_backup-007-a",
+    "sandbox-v4-edit_backup-007-b",
+    "sandbox-v4-edit_backup-010-a",
+    "sandbox-v4-edit_backup-010-b",
+    "sandbox-v4-edit_backup-013-a",
+    "sandbox-v4-edit_backup-013-b",
+    "sandbox-v4-edit_backup-014-a",
+    "sandbox-v4-edit_backup-014-b",
+    "sandbox-v4-edit_backup-017-a",
+    "sandbox-v4-edit_backup-017-b",
+    "sandbox-v4-edit_backup-019-a",
+    "sandbox-v4-edit_backup-019-b",
+    "sandbox-v4-edit_backup-021-a",
+    "sandbox-v4-edit_backup-021-b",
+    "sandbox-v4-edit_backup-027-a",
+    "sandbox-v4-edit_backup-027-b",
+    "sandbox-v4-edit_backup-042-a",
+    "sandbox-v4-edit_backup-042-b",
+    "sandbox-v4-edit_backup-044-a",
+    "sandbox-v4-edit_backup-044-b",
+    "sandbox-v4-edit_inverse-008-a",
+    "sandbox-v4-edit_inverse-008-b",
+    "sandbox-v4-edit_inverse-009-a",
+    "sandbox-v4-edit_inverse-009-b",
+    "sandbox-v4-edit_inverse-024-a",
+    "sandbox-v4-edit_inverse-024-b",
+    "sandbox-v4-edit_inverse-028-a",
+    "sandbox-v4-edit_inverse-028-b",
+    "sandbox-v4-edit_inverse-032-a",
+    "sandbox-v4-edit_inverse-032-b",
+    "sandbox-v4-edit_inverse-035-a",
+    "sandbox-v4-edit_inverse-035-b",
+    "sandbox-v4-edit_inverse-039-a",
+    "sandbox-v4-edit_inverse-039-b",
+    "sandbox-v4-edit_inverse-040-a",
+    "sandbox-v4-edit_inverse-040-b",
+    "sandbox-v4-edit_inverse-051-a",
+    "sandbox-v4-edit_inverse-051-b",
+    "sandbox-v4-edit_inverse-053-a",
+    "sandbox-v4-edit_inverse-053-b",
+    "sandbox-v4-edit_inverse-055-a",
+    "sandbox-v4-edit_inverse-055-b",
+    "sandbox-v4-edit_inverse-058-a",
+    "sandbox-v4-edit_inverse-058-b",
+    "sandbox-v4-edit_affordability-009-a",
+    "sandbox-v4-edit_affordability-009-b",
+    "sandbox-v4-edit_affordability-011-a",
+    "sandbox-v4-edit_affordability-011-b",
+    "sandbox-v4-edit_affordability-017-a",
+    "sandbox-v4-edit_affordability-017-b",
+    "sandbox-v4-edit_affordability-024-a",
+    "sandbox-v4-edit_affordability-024-b",
+    "sandbox-v4-edit_affordability-025-a",
+    "sandbox-v4-edit_affordability-025-b",
+    "sandbox-v4-edit_affordability-030-a",
+    "sandbox-v4-edit_affordability-030-b",
+    "sandbox-v4-edit_affordability-031-a",
+    "sandbox-v4-edit_affordability-031-b",
+    "sandbox-v4-edit_affordability-037-a",
+    "sandbox-v4-edit_affordability-037-b",
+    "sandbox-v4-edit_affordability-041-a",
+    "sandbox-v4-edit_affordability-041-b",
+    "sandbox-v4-edit_affordability-045-a",
+    "sandbox-v4-edit_affordability-045-b",
+    "sandbox-v4-edit_affordability-049-a",
+    "sandbox-v4-edit_affordability-049-b",
+    "sandbox-v4-edit_affordability-057-a",
+    "sandbox-v4-edit_affordability-057-b",
+    "sandbox-v5-settle_pending-009-single",
+    "sandbox-v5-settle_pending-011-single",
+    "sandbox-v5-settle_pending-016-single",
+    "sandbox-v5-settle_pending-018-single",
+    "sandbox-v5-settle_pending-022-single",
+    "sandbox-v5-settle_pending-027-single",
+    "sandbox-v5-cancel_with_other_delivery-005-single",
+    "sandbox-v5-cancel_with_other_delivery-006-single",
+    "sandbox-v5-cancel_with_other_delivery-016-single",
+    "sandbox-v5-cancel_with_other_delivery-018-single",
+    "sandbox-v5-cancel_with_other_delivery-021-single",
+    "sandbox-v5-cancel_with_other_delivery-023-single"
+  ],
+  "evaluated_test": false,
+  "status": "FIT",
+  "selected_layer": 9,
+  "layer_choice": {
+    "0": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.32142857142857145,
+        "macro_F1": 0.21882352941176472,
+        "balanced_accuracy": 0.2638888888888889,
+        "AUROC": 0.43838734567901233,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.2026143790849673,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.42538580246913577,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            170
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.2026143790849673,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.42214506172839505,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            337
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.2026143790849673,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.4249228395061729,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            625
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.21882352941176472,
+            "balanced_accuracy": 0.2638888888888889,
+            "AUROC": 0.43838734567901233,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            725
+          ]
+        }
+      ],
+      "training_span_dimension": 96
+    },
+    "1": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.2976190476190476,
+        "macro_F1": 0.29740094443269777,
+        "balanced_accuracy": 0.3194444444444444,
+        "AUROC": 0.45165895061728395,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.25242424242424244,
+            "balanced_accuracy": 0.2916666666666667,
+            "AUROC": 0.4640817901234568,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            155
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.26170542635658917,
+            "balanced_accuracy": 0.2962962962962963,
+            "AUROC": 0.47484567901234565,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            352
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.2918345705196182,
+            "balanced_accuracy": 0.2962962962962963,
+            "AUROC": 0.46392746913580246,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            725
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2976190476190476,
+            "macro_F1": 0.29740094443269777,
+            "balanced_accuracy": 0.3194444444444444,
+            "AUROC": 0.45165895061728395,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1216
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "2": {
+      "selected_C": 0.1,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.3333333333333333,
+        "macro_F1": 0.2750065535707598,
+        "balanced_accuracy": 0.2962962962962963,
+        "AUROC": 0.46670524691358023,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.2407685881370092,
+            "balanced_accuracy": 0.2824074074074074,
+            "AUROC": 0.43086419753086425,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            140
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.2750065535707598,
+            "balanced_accuracy": 0.2962962962962963,
+            "AUROC": 0.46670524691358023,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            338
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2976190476190476,
+            "macro_F1": 0.2694083694083694,
+            "balanced_accuracy": 0.2962962962962963,
+            "AUROC": 0.4756944444444445,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            779
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.27182077182077186,
+            "balanced_accuracy": 0.3055555555555556,
+            "AUROC": 0.48016975308641974,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1409
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "3": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.3333333333333333,
+        "macro_F1": 0.30765529149632215,
+        "balanced_accuracy": 0.3194444444444444,
+        "AUROC": 0.49309413580246914,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.24741200828157348,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.4539351851851852,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            195
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.26161616161616164,
+            "balanced_accuracy": 0.2916666666666667,
+            "AUROC": 0.47422839506172837,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            355
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.25963718820861675,
+            "balanced_accuracy": 0.28703703703703703,
+            "AUROC": 0.4876929012345679,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            890
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.30765529149632215,
+            "balanced_accuracy": 0.3194444444444444,
+            "AUROC": 0.49309413580246914,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1555
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "4": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.30952380952380953,
+        "macro_F1": 0.2804232804232804,
+        "balanced_accuracy": 0.3055555555555555,
+        "AUROC": 0.5088348765432099,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2619047619047619,
+            "macro_F1": 0.21626984126984128,
+            "balanced_accuracy": 0.23611111111111113,
+            "AUROC": 0.4152777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            161
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2619047619047619,
+            "macro_F1": 0.2228855721393035,
+            "balanced_accuracy": 0.2638888888888889,
+            "AUROC": 0.4327160493827161,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            345
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.25091044221479003,
+            "balanced_accuracy": 0.2962962962962963,
+            "AUROC": 0.445679012345679,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            771
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.2804232804232804,
+            "balanced_accuracy": 0.3055555555555555,
+            "AUROC": 0.5088348765432099,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1753
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "5": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.34523809523809523,
+        "macro_F1": 0.3253265807463679,
+        "balanced_accuracy": 0.3611111111111111,
+        "AUROC": 0.5168981481481482,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.25,
+            "macro_F1": 0.21447336995462143,
+            "balanced_accuracy": 0.23611111111111108,
+            "AUROC": 0.4294753086419753,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            178
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.25060508269463494,
+            "balanced_accuracy": 0.2962962962962963,
+            "AUROC": 0.4584104938271605,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            419
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.2980342191481616,
+            "balanced_accuracy": 0.3333333333333333,
+            "AUROC": 0.47947530864197524,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1019
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.34523809523809523,
+            "macro_F1": 0.3253265807463679,
+            "balanced_accuracy": 0.3611111111111111,
+            "AUROC": 0.5168981481481482,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            2094
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "6": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.32142857142857145,
+        "macro_F1": 0.1997747838869334,
+        "balanced_accuracy": 0.25925925925925924,
+        "AUROC": 0.4481095679012346,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.34523809523809523,
+            "macro_F1": 0.1710914454277286,
+            "balanced_accuracy": 0.26851851851851855,
+            "AUROC": 0.46566358024691357,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            194
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.16216216216216217,
+            "balanced_accuracy": 0.25,
+            "AUROC": 0.47326388888888893,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            383
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.1728395061728395,
+            "balanced_accuracy": 0.24537037037037035,
+            "AUROC": 0.4549768518518518,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            940
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.1997747838869334,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.4481095679012346,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            2463
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "7": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.2619047619047619,
+        "macro_F1": 0.2640305172325919,
+        "balanced_accuracy": 0.27314814814814814,
+        "AUROC": 0.4446759259259259,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2976190476190476,
+            "macro_F1": 0.15290519877675843,
+            "balanced_accuracy": 0.23148148148148148,
+            "AUROC": 0.4498456790123457,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            170
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2976190476190476,
+            "macro_F1": 0.15290519877675843,
+            "balanced_accuracy": 0.23148148148148148,
+            "AUROC": 0.4884259259259259,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            384
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.23589619749967494,
+            "balanced_accuracy": 0.27314814814814814,
+            "AUROC": 0.4758873456790123,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            910
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2619047619047619,
+            "macro_F1": 0.2640305172325919,
+            "balanced_accuracy": 0.27314814814814814,
+            "AUROC": 0.4446759259259259,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            2227
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "8": {
+      "selected_C": 1,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.2976190476190476,
+        "macro_F1": 0.2200559297333491,
+        "balanced_accuracy": 0.25000000000000006,
+        "AUROC": 0.4277006172839506,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.14814814814814814,
+            "balanced_accuracy": 0.2222222222222222,
+            "AUROC": 0.4096064814814815,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            189
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.14814814814814814,
+            "balanced_accuracy": 0.2222222222222222,
+            "AUROC": 0.4244598765432099,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            415
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2976190476190476,
+            "macro_F1": 0.2200559297333491,
+            "balanced_accuracy": 0.25000000000000006,
+            "AUROC": 0.4277006172839506,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1200
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2261904761904762,
+            "macro_F1": 0.18609412795459304,
+            "balanced_accuracy": 0.19907407407407407,
+            "AUROC": 0.4290509259259259,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            2148
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "9": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.41125541125541126,
+        "balanced_accuracy": 0.4351851851851852,
+        "AUROC": 0.6180941358024691,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.18104222821203952,
+            "balanced_accuracy": 0.24537037037037035,
+            "AUROC": 0.5023148148148149,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            170
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.23432744978697503,
+            "balanced_accuracy": 0.2916666666666667,
+            "AUROC": 0.5515432098765433,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            366
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.40476190476190477,
+            "macro_F1": 0.2821661998132587,
+            "balanced_accuracy": 0.33796296296296297,
+            "AUROC": 0.553317901234568,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1388
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.41125541125541126,
+            "balanced_accuracy": 0.4351851851851852,
+            "AUROC": 0.6180941358024691,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1985
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "10": {
+      "selected_C": 1,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.4523809523809524,
+        "macro_F1": 0.3591308368007397,
+        "balanced_accuracy": 0.39351851851851855,
+        "AUROC": 0.6250771604938272,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.23015873015873015,
+            "balanced_accuracy": 0.27314814814814814,
+            "AUROC": 0.4870756172839506,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            194
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.39285714285714285,
+            "macro_F1": 0.3235294117647059,
+            "balanced_accuracy": 0.34259259259259256,
+            "AUROC": 0.5657793209876544,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            472
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.4523809523809524,
+            "macro_F1": 0.3591308368007397,
+            "balanced_accuracy": 0.39351851851851855,
+            "AUROC": 0.6250771604938272,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            953
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.39285714285714285,
+            "macro_F1": 0.3112186288656877,
+            "balanced_accuracy": 0.33796296296296297,
+            "AUROC": 0.6405864197530864,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            2603
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "11": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.30952380952380953,
+        "macro_F1": 0.2133834429481157,
+        "balanced_accuracy": 0.2546296296296296,
+        "AUROC": 0.5025848765432098,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.2133834429481157,
+            "balanced_accuracy": 0.2546296296296296,
+            "AUROC": 0.5025848765432098,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            218
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.18052678307191475,
+            "balanced_accuracy": 0.2546296296296296,
+            "AUROC": 0.5522762345679012,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            578
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.17543859649122806,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.5336805555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1237
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.36904761904761907,
+            "macro_F1": 0.17971014492753623,
+            "balanced_accuracy": 0.28703703703703703,
+            "AUROC": 0.5336226851851852,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            2114
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "12": {
+      "selected_C": 1,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.4166666666666667,
+        "macro_F1": 0.19607843137254902,
+        "balanced_accuracy": 0.32407407407407407,
+        "AUROC": 0.49571759259259257,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.15757575757575756,
+            "balanced_accuracy": 0.24074074074074073,
+            "AUROC": 0.5047067901234569,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            156
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.17543859649122806,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.5200617283950617,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            541
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.4166666666666667,
+            "macro_F1": 0.19607843137254902,
+            "balanced_accuracy": 0.32407407407407407,
+            "AUROC": 0.49571759259259257,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1328
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.40476190476190477,
+            "macro_F1": 0.192090395480226,
+            "balanced_accuracy": 0.3148148148148148,
+            "AUROC": 0.47955246913580246,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1986
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "13": {
+      "selected_C": 1,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.39285714285714285,
+        "macro_F1": 0.18803418803418803,
+        "balanced_accuracy": 0.3055555555555555,
+        "AUROC": 0.32966820987654316,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.15757575757575756,
+            "balanced_accuracy": 0.24074074074074073,
+            "AUROC": 0.41554783950617286,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            185
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.36904761904761907,
+            "macro_F1": 0.17971014492753623,
+            "balanced_accuracy": 0.28703703703703703,
+            "AUROC": 0.36832561728395063,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            474
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.39285714285714285,
+            "macro_F1": 0.18803418803418803,
+            "balanced_accuracy": 0.3055555555555555,
+            "AUROC": 0.32966820987654316,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            846
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.17543859649122806,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.3595486111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1963
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "14": {
+      "selected_C": 1,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.35714285714285715,
+        "macro_F1": 0.17543859649122806,
+        "balanced_accuracy": 0.2777777777777778,
+        "AUROC": 0.37878086419753093,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.16666666666666666,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.40335648148148145,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            219
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.34523809523809523,
+            "macro_F1": 0.1710914454277286,
+            "balanced_accuracy": 0.26851851851851855,
+            "AUROC": 0.3791666666666667,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            380
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.17543859649122806,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.37878086419753093,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            806
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.15757575757575756,
+            "balanced_accuracy": 0.24074074074074073,
+            "AUROC": 0.4481095679012346,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1960
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "15": {
+      "selected_C": 0.1,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.35714285714285715,
+        "macro_F1": 0.17543859649122806,
+        "balanced_accuracy": 0.2777777777777778,
+        "AUROC": 0.3631558641975308,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.16216216216216217,
+            "balanced_accuracy": 0.25,
+            "AUROC": 0.39301697530864194,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            183
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.17543859649122806,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.3631558641975308,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            348
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.17336860670194001,
+            "balanced_accuracy": 0.24537037037037035,
+            "AUROC": 0.36624228395061725,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            901
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.16553398058252428,
+            "balanced_accuracy": 0.22685185185185183,
+            "AUROC": 0.399537037037037,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1890
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "16": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.2976190476190476,
+        "macro_F1": 0.16896141424443312,
+        "balanced_accuracy": 0.23611111111111108,
+        "AUROC": 0.41983024691358023,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.14814814814814814,
+            "balanced_accuracy": 0.2222222222222222,
+            "AUROC": 0.39089506172839505,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            215
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.14814814814814814,
+            "balanced_accuracy": 0.2222222222222222,
+            "AUROC": 0.36994598765432096,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            408
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.14814814814814814,
+            "balanced_accuracy": 0.2222222222222222,
+            "AUROC": 0.3755401234567901,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            834
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2976190476190476,
+            "macro_F1": 0.16896141424443312,
+            "balanced_accuracy": 0.23611111111111108,
+            "AUROC": 0.41983024691358023,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1853
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "17": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.2857142857142857,
+        "macro_F1": 0.24508974171895517,
+        "balanced_accuracy": 0.2546296296296296,
+        "AUROC": 0.45856481481481487,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.1927849927849928,
+            "balanced_accuracy": 0.25,
+            "AUROC": 0.4157407407407408,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            184
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.14953271028037382,
+            "balanced_accuracy": 0.2222222222222222,
+            "AUROC": 0.38429783950617286,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            385
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.1509433962264151,
+            "balanced_accuracy": 0.2222222222222222,
+            "AUROC": 0.39992283950617286,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            787
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.24508974171895517,
+            "balanced_accuracy": 0.2546296296296296,
+            "AUROC": 0.45856481481481487,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1439
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "18": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.32142857142857145,
+        "macro_F1": 0.2897571564238231,
+        "balanced_accuracy": 0.3055555555555556,
+        "AUROC": 0.5029706790123457,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.36904761904761907,
+            "macro_F1": 0.20365781710914455,
+            "balanced_accuracy": 0.2916666666666667,
+            "AUROC": 0.41076388888888893,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            215
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.16969696969696968,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.38919753086419756,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            352
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.20211640211640214,
+            "balanced_accuracy": 0.26851851851851855,
+            "AUROC": 0.4127314814814815,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            808
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.2897571564238231,
+            "balanced_accuracy": 0.3055555555555556,
+            "AUROC": 0.5029706790123457,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            2132
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "19": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.2857142857142857,
+        "macro_F1": 0.25541125541125537,
+        "balanced_accuracy": 0.2731481481481482,
+        "AUROC": 0.4362654320987655,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.16666666666666666,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.41006944444444443,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            156
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.16216216216216217,
+            "balanced_accuracy": 0.25,
+            "AUROC": 0.3859567901234568,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            343
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.19047619047619047,
+            "balanced_accuracy": 0.2638888888888889,
+            "AUROC": 0.39425154320987654,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            853
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.25541125541125537,
+            "balanced_accuracy": 0.2731481481481482,
+            "AUROC": 0.4362654320987655,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1911
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "20": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.3333333333333333,
+        "macro_F1": 0.34116059379217273,
+        "balanced_accuracy": 0.3333333333333333,
+        "AUROC": 0.4734953703703704,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.16666666666666666,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.41967592592592595,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            170
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.27380952380952384,
+            "macro_F1": 0.14330218068535824,
+            "balanced_accuracy": 0.21296296296296294,
+            "AUROC": 0.3892361111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            349
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.22424007106593014,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.40119598765432096,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            829
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.34116059379217273,
+            "balanced_accuracy": 0.3333333333333333,
+            "AUROC": 0.4734953703703704,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1703
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "21": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.34523809523809523,
+        "macro_F1": 0.3434234277503612,
+        "balanced_accuracy": 0.34722222222222215,
+        "AUROC": 0.4923611111111111,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.34523809523809523,
+            "macro_F1": 0.21264367816091956,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.4080246913580247,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            186
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.17726861621947543,
+            "balanced_accuracy": 0.24537037037037035,
+            "AUROC": 0.4117669753086419,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            373
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.24460705334765484,
+            "balanced_accuracy": 0.26851851851851855,
+            "AUROC": 0.4223765432098765,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            858
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.34523809523809523,
+            "macro_F1": 0.3434234277503612,
+            "balanced_accuracy": 0.34722222222222215,
+            "AUROC": 0.4923611111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1529
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "22": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.32142857142857145,
+        "macro_F1": 0.2574740017464476,
+        "balanced_accuracy": 0.2777777777777778,
+        "AUROC": 0.4283564814814815,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.17730949340144742,
+            "balanced_accuracy": 0.24537037037037035,
+            "AUROC": 0.41010802469135804,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            178
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2857142857142857,
+            "macro_F1": 0.1509433962264151,
+            "balanced_accuracy": 0.2222222222222222,
+            "AUROC": 0.40081018518518524,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            359
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.2976190476190476,
+            "macro_F1": 0.1738863287250384,
+            "balanced_accuracy": 0.23611111111111108,
+            "AUROC": 0.4010416666666667,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            788
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.2574740017464476,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.4283564814814815,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1492
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "23": {
+      "selected_C": 10,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.38095238095238093,
+        "macro_F1": 0.30727840641206977,
+        "balanced_accuracy": 0.3287037037037037,
+        "AUROC": 0.49782021604938276,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.39285714285714285,
+            "macro_F1": 0.2667068636317958,
+            "balanced_accuracy": 0.32407407407407407,
+            "AUROC": 0.44930555555555557,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            145
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.38095238095238093,
+            "macro_F1": 0.24718614718614718,
+            "balanced_accuracy": 0.3101851851851852,
+            "AUROC": 0.4518132716049383,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            358
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.34523809523809523,
+            "macro_F1": 0.20967741935483872,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.4531635802469136,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            814
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.38095238095238093,
+            "macro_F1": 0.30727840641206977,
+            "balanced_accuracy": 0.3287037037037037,
+            "AUROC": 0.49782021604938276,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1721
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "24": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.38095238095238093,
+        "macro_F1": 0.24633554782241907,
+        "balanced_accuracy": 0.3101851851851852,
+        "AUROC": 0.44116512345679015,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.38095238095238093,
+            "macro_F1": 0.24633554782241907,
+            "balanced_accuracy": 0.3101851851851852,
+            "AUROC": 0.44116512345679015,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            168
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.36904761904761907,
+            "macro_F1": 0.20365781710914455,
+            "balanced_accuracy": 0.2916666666666667,
+            "AUROC": 0.45405092592592594,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            368
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.1982600732600733,
+            "balanced_accuracy": 0.2824074074074074,
+            "AUROC": 0.44502314814814814,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            880
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.21976425897994525,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.4525462962962963,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1401
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "25": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.38095238095238093,
+        "macro_F1": 0.24567901234567904,
+        "balanced_accuracy": 0.3101851851851852,
+        "AUROC": 0.4103009259259259,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.38095238095238093,
+            "macro_F1": 0.24567901234567904,
+            "balanced_accuracy": 0.3101851851851852,
+            "AUROC": 0.4103009259259259,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            173
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.19886553219886552,
+            "balanced_accuracy": 0.2824074074074074,
+            "AUROC": 0.4173225308641976,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            338
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.36904761904761907,
+            "macro_F1": 0.2216741741741742,
+            "balanced_accuracy": 0.2962962962962963,
+            "AUROC": 0.42422839506172844,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            673
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.17392883079157587,
+            "balanced_accuracy": 0.24537037037037035,
+            "AUROC": 0.42390046296296297,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1465
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "26": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.3333333333333333,
+        "macro_F1": 0.22063582714639254,
+        "balanced_accuracy": 0.27314814814814814,
+        "AUROC": 0.41307870370370364,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.22063582714639254,
+            "balanced_accuracy": 0.27314814814814814,
+            "AUROC": 0.41307870370370364,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            163
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.19886553219886552,
+            "balanced_accuracy": 0.2824074074074074,
+            "AUROC": 0.4371527777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            332
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.35714285714285715,
+            "macro_F1": 0.17543859649122806,
+            "balanced_accuracy": 0.2777777777777778,
+            "AUROC": 0.44116512345679015,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            818
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.18744588744588744,
+            "balanced_accuracy": 0.2638888888888889,
+            "AUROC": 0.4268518518518518,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1379
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "27": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.34523809523809523,
+        "macro_F1": 0.2256854256854257,
+        "balanced_accuracy": 0.2824074074074074,
+        "AUROC": 0.4362268518518519,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.34523809523809523,
+            "macro_F1": 0.2256854256854257,
+            "balanced_accuracy": 0.2824074074074074,
+            "AUROC": 0.4362268518518519,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            163
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.16816816816816815,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.4448688271604939,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            312
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.34523809523809523,
+            "macro_F1": 0.1710914454277286,
+            "balanced_accuracy": 0.26851851851851855,
+            "AUROC": 0.43777006172839505,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            812
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.32142857142857145,
+            "macro_F1": 0.16363636363636364,
+            "balanced_accuracy": 0.25,
+            "AUROC": 0.4216435185185185,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1358
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    },
+    "28": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 84,
+        "class_counts": {
+          "reversible": 24,
+          "partially_reversible": 24,
+          "irreversible": 36
+        },
+        "accuracy": 0.30952380952380953,
+        "macro_F1": 0.24943000455996353,
+        "balanced_accuracy": 0.2824074074074074,
+        "AUROC": 0.4255787037037037,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.24943000455996353,
+            "balanced_accuracy": 0.2824074074074074,
+            "AUROC": 0.4255787037037037,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            181
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.24680851063829787,
+            "balanced_accuracy": 0.27777777777777773,
+            "AUROC": 0.4309413580246914,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            340
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.30952380952380953,
+            "macro_F1": 0.2192885955262193,
+            "balanced_accuracy": 0.25925925925925924,
+            "AUROC": 0.4249228395061729,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            741
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 84,
+            "class_counts": {
+              "reversible": 24,
+              "partially_reversible": 24,
+              "irreversible": 36
+            },
+            "accuracy": 0.3333333333333333,
+            "macro_F1": 0.22174883343477378,
+            "balanced_accuracy": 0.27314814814814814,
+            "AUROC": 0.40914351851851855,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            1416
+          ]
+        }
+      ],
+      "training_span_dimension": 203
+    }
+  },
+  "fit_sha256": "6d15a3543e92d104f7b7f0972f348efe720a07c3ba0f656e092ea4c5b5d7cb8b"
+}

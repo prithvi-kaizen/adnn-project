@@ -1,0 +1,2840 @@
+{
+  "id": "s31415_h3_binary_mean_minimal_pairs_ordinary",
+  "condition": {
+    "seed": 31415,
+    "horizon": 3,
+    "binary": true,
+    "pooling": "mean",
+    "subset": "minimal_pairs",
+    "control": "ordinary"
+  },
+  "order": [
+    "reversible",
+    "irreversible"
+  ],
+  "verb_mapping": null,
+  "train_ids": [
+    "sandbox-v4-edit_inverse-008-a",
+    "sandbox-v4-edit_inverse-008-b",
+    "sandbox-v4-edit_inverse-009-a",
+    "sandbox-v4-edit_inverse-009-b",
+    "sandbox-v4-edit_inverse-024-a",
+    "sandbox-v4-edit_inverse-024-b",
+    "sandbox-v4-edit_inverse-028-a",
+    "sandbox-v4-edit_inverse-028-b",
+    "sandbox-v4-edit_inverse-032-a",
+    "sandbox-v4-edit_inverse-032-b",
+    "sandbox-v4-edit_inverse-035-a",
+    "sandbox-v4-edit_inverse-035-b",
+    "sandbox-v4-edit_inverse-039-a",
+    "sandbox-v4-edit_inverse-039-b",
+    "sandbox-v4-edit_inverse-040-a",
+    "sandbox-v4-edit_inverse-040-b",
+    "sandbox-v4-edit_inverse-051-a",
+    "sandbox-v4-edit_inverse-051-b",
+    "sandbox-v4-edit_inverse-053-a",
+    "sandbox-v4-edit_inverse-053-b",
+    "sandbox-v4-edit_inverse-055-a",
+    "sandbox-v4-edit_inverse-055-b",
+    "sandbox-v4-edit_inverse-058-a",
+    "sandbox-v4-edit_inverse-058-b",
+    "sandbox-v4-remove_backup_inverse-002-a",
+    "sandbox-v4-remove_backup_inverse-002-b",
+    "sandbox-v4-remove_backup_inverse-004-a",
+    "sandbox-v4-remove_backup_inverse-004-b",
+    "sandbox-v4-remove_backup_inverse-007-a",
+    "sandbox-v4-remove_backup_inverse-007-b",
+    "sandbox-v4-remove_backup_inverse-010-a",
+    "sandbox-v4-remove_backup_inverse-010-b",
+    "sandbox-v4-remove_backup_inverse-011-a",
+    "sandbox-v4-remove_backup_inverse-011-b",
+    "sandbox-v4-remove_backup_inverse-018-a",
+    "sandbox-v4-remove_backup_inverse-018-b",
+    "sandbox-v4-remove_backup_inverse-020-a",
+    "sandbox-v4-remove_backup_inverse-020-b",
+    "sandbox-v4-remove_backup_inverse-021-a",
+    "sandbox-v4-remove_backup_inverse-021-b",
+    "sandbox-v4-remove_backup_inverse-027-a",
+    "sandbox-v4-remove_backup_inverse-027-b",
+    "sandbox-v4-remove_backup_inverse-038-a",
+    "sandbox-v4-remove_backup_inverse-038-b",
+    "sandbox-v4-remove_backup_inverse-039-a",
+    "sandbox-v4-remove_backup_inverse-039-b",
+    "sandbox-v4-remove_backup_inverse-051-a",
+    "sandbox-v4-remove_backup_inverse-051-b",
+    "sandbox-v4-wait_deadline-004-a",
+    "sandbox-v4-wait_deadline-004-b",
+    "sandbox-v4-wait_deadline-005-a",
+    "sandbox-v4-wait_deadline-005-b",
+    "sandbox-v4-wait_deadline-006-a",
+    "sandbox-v4-wait_deadline-006-b",
+    "sandbox-v4-wait_deadline-010-a",
+    "sandbox-v4-wait_deadline-010-b",
+    "sandbox-v4-wait_deadline-014-a",
+    "sandbox-v4-wait_deadline-014-b",
+    "sandbox-v4-wait_deadline-023-a",
+    "sandbox-v4-wait_deadline-023-b",
+    "sandbox-v4-wait_deadline-024-a",
+    "sandbox-v4-wait_deadline-024-b",
+    "sandbox-v4-wait_deadline-032-a",
+    "sandbox-v4-wait_deadline-032-b",
+    "sandbox-v4-wait_deadline-039-a",
+    "sandbox-v4-wait_deadline-039-b",
+    "sandbox-v4-wait_deadline-044-a",
+    "sandbox-v4-wait_deadline-044-b",
+    "sandbox-v4-wait_deadline-047-a",
+    "sandbox-v4-wait_deadline-047-b",
+    "sandbox-v4-wait_deadline-050-a",
+    "sandbox-v4-wait_deadline-050-b",
+    "sandbox-v5-edit_collateral_clock-002-a",
+    "sandbox-v5-edit_collateral_clock-002-b",
+    "sandbox-v5-edit_collateral_clock-003-a",
+    "sandbox-v5-edit_collateral_clock-003-b",
+    "sandbox-v5-edit_collateral_clock-011-a",
+    "sandbox-v5-edit_collateral_clock-011-b"
+  ],
+  "dev_ids": [
+    "sandbox-v4-delete_bin-004-a",
+    "sandbox-v4-delete_bin-004-b",
+    "sandbox-v4-delete_bin-005-a",
+    "sandbox-v4-delete_bin-005-b",
+    "sandbox-v4-delete_bin-020-a",
+    "sandbox-v4-delete_bin-020-b",
+    "sandbox-v4-delete_bin-022-a",
+    "sandbox-v4-delete_bin-022-b",
+    "sandbox-v4-delete_bin-028-a",
+    "sandbox-v4-delete_bin-028-b",
+    "sandbox-v4-delete_bin-036-a",
+    "sandbox-v4-delete_bin-036-b",
+    "sandbox-v4-delete_bin-041-a",
+    "sandbox-v4-delete_bin-041-b",
+    "sandbox-v4-delete_bin-042-a",
+    "sandbox-v4-delete_bin-042-b",
+    "sandbox-v4-delete_bin-044-a",
+    "sandbox-v4-delete_bin-044-b",
+    "sandbox-v4-delete_bin-049-a",
+    "sandbox-v4-delete_bin-049-b",
+    "sandbox-v4-delete_bin-050-a",
+    "sandbox-v4-delete_bin-050-b",
+    "sandbox-v4-delete_bin-052-a",
+    "sandbox-v4-delete_bin-052-b",
+    "sandbox-v5-second_transfer_rollback-002-a",
+    "sandbox-v5-second_transfer_rollback-002-b",
+    "sandbox-v5-second_transfer_rollback-011-a",
+    "sandbox-v5-second_transfer_rollback-011-b",
+    "sandbox-v5-second_transfer_rollback-014-a",
+    "sandbox-v5-second_transfer_rollback-014-b"
+  ],
+  "evaluated_test": false,
+  "lexical": {
+    "selected_C": 0.01,
+    "development": {
+      "N": 30,
+      "class_counts": {
+        "reversible": 15,
+        "irreversible": 15
+      },
+      "accuracy": 0.5,
+      "macro_F1": 0.3333333333333333,
+      "balanced_accuracy": 0.5,
+      "AUROC": 0.5,
+      "AUROC_undefined_reason": null
+    },
+    "tried": [
+      {
+        "C": 0.01,
+        "development": {
+          "N": 30,
+          "class_counts": {
+            "reversible": 15,
+            "irreversible": 15
+          },
+          "accuracy": 0.5,
+          "macro_F1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "AUROC": 0.5,
+          "AUROC_undefined_reason": null
+        },
+        "iterations": [
+          0
+        ],
+        "converged": true
+      },
+      {
+        "C": 0.1,
+        "development": {
+          "N": 30,
+          "class_counts": {
+            "reversible": 15,
+            "irreversible": 15
+          },
+          "accuracy": 0.5,
+          "macro_F1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "AUROC": 0.5,
+          "AUROC_undefined_reason": null
+        },
+        "iterations": [
+          0
+        ],
+        "converged": true
+      },
+      {
+        "C": 1,
+        "development": {
+          "N": 30,
+          "class_counts": {
+            "reversible": 15,
+            "irreversible": 15
+          },
+          "accuracy": 0.5,
+          "macro_F1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "AUROC": 0.5,
+          "AUROC_undefined_reason": null
+        },
+        "iterations": [
+          0
+        ],
+        "converged": true
+      },
+      {
+        "C": 10,
+        "development": {
+          "N": 30,
+          "class_counts": {
+            "reversible": 15,
+            "irreversible": 15
+          },
+          "accuracy": 0.5,
+          "macro_F1": 0.3333333333333333,
+          "balanced_accuracy": 0.5,
+          "AUROC": 0.5,
+          "AUROC_undefined_reason": null
+        },
+        "iterations": [
+          0
+        ],
+        "converged": true
+      }
+    ],
+    "selection_metric": "development_macro_F1_then_smaller_C",
+    "test_data_used_for_selection": false
+  },
+  "majority": "reversible",
+  "status": "FIT",
+  "selected_layer": 1,
+  "layer_choice": {
+    "0": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.5,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            0
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            0
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            0
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            0
+          ]
+        }
+      ],
+      "training_span_dimension": 27
+    },
+    "1": {
+      "selected_C": 10,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5333333333333333,
+        "macro_F1": 0.5333333333333333,
+        "balanced_accuracy": 0.5333333333333333,
+        "AUROC": 0.5866666666666667,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5555555555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            28
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5688888888888889,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            82
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5644444444444445,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            219
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5333333333333333,
+            "macro_F1": 0.5333333333333333,
+            "balanced_accuracy": 0.5333333333333333,
+            "AUROC": 0.5866666666666667,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            406
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "2": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.5555555555555556,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5555555555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            28
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5555555555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            89
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5555555555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            218
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5466666666666666,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            485
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "3": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.5555555555555556,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5555555555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            50
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5466666666666666,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            100
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5733333333333334,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            177
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5466666666666666,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            388
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "4": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.5244444444444445,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5244444444444445,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            58
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5377777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            93
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5555555555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            215
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5511111111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            280
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "5": {
+      "selected_C": 0.1,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5333333333333333,
+        "macro_F1": 0.475,
+        "balanced_accuracy": 0.5333333333333333,
+        "AUROC": 0.5422222222222222,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5333333333333333,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            58
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5333333333333333,
+            "macro_F1": 0.475,
+            "balanced_accuracy": 0.5333333333333333,
+            "AUROC": 0.5422222222222222,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            87
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5866666666666667,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            205
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5777777777777777,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            323
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "6": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.5555555555555556,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5555555555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            60
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5555555555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            109
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5955555555555555,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            211
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5377777777777777,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            316
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "7": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.45777777777777784,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.45777777777777784,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            51
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.38440492476060195,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4666666666666667,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            105
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5466666666666666,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            207
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5444444444444444,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            375
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "8": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.3333333333333333,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.4311111111111111,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4311111111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            50
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4311111111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            90
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.45777777777777773,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            224
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.45999999999999996,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            376
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "9": {
+      "selected_C": 0.1,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.38440492476060195,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.42666666666666664,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.3650793650793651,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.4177777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            49
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.38440492476060195,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.42666666666666664,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            129
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4622222222222222,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            237
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.3333333333333333,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.44222222222222224,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            362
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "10": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.4857142857142857,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.4444444444444444,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.4857142857142857,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4444444444444444,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            51
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.45777777777777784,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            123
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.3650793650793651,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.4222222222222223,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            235
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.3650793650793651,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.42666666666666664,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            355
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "11": {
+      "selected_C": 10,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.4857142857142857,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.41333333333333333,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.42666666666666664,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            59
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4488888888888889,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            98
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.4444444444444444,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.39555555555555555,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            212
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.4857142857142857,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.41333333333333333,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            364
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "12": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.4044444444444445,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4044444444444445,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            40
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.40444444444444444,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            101
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.3288888888888889,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            222
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.3244444444444445,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            356
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "13": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.4622222222222223,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4622222222222223,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            44
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.43999999999999995,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            85
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.3911111111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            235
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.3733333333333333,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            343
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "14": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.45777777777777784,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.45777777777777784,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            55
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4444444444444444,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            103
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4222222222222223,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            188
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.42,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            316
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "15": {
+      "selected_C": 1,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.4177777777777777,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.42233632862644416,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5066666666666666,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            50
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5333333333333333,
+            "macro_F1": 0.4034090909090909,
+            "balanced_accuracy": 0.5333333333333333,
+            "AUROC": 0.45777777777777773,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            78
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4177777777777777,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            229
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.41777777777777775,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            258
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "16": {
+      "selected_C": 1,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.3911111111111111,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.38440492476060195,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5377777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            48
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.42233632862644416,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.41333333333333333,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            93
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.3911111111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            171
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.4258373205741627,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.3911111111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            323
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "17": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.5777777777777778,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5777777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            29
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4444444444444444,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            80
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.36444444444444446,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            203
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.43333333333333335,
+            "macro_F1": 0.41714285714285715,
+            "balanced_accuracy": 0.43333333333333335,
+            "AUROC": 0.3466666666666667,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            295
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "18": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.5733333333333334,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5733333333333334,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            35
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.48,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            84
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.42666666666666664,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            208
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.4444444444444444,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.36888888888888893,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            348
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "19": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.5822222222222222,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5822222222222222,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            34
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4577777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            97
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.43333333333333335,
+            "macro_F1": 0.41714285714285715,
+            "balanced_accuracy": 0.43333333333333335,
+            "AUROC": 0.41333333333333333,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            185
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.43333333333333335,
+            "macro_F1": 0.40070505287896596,
+            "balanced_accuracy": 0.43333333333333335,
+            "AUROC": 0.4,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            276
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "20": {
+      "selected_C": 1,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.4666666666666667,
+        "macro_F1": 0.4258373205741627,
+        "balanced_accuracy": 0.4666666666666667,
+        "AUROC": 0.37777777777777777,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.3181818181818182,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.52,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            61
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.38440492476060195,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.40888888888888886,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            83
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.4258373205741627,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.37777777777777777,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            218
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.36666666666666664,
+            "macro_F1": 0.3659621802002225,
+            "balanced_accuracy": 0.3666666666666667,
+            "AUROC": 0.37777777777777777,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            312
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "21": {
+      "selected_C": 1,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.4177777777777778,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.42233632862644416,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5688888888888889,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            55
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.38440492476060195,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4533333333333333,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            97
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4177777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            199
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.43333333333333335,
+            "macro_F1": 0.4276094276094276,
+            "balanced_accuracy": 0.43333333333333335,
+            "AUROC": 0.3688888888888889,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            290
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "22": {
+      "selected_C": 0.1,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.4577777777777778,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.42233632862644416,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5155555555555555,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            54
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4577777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            86
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.42666666666666664,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            208
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.40444444444444444,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            380
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "23": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.5155555555555555,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5155555555555555,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            48
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.46222222222222226,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            98
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.4258373205741627,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.4,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            197
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.4444444444444444,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.3866666666666667,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            333
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "24": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.48444444444444446,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.48444444444444446,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            52
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4666666666666667,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            90
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4355555555555555,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            190
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.3650793650793651,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.4177777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            349
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "25": {
+      "selected_C": 10,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.4857142857142857,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.3955555555555556,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4711111111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            44
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4488888888888889,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            100
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.43333333333333335,
+            "macro_F1": 0.3453145057766367,
+            "balanced_accuracy": 0.43333333333333335,
+            "AUROC": 0.4488888888888889,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            209
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.4857142857142857,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.3955555555555556,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            380
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "26": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.4666666666666667,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4666666666666667,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            53
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5111111111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            87
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.38440492476060195,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5288888888888889,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            207
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.38440492476060195,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4888888888888889,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            316
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "27": {
+      "selected_C": 10,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5333333333333333,
+        "macro_F1": 0.475,
+        "balanced_accuracy": 0.5333333333333333,
+        "AUROC": 0.5155555555555555,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.3650793650793651,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.4622222222222222,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            54
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5066666666666666,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            85
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.4666666666666667,
+            "macro_F1": 0.4,
+            "balanced_accuracy": 0.4666666666666667,
+            "AUROC": 0.5377777777777778,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            192
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5333333333333333,
+            "macro_F1": 0.475,
+            "balanced_accuracy": 0.5333333333333333,
+            "AUROC": 0.5155555555555555,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            384
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    },
+    "28": {
+      "selected_C": 0.01,
+      "development": {
+        "N": 30,
+        "class_counts": {
+          "reversible": 15,
+          "irreversible": 15
+        },
+        "accuracy": 0.5,
+        "macro_F1": 0.45054945054945056,
+        "balanced_accuracy": 0.5,
+        "AUROC": 0.4222222222222222,
+        "AUROC_undefined_reason": null
+      },
+      "tried": [
+        {
+          "C": 0.01,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.4222222222222222,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            41
+          ]
+        },
+        {
+          "C": 0.1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.45054945054945056,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.48,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            97
+          ]
+        },
+        {
+          "C": 1,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.42233632862644416,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5511111111111111,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            199
+          ]
+        },
+        {
+          "C": 10,
+          "development": {
+            "N": 30,
+            "class_counts": {
+              "reversible": 15,
+              "irreversible": 15
+            },
+            "accuracy": 0.5,
+            "macro_F1": 0.42233632862644416,
+            "balanced_accuracy": 0.5,
+            "AUROC": 0.5466666666666666,
+            "AUROC_undefined_reason": null
+          },
+          "iterations": [
+            374
+          ]
+        }
+      ],
+      "training_span_dimension": 77
+    }
+  },
+  "fit_sha256": "931b6de8214299687c478ccf601e64cb47c21aa3e0ef77022918bd54d532b477"
+}

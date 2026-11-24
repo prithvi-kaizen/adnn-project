@@ -1,0 +1,76 @@
+{
+  "scope": "read_only_scheduler_and_actual_cpu_allocation_helpers",
+  "recorded_on_ist": "2026-11-20",
+  "login_host": "dgx-login01",
+  "test_only_forecasts": [
+    {
+      "job_id": 42181,
+      "gres": "gpu:a100:1",
+      "scheduled_estimate_ist": "2027-01-09T07:52:15+05:30"
+    },
+    {
+      "job_id": 42182,
+      "gres": "gpu:a100_3g.20gb:1",
+      "scheduled_estimate_ist": "2027-01-08T04:05:47+05:30"
+    },
+    {
+      "job_id": 42183,
+      "gres": "gpu:a100_4g.20gb:1",
+      "scheduled_estimate_ist": "2027-01-10T22:39:35+05:30"
+    },
+    {
+      "job_id": 42184,
+      "resource": "4 CPU 32GiB",
+      "scheduled_estimate_ist": "2026-12-15T14:05:10+05:30"
+    }
+  ],
+  "account_expiry_from_prior_verified_records": "2026-12-31",
+  "untouched_pending_job": {
+    "job_id": 42164,
+    "name": "a4_test",
+    "state": "PENDING",
+    "time_limit": "00:30:00",
+    "scheduled_estimate_ist": "2026-11-21T19:56:15+05:30"
+  },
+  "access_job": {
+    "job_id": 42188,
+    "node": "dgxa",
+    "state": "COMPLETED",
+    "elapsed_seconds": 5,
+    "heads_checked_utc": "2026-11-20T10:26:49Z to 10:26:51Z",
+    "auth_valid": true,
+    "model_shards_verified": 8,
+    "shared_filesystem_available_bytes": 1377980887040,
+    "allocated_home_bytes": 30004490240
+  },
+  "followup_cache_inventory_attempt": {
+    "job_id": 42191,
+    "state": "NOT_ALLOCATED",
+    "reason": "requested nodes busy"
+  },
+  "binding_home_allowance_bytes": 50000000000,
+  "prior_bounded_nonweight_reserves_bytes": 4695398400,
+  "models": {
+    "Qwen/Qwen2.5-7B-Instruct": {
+      "revision": "a09a35458c702b33eeacc393d103063234e8bc28",
+      "verified_weight_shards": 4,
+      "weights_bytes": 15231271888,
+      "checkpoint_gate": "HEAD_VERIFIED",
+      "prior_bounded_envelope_total_bytes": 49931160528,
+      "prior_bounded_envelope_margin_bytes": 68839472
+    },
+    "meta-llama/Llama-3.1-8B-Instruct": {
+      "revision": "0e9e39f249a16976918f6564b8830bc894c89659",
+      "verified_weight_shards": 4,
+      "weights_bytes": 16060556376,
+      "checkpoint_gate": "HEAD_VERIFIED",
+      "prior_bounded_envelope_total_bytes": 50760445016,
+      "prior_bounded_envelope_margin_bytes": -760445016
+    }
+  },
+  "if_export_and_release_qwen_2400_pooled_feature_bytes": 997785600,
+  "llama_envelope_after_feature_release_bytes": 49762659416,
+  "model_weights_downloaded": 0,
+  "gpu_jobs_submitted": 0,
+  "deleted_paths": []
+}

@@ -1,0 +1,4230 @@
+{
+  "scope": "retrospective sandbox, cached Llama Q4_K_M; original gates independent",
+  "feature_verification": {
+    "scope": "cached_llama_quantized",
+    "shape": [
+      360,
+      2,
+      29,
+      3072
+    ],
+    "paired_action_ids_verified": 162,
+    "raw_sha256": "aef5bf96786896d41f006ee4ad7a2733b183572a738c0ae5c10e9596b4ecdc10",
+    "input_manifest_sha256": "6fdd85b2657aa6bc5ae24595119496b9dba48488a67be806176fd62fcb828f2f",
+    "token_log_sha256": "7bdc891c17c953e757dbfe5980435f99a194e45cfdc8978427ebc9eb04ce03ee",
+    "preflight_sha256": "3375cb2a3f5868d0b20fea484b8d056533667d91d5aa7e363fc38e6fc6d7be48",
+    "runtime_seconds_at_last_sample": 311.1438816660084,
+    "lowest_memory_free_percentage": 32,
+    "maximum_added_swap_bytes": 0
+  },
+  "probe_condition_count": 180,
+  "checks": {
+    "layer_predictions": 5220
+  },
+  "primary_probe": [
+    {
+      "id": "s1729_h3_binary_last_all_ordinary",
+      "N": 66,
+      "condition": {
+        "seed": 1729,
+        "horizon": 3,
+        "binary": true,
+        "pooling": "last",
+        "subset": "all",
+        "control": "ordinary"
+      },
+      "selected_layer": 28,
+      "probe": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 3,
+            "sandbox-v5-twofile_delete_backup-008-a": 3,
+            "sandbox-v5-read_quiet_files-012-single": 6,
+            "sandbox-v5-remove_delivered_record-001-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 14,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5303030303030303,
+            "CI95": [
+              0.42857142857142855,
+              0.745220588235294
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.4944444444444444,
+            "CI95": [
+              0.36666666666666664,
+              0.6666666666666667
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.417923186344239,
+            "CI95": [
+              0.31932773109243695,
+              0.6495244117584541
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.6203703703703703,
+            "CI95": [
+              0.38512731481481477,
+              0.8972222222222223
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": 0.030303030303030276,
+            "CI95": [
+              -0.050000000000000044,
+              0.19999999999999996
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.036111111111111094,
+            "CI95": [
+              -0.03525641025641028,
+              0.22222222222222215
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.08458985301090566,
+            "CI95": [
+              -0.021505376344086058,
+              0.30000000000000004
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.15370370370370368,
+            "CI95": [
+              -0.008547008547008572,
+              0.4749007936507937
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.0,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 0
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 3,
+            "sandbox-v5-twofile_delete_backup-008-a": 3,
+            "sandbox-v5-read_quiet_files-012-single": 6,
+            "sandbox-v5-remove_delivered_record-001-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 14,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.3125,
+              0.7272727272727273
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.4583333333333333,
+            "CI95": [
+              0.3125,
+              0.5
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.3333333333333333,
+            "CI95": [
+              0.23809523809523808,
+              0.42105263157894735
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.4666666666666667,
+            "CI95": [
+              0.2,
+              0.75
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.0,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 3,
+            "sandbox-v5-twofile_delete_backup-008-a": 3,
+            "sandbox-v5-read_quiet_files-012-single": 6,
+            "sandbox-v5-remove_delivered_record-001-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 14,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.45454545454545453,
+            "CI95": [
+              0.2,
+              0.6086956521739131
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.3125,
+            "CI95": [
+              0.16666666666666666,
+              0.3783783783783784
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.0,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s1729_h3_threeway_last_all_ordinary",
+      "N": 72,
+      "condition": {
+        "seed": 1729,
+        "horizon": 3,
+        "binary": false,
+        "pooling": "last",
+        "subset": "all",
+        "control": "ordinary"
+      },
+      "selected_layer": 28,
+      "probe": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-read_quiet_files-012-single": 6,
+            "sandbox-v5-remove_delivered_record-001-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 99,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4861111111111111,
+            "CI95": [
+              0.3148148148148148,
+              0.6666666666666666
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.46666666666666673,
+            "CI95": [
+              0.25641025641025644,
+              0.674074074074074
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.3655806182121972,
+            "CI95": [
+              0.21505376344086022,
+              0.4939740655987796
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.7164281705948373,
+            "CI95": [
+              0.5090277777777777,
+              0.8721283189882224
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": -0.013888888888888895,
+            "CI95": [
+              -0.16666666666666669,
+              0.08356481481481463
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": -0.14444444444444443,
+            "CI95": [
+              -0.33333333333333337,
+              0.05555555555555558
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": -0.06497493734335835,
+            "CI95": [
+              -0.2222222222222222,
+              0.12549924490713954
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.016897146063812762,
+            "CI95": [
+              -0.2074374699374701,
+              0.18719650362162443
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-read_quiet_files-012-single": 6,
+            "sandbox-v5-remove_delivered_record-001-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 99,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.3333333333333333,
+              0.6666666666666666
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.6111111111111112,
+            "CI95": [
+              0.4666666666666666,
+              0.6491228070175438
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.4305555555555555,
+            "CI95": [
+              0.21212121212121213,
+              0.47457842457842453
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.6995310245310246,
+            "CI95": [
+              0.67940402931803,
+              0.7437229437229438
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-read_quiet_files-012-single": 6,
+            "sandbox-v5-remove_delivered_record-001-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 99,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4166666666666667,
+            "CI95": [
+              0.16666666666666666,
+              0.5833333333333334
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.3333333333333333,
+            "CI95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.19607843137254902,
+            "CI95": [
+              0.09523809523809523,
+              0.24561403508771928
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s1729_h3_binary_last_minimal_pairs_ordinary",
+      "N": 48,
+      "condition": {
+        "seed": 1729,
+        "horizon": 3,
+        "binary": true,
+        "pooling": "last",
+        "subset": "minimal_pairs",
+        "control": "ordinary"
+      },
+      "selected_layer": 1,
+      "probe": {
+        "design": {
+          "clusters": 2,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 0,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5833333333333334,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5833333333333334,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "macro_F1": {
+            "estimate": 0.4957983193277311,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "AUROC": {
+            "estimate": 0.5902777777777778,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": 0.08333333333333337,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "balanced_accuracy": {
+            "estimate": 0.08333333333333337,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "macro_F1": {
+            "estimate": 0.1624649859943978,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "AUROC": {
+            "estimate": 0.09027777777777779,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 4
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 2,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 0,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "macro_F1": {
+            "estimate": 0.3333333333333333,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.0,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 2,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 0,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "macro_F1": {
+            "estimate": 0.3333333333333333,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.0,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s1729_h3_threeway_last_minimal_pairs_ordinary",
+      "N": 60,
+      "condition": {
+        "seed": 1729,
+        "horizon": 3,
+        "binary": false,
+        "pooling": "last",
+        "subset": "minimal_pairs",
+        "control": "ordinary"
+      },
+      "selected_layer": 28,
+      "probe": {
+        "design": {
+          "clusters": 4,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 105,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4666666666666667,
+            "CI95": [
+              0.3333333333333333,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.48888888888888893,
+            "CI95": [
+              0.30158730158730157,
+              0.6410256410256411
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.3829059829059829,
+            "CI95": [
+              0.17777777777777778,
+              0.46621621621621623
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.6333847736625514,
+            "CI95": [
+              0.4899396458920269,
+              0.7953940077017
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": -0.033333333333333326,
+            "CI95": [
+              -0.16666666666666669,
+              0.0
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": -0.11111111111111105,
+            "CI95": [
+              -0.22222222222222227,
+              0.0
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": -0.04444444444444445,
+            "CI95": [
+              -0.12698412698412698,
+              0.027777777777777846
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": -0.0703189300411523,
+            "CI95": [
+              -0.23127247532009432,
+              0.11158448389217612
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 4,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 105,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.6,
+            "CI95": [
+              0.5238095238095238,
+              0.6410256410256411
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.42735042735042733,
+            "CI95": [
+              0.2222222222222222,
+              0.4384384384384384
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.7037037037037037,
+            "CI95": [
+              0.6838095238095239,
+              0.7212121212121212
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 4,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 105,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4,
+            "CI95": [
+              0.0,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.3333333333333333,
+            "CI95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.19047619047619047,
+            "CI95": [
+              0.0,
+              0.2222222222222222
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s2718_h3_binary_last_all_ordinary",
+      "N": 66,
+      "condition": {
+        "seed": 2718,
+        "horizon": 3,
+        "binary": true,
+        "pooling": "last",
+        "subset": "all",
+        "control": "ordinary"
+      },
+      "selected_layer": 25,
+      "probe": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 3,
+            "sandbox-v5-twofile_delete_backup-008-a": 3,
+            "sandbox-v5-settle_pending-009-single": 6,
+            "sandbox-v5-read_pending_wallet-000-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 14,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5909090909090909,
+            "CI95": [
+              0.4666666666666667,
+              0.7777777777777778
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5666666666666667,
+            "CI95": [
+              0.35446428571428573,
+              0.8125
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.5448275862068965,
+            "CI95": [
+              0.31995454545454544,
+              0.754454887218045
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.575,
+            "CI95": [
+              0.2555555555555556,
+              0.8903769841269842
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": 0.09090909090909094,
+            "CI95": [
+              -0.18181818181818188,
+              0.4375
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.07499999999999996,
+            "CI95": [
+              -0.35,
+              0.4166666666666666
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.05430127041742283,
+            "CI95": [
+              -0.24999999999999994,
+              0.4912488553113552
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": -0.008333333333333415,
+            "CI95": [
+              -0.38888888888888906,
+              0.253968253968254
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.125,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 3
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 3,
+            "sandbox-v5-twofile_delete_backup-008-a": 3,
+            "sandbox-v5-settle_pending-009-single": 6,
+            "sandbox-v5-read_pending_wallet-000-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 14,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.3125,
+              0.7272727272727273
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.4916666666666667,
+            "CI95": [
+              0.3078125,
+              0.7
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.4905263157894737,
+            "CI95": [
+              0.25,
+              0.6190476190476191
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5833333333333334,
+            "CI95": [
+              0.296875,
+              0.8888888888888888
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.0,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 3,
+            "sandbox-v5-twofile_delete_backup-008-a": 3,
+            "sandbox-v5-settle_pending-009-single": 6,
+            "sandbox-v5-read_pending_wallet-000-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 14,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.45454545454545453,
+            "CI95": [
+              0.2,
+              0.6086956521739131
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.3125,
+            "CI95": [
+              0.16666666666666666,
+              0.3783783783783784
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 986,
+            "undefined_draws": 14,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.0,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s2718_h3_threeway_last_all_ordinary",
+      "N": 72,
+      "condition": {
+        "seed": 2718,
+        "horizon": 3,
+        "binary": false,
+        "pooling": "last",
+        "subset": "all",
+        "control": "ordinary"
+      },
+      "selected_layer": 24,
+      "probe": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-settle_pending-009-single": 6,
+            "sandbox-v5-read_pending_wallet-000-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 99,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5277777777777778,
+            "CI95": [
+              0.42592592592592593,
+              0.6851851851851852
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5685185185185185,
+            "CI95": [
+              0.39999999999999997,
+              0.7777777777777777
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.5211795373085696,
+            "CI95": [
+              0.32186442220200184,
+              0.6402116402116402
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.7095665651221207,
+            "CI95": [
+              0.5886889052901533,
+              0.8802807617622432
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": 0.02777777777777779,
+            "CI95": [
+              -0.11111111111111116,
+              0.2407407407407408
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": -0.06481481481481477,
+            "CI95": [
+              -0.31851851851851853,
+              0.19444444444444453
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": -0.015857499728467395,
+            "CI95": [
+              -0.1993888888888888,
+              0.23947368421052623
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.009770990326545714,
+            "CI95": [
+              -0.1497307733418844,
+              0.18053073923171953
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-settle_pending-009-single": 6,
+            "sandbox-v5-read_pending_wallet-000-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 99,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.3333333333333333,
+              0.6666666666666666
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.6333333333333333,
+            "CI95": [
+              0.4444444444444444,
+              0.7619047619047619
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.537037037037037,
+            "CI95": [
+              0.24561403508771928,
+              0.6222222222222222
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.699795574795575,
+            "CI95": [
+              0.6224146224146224,
+              0.777245670995671
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-settle_pending-009-single": 6,
+            "sandbox-v5-read_pending_wallet-000-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 99,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4166666666666667,
+            "CI95": [
+              0.16666666666666666,
+              0.5833333333333334
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.3333333333333333,
+            "CI95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.19607843137254902,
+            "CI95": [
+              0.09523809523809523,
+              0.24561403508771928
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 901,
+            "undefined_draws": 99,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s2718_h3_binary_last_minimal_pairs_ordinary",
+      "N": 48,
+      "condition": {
+        "seed": 2718,
+        "horizon": 3,
+        "binary": true,
+        "pooling": "last",
+        "subset": "minimal_pairs",
+        "control": "ordinary"
+      },
+      "selected_layer": 1,
+      "probe": {
+        "design": {
+          "clusters": 2,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 0,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5833333333333334,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5833333333333334,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "macro_F1": {
+            "estimate": 0.4957983193277311,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "AUROC": {
+            "estimate": 0.6024305555555556,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": 0.08333333333333337,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "balanced_accuracy": {
+            "estimate": 0.08333333333333337,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "macro_F1": {
+            "estimate": 0.1624649859943978,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "AUROC": {
+            "estimate": 0.10243055555555558,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 4
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 2,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 0,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "macro_F1": {
+            "estimate": 0.3333333333333333,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.0,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 2,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 0,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "macro_F1": {
+            "estimate": 0.3333333333333333,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": null,
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws"
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 24,
+          "mean": 0.0,
+          "design": {
+            "clusters": 2,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": null,
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": "fewer_than_3_clusters_or_200_defined_draws",
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s2718_h3_threeway_last_minimal_pairs_ordinary",
+      "N": 60,
+      "condition": {
+        "seed": 2718,
+        "horizon": 3,
+        "binary": false,
+        "pooling": "last",
+        "subset": "minimal_pairs",
+        "control": "ordinary"
+      },
+      "selected_layer": 4,
+      "probe": {
+        "design": {
+          "clusters": 4,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 105,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.45,
+            "CI95": [
+              0.25,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.46388888888888885,
+            "CI95": [
+              0.21714285714285725,
+              0.6611111111111111
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.4396462785556374,
+            "CI95": [
+              0.13333333333333333,
+              0.5448590381426203
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.7385030864197532,
+            "CI95": [
+              0.6657063835635264,
+              0.9287082433236279
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": -0.04999999999999999,
+            "CI95": [
+              -0.25,
+              0.0
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": -0.13611111111111113,
+            "CI95": [
+              -0.33333333333333337,
+              0.061111111111111116
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.012295851205210095,
+            "CI95": [
+              -0.23687423687423687,
+              0.10905398948877204
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.03479938271604943,
+            "CI95": [
+              -0.05550573764859479,
+              0.24489871951410402
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 4,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 105,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.6,
+            "CI95": [
+              0.5238095238095238,
+              0.6410256410256411
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.42735042735042733,
+            "CI95": [
+              0.2222222222222222,
+              0.4384384384384384
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.7037037037037037,
+            "CI95": [
+              0.6838095238095239,
+              0.7212121212121212
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 4,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 105,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4,
+            "CI95": [
+              0.0,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.3333333333333333,
+            "CI95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.19047619047619047,
+            "CI95": [
+              0.0,
+              0.2222222222222222
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 895,
+            "undefined_draws": 105,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 4,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s31415_h3_binary_last_all_ordinary",
+      "N": 66,
+      "condition": {
+        "seed": 31415,
+        "horizon": 3,
+        "binary": true,
+        "pooling": "last",
+        "subset": "all",
+        "control": "ordinary"
+      },
+      "selected_layer": 27,
+      "probe": {
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 3,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 3
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 16,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.4,
+              0.6
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5333333333333333,
+            "CI95": [
+              0.4722222222222222,
+              0.6388888888888888
+            ],
+            "defined_draws": 984,
+            "undefined_draws": 16,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.44367816091954027,
+            "CI95": [
+              0.2962962962962963,
+              0.5804195804195804
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5074074074074074,
+            "CI95": [
+              0.3861111111111111,
+              0.6666666666666667
+            ],
+            "defined_draws": 984,
+            "undefined_draws": 16,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": 0.04545454545454547,
+            "CI95": [
+              0.0,
+              0.27424242424242284
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.04166666666666663,
+            "CI95": [
+              0.0,
+              0.1875
+            ],
+            "defined_draws": 984,
+            "undefined_draws": 16,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.07224958949096882,
+            "CI95": [
+              0.0,
+              0.3140559440559437
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": -0.025925925925925908,
+            "CI95": [
+              -0.20833333333333337,
+              0.16666666666666674
+            ],
+            "defined_draws": 984,
+            "undefined_draws": 16,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-cancel_horizon-002-a": 6
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 3,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 3
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 16,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.45454545454545453,
+            "CI95": [
+              0.25,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.4916666666666667,
+            "CI95": [
+              0.36755952380952395,
+              0.5
+            ],
+            "defined_draws": 984,
+            "undefined_draws": 16,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.37142857142857144,
+            "CI95": [
+              0.25,
+              0.4564705882352942
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5333333333333333,
+            "CI95": [
+              0.43333333333333335,
+              0.75
+            ],
+            "defined_draws": 984,
+            "undefined_draws": 16,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-cancel_horizon-002-a": 6
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 3,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 3
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 16,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.45454545454545453,
+            "CI95": [
+              0.25,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 984,
+            "undefined_draws": 16,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.3125,
+            "CI95": [
+              0.2,
+              0.3333333333333333
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 984,
+            "undefined_draws": 16,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-cancel_horizon-002-a": 6
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s31415_h3_threeway_last_all_ordinary",
+      "N": 72,
+      "condition": {
+        "seed": 31415,
+        "horizon": 3,
+        "binary": false,
+        "pooling": "last",
+        "subset": "all",
+        "control": "ordinary"
+      },
+      "selected_layer": 28,
+      "probe": {
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 90,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4861111111111111,
+            "CI95": [
+              0.43333333333333335,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.6111111111111112,
+            "CI95": [
+              0.5555555555555555,
+              0.6666666666666666
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.4257246376811594,
+            "CI95": [
+              0.2222222222222222,
+              0.4444444444444444
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.6694912083800971,
+            "CI95": [
+              0.6302340915080378,
+              0.6923818685723447
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": 0.02777777777777779,
+            "CI95": [
+              0.0,
+              0.13333333333333336
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.1166666666666667,
+            "CI95": [
+              0.0,
+              0.23888888888888882
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.01143892339544511,
+            "CI95": [
+              -0.08148148148148154,
+              0.20476190476190484
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": -0.02011918123029255,
+            "CI95": [
+              -0.06962155925473312,
+              0.07414393366774319
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 36,
+          "mean": 0.0,
+          "design": {
+            "clusters": 5,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-cancel_horizon-002-a": 6,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 90,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4583333333333333,
+            "CI95": [
+              0.3,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.49444444444444446,
+            "CI95": [
+              0.31666666666666665,
+              0.6666666666666666
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.4142857142857143,
+            "CI95": [
+              0.19954545454545455,
+              0.5174603174603174
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.6896103896103897,
+            "CI95": [
+              0.5833333333333334,
+              0.7222222222222223
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 36,
+          "mean": 0.0,
+          "design": {
+            "clusters": 5,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-cancel_horizon-002-a": 6,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 90,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4166666666666667,
+            "CI95": [
+              0.16666666666666666,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.3333333333333333,
+            "CI95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.19607843137254902,
+            "CI95": [
+              0.09523809523809523,
+              0.2222222222222222
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 36,
+          "mean": 0.0,
+          "design": {
+            "clusters": 5,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-cancel_horizon-002-a": 6,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s31415_h3_binary_last_minimal_pairs_ordinary",
+      "N": 60,
+      "condition": {
+        "seed": 31415,
+        "horizon": 3,
+        "binary": true,
+        "pooling": "last",
+        "subset": "minimal_pairs",
+        "control": "ordinary"
+      },
+      "selected_layer": 21,
+      "probe": {
+        "design": {
+          "clusters": 3,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-cancel_horizon-002-a": 12
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 0,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.46172248803827753,
+            "CI95": [
+              0.3333333333333333,
+              0.4994438264738599
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5133333333333333,
+            "CI95": [
+              0.4652777777777778,
+              0.5833333333333333
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": 0.0,
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.0,
+            "CI95": [
+              0.0,
+              0.0
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.12838915470494422,
+            "CI95": [
+              0.0,
+              0.16611049314052656
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.013333333333333308,
+            "CI95": [
+              -0.03472222222222221,
+              0.08333333333333326
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-cancel_horizon-002-a": 6
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 3,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-cancel_horizon-002-a": 12
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 0,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.3333333333333333,
+            "CI95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-cancel_horizon-002-a": 6
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 3,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-cancel_horizon-002-a": 12
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 0,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.3333333333333333,
+            "CI95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": true,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 30,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-cancel_horizon-002-a": 6
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      }
+    },
+    {
+      "id": "s31415_h3_threeway_last_minimal_pairs_ordinary",
+      "N": 72,
+      "condition": {
+        "seed": 31415,
+        "horizon": 3,
+        "binary": false,
+        "pooling": "last",
+        "subset": "minimal_pairs",
+        "control": "ordinary"
+      },
+      "selected_layer": 28,
+      "probe": {
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 90,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.3194444444444444,
+            "CI95": [
+              0.12222222222222222,
+              0.4880952380952381
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.4740740740740741,
+            "CI95": [
+              0.28703703703703703,
+              0.6518518518518519
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.282668793195109,
+            "CI95": [
+              0.1111111111111111,
+              0.44761904761904764
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.6091844369622148,
+            "CI95": [
+              0.479780623121931,
+              0.7121798505727077
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": {
+          "accuracy": {
+            "estimate": -0.1388888888888889,
+            "CI95": [
+              -0.35555555555555557,
+              0.125
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": -0.025925925925925908,
+            "CI95": [
+              -0.2592592592592592,
+              0.20740740740740743
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": -0.09233120680489099,
+            "CI95": [
+              -0.2743374272786037,
+              0.20846702317290552
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": -0.07523114745336956,
+            "CI95": [
+              -0.22700858904943344,
+              0.016667030059887122
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "both_pair_endpoints_correct": {
+          "N": 36,
+          "mean": 0.0,
+          "design": {
+            "clusters": 5,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-cancel_horizon-002-a": 6,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "lexical": {
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 90,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4583333333333333,
+            "CI95": [
+              0.3,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.5,
+            "CI95": [
+              0.3333333333333333,
+              0.6666666666666666
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.375,
+            "CI95": [
+              0.17777777777777778,
+              0.4444444444444444
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.6844155844155844,
+            "CI95": [
+              0.6020833333333333,
+              0.7222222222222223
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": false,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 36,
+          "mean": 0.0,
+          "design": {
+            "clusters": 5,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-cancel_horizon-002-a": 6,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      },
+      "majority": {
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "missing_true_class_draws": 90,
+        "metrics": {
+          "accuracy": {
+            "estimate": 0.4166666666666667,
+            "CI95": [
+              0.16666666666666666,
+              0.5
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "balanced_accuracy": {
+            "estimate": 0.3333333333333333,
+            "CI95": [
+              0.3333333333333333,
+              0.3333333333333333
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          },
+          "macro_F1": {
+            "estimate": 0.19607843137254902,
+            "CI95": [
+              0.09523809523809523,
+              0.2222222222222222
+            ],
+            "defined_draws": 1000,
+            "undefined_draws": 0,
+            "zero_width": false,
+            "conditional_on_estimable_draws": false,
+            "not_estimable_reason": null
+          },
+          "AUROC": {
+            "estimate": 0.5,
+            "CI95": [
+              0.5,
+              0.5
+            ],
+            "defined_draws": 910,
+            "undefined_draws": 90,
+            "zero_width": true,
+            "conditional_on_estimable_draws": true,
+            "not_estimable_reason": null
+          }
+        },
+        "paired_difference": null,
+        "both_pair_endpoints_correct": {
+          "N": 36,
+          "mean": 0.0,
+          "design": {
+            "clusters": 5,
+            "cluster_sizes": {
+              "sandbox-v4-send_window-006-a": 12,
+              "sandbox-v4-transfer_rollback-007-a": 12,
+              "sandbox-v5-overwrite_palette-008-a": 3,
+              "sandbox-v5-cancel_horizon-002-a": 6,
+              "sandbox-v5-twofile_delete_backup-008-a": 3
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null,
+          "correct_pairs": 0
+        }
+      }
+    }
+  ],
+  "test_overlap_counts": {
+    "1729-2718": 60,
+    "1729-31415": 60,
+    "2718-31415": 60
+  },
+  "stated": [
+    {
+      "seed": 1729,
+      "N": 72,
+      "correct": 31,
+      "labels": {
+        "reversible": 60,
+        "irreversible": 11,
+        "partially_reversible": 1
+      },
+      "oracle_accuracy": {
+        "N": 72,
+        "mean": 0.4305555555555556,
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-read_quiet_files-012-single": 6,
+            "sandbox-v5-remove_delivered_record-001-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "CI95": [
+          0.2222222222222222,
+          0.5833333333333334
+        ],
+        "defined_draws": 1000,
+        "undefined_draws": 0,
+        "zero_width": false,
+        "conditional_on_estimable_draws": false,
+        "not_estimable_reason": null
+      },
+      "agreement_with_three_way_probe": {
+        "kappa": 0.3859275053304905,
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-read_quiet_files-012-single": 6,
+            "sandbox-v5-remove_delivered_record-001-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "CI95": [
+          0.0,
+          0.6491228070175439
+        ],
+        "defined_draws": 985,
+        "undefined_draws": 15,
+        "zero_width": false,
+        "conditional_on_estimable_draws": true,
+        "not_estimable_reason": null
+      },
+      "confusion": [
+        {
+          "oracle": "irreversible",
+          "response": "reversible",
+          "count": 30
+        },
+        {
+          "oracle": "partially_reversible",
+          "response": "irreversible",
+          "count": 5
+        },
+        {
+          "oracle": "partially_reversible",
+          "response": "partially_reversible",
+          "count": 1
+        },
+        {
+          "oracle": "reversible",
+          "response": "irreversible",
+          "count": 6
+        },
+        {
+          "oracle": "reversible",
+          "response": "reversible",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "seed": 2718,
+      "N": 72,
+      "correct": 31,
+      "labels": {
+        "reversible": 60,
+        "irreversible": 11,
+        "partially_reversible": 1
+      },
+      "oracle_accuracy": {
+        "N": 72,
+        "mean": 0.4305555555555556,
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-settle_pending-009-single": 6,
+            "sandbox-v5-read_pending_wallet-000-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "CI95": [
+          0.2222222222222222,
+          0.5833333333333334
+        ],
+        "defined_draws": 1000,
+        "undefined_draws": 0,
+        "zero_width": false,
+        "conditional_on_estimable_draws": false,
+        "not_estimable_reason": null
+      },
+      "agreement_with_three_way_probe": {
+        "kappa": 0.023163467902051593,
+        "design": {
+          "clusters": 6,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-twofile_delete_backup-008-a": 6,
+            "sandbox-v5-settle_pending-009-single": 6,
+            "sandbox-v5-read_pending_wallet-000-single": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "CI95": [
+          -0.2209138012246823,
+          0.4327272727272726
+        ],
+        "defined_draws": 1000,
+        "undefined_draws": 0,
+        "zero_width": false,
+        "conditional_on_estimable_draws": false,
+        "not_estimable_reason": null
+      },
+      "confusion": [
+        {
+          "oracle": "irreversible",
+          "response": "reversible",
+          "count": 30
+        },
+        {
+          "oracle": "partially_reversible",
+          "response": "irreversible",
+          "count": 5
+        },
+        {
+          "oracle": "partially_reversible",
+          "response": "partially_reversible",
+          "count": 1
+        },
+        {
+          "oracle": "reversible",
+          "response": "irreversible",
+          "count": 6
+        },
+        {
+          "oracle": "reversible",
+          "response": "reversible",
+          "count": 30
+        }
+      ]
+    },
+    {
+      "seed": 31415,
+      "N": 72,
+      "correct": 31,
+      "labels": {
+        "reversible": 60,
+        "irreversible": 11,
+        "partially_reversible": 1
+      },
+      "oracle_accuracy": {
+        "N": 72,
+        "mean": 0.4305555555555556,
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "CI95": [
+          0.2222222222222222,
+          0.5
+        ],
+        "defined_draws": 1000,
+        "undefined_draws": 0,
+        "zero_width": false,
+        "conditional_on_estimable_draws": false,
+        "not_estimable_reason": null
+      },
+      "agreement_with_three_way_probe": {
+        "kappa": -0.1380231522707034,
+        "design": {
+          "clusters": 5,
+          "cluster_sizes": {
+            "sandbox-v4-send_window-006-a": 24,
+            "sandbox-v4-transfer_rollback-007-a": 24,
+            "sandbox-v5-overwrite_palette-008-a": 6,
+            "sandbox-v5-cancel_horizon-002-a": 12,
+            "sandbox-v5-twofile_delete_backup-008-a": 6
+          },
+          "draws": 1000,
+          "seed": 9001,
+          "unit": "whole_connected_component_or_template"
+        },
+        "CI95": [
+          -0.33980582524271874,
+          0.0
+        ],
+        "defined_draws": 1000,
+        "undefined_draws": 0,
+        "zero_width": false,
+        "conditional_on_estimable_draws": false,
+        "not_estimable_reason": null
+      },
+      "confusion": [
+        {
+          "oracle": "irreversible",
+          "response": "reversible",
+          "count": 30
+        },
+        {
+          "oracle": "partially_reversible",
+          "response": "irreversible",
+          "count": 5
+        },
+        {
+          "oracle": "partially_reversible",
+          "response": "partially_reversible",
+          "count": 1
+        },
+        {
+          "oracle": "reversible",
+          "response": "irreversible",
+          "count": 6
+        },
+        {
+          "oracle": "reversible",
+          "response": "reversible",
+          "count": 30
+        }
+      ]
+    }
+  ],
+  "stated_unique": {
+    "N": 96,
+    "labels": {
+      "reversible": 84,
+      "irreversible": 11,
+      "partially_reversible": 1
+    }
+  },
+  "stated_resource_max_added_swap_bytes": 0,
+  "test_predictions_sha256": "28610c5bd0f6de07c4dbd67c932736c894cb5a109191633af669400b61fcc1c1",
+  "selection_lock_sha256": "5cf511d3b882d090ad7cbe2528e9a9b0531547ae24c1fa147b9e6ad1cd8efce2"
+}

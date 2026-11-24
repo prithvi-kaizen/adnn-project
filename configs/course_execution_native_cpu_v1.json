@@ -1,0 +1,49 @@
+{
+  "version": "course-execution-native-cpu-v1",
+  "scope": "reduced_course_study_not_prescribed_BF16_comparison",
+  "selected_at_utc": "2026-11-15T08:56:53.201414+00:00",
+  "selection_receipt": "artifacts/course_fast_track/native_cpu_pilot_v1/native_pilot/pool_decision.json",
+  "selection_receipt_sha256": "1d521d5a37197b6ac8219f5671c40f4ab4c638b10ac963fcf9ee083cc6b9b079",
+  "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+  "checkpoint_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+  "device": "cpu",
+  "platform": "DGX_Slurm_cpu_student",
+  "precision": "float32",
+  "attention_backend": "eager",
+  "cpu_threads": 2,
+  "max_context_including_generation": 2048,
+  "agent_max_new_tokens": 128,
+  "stated_max_new_tokens": 64,
+  "sampling": false,
+  "selected_pool": "subset_360",
+  "selected_ids_manifest": "data/course_fast_track/v2/subset_360.json",
+  "selected_ids_manifest_sha256": "fe8b2126b15c2ddd85b9ad780749ae61e541be7bfd32bdf55af74c03defb884c",
+  "split_manifests": {
+    "1729": {
+      "path": "data/course_fast_track/v2/splits/subset_360/seed_1729.json",
+      "sha256": "fab99efee4a1da203f8f508584703908ad803ed20a195fffdcde8edcf8e65484"
+    },
+    "2718": {
+      "path": "data/course_fast_track/v2/splits/subset_360/seed_2718.json",
+      "sha256": "7b911d68258fc643a29fc8837c455bb0b628c1070c2d0c922685546578fdc146"
+    },
+    "31415": {
+      "path": "data/course_fast_track/v2/splits/subset_360/seed_31415.json",
+      "sha256": "562d7b8c316a312e7886a5343563cb668606e1bc7d6b6828c9c62a9fac374e9e"
+    }
+  },
+  "feature_prompt_version": "course_candidate_action_v1",
+  "stated_prompt_version": "course_three_label_json_v1",
+  "stated_system_sha256": "b70dbae3be7923488ad9e2fb9b7574f78b2b3e18aaa5f219a3896af2bb888eb7",
+  "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+  "model_runner_source_sha256": "594e3a62b0a44e700096a9b8e1cd1dde5bdf25b78c718b1125272e4fcdfc468d",
+  "agent_system_prompt": "data/course_fast_track/v2/agent_system_prompt.txt",
+  "original_course_planning_config": "configs/course_fast_track.json",
+  "original_course_config_remains_historical_plan_not_actual_run_record": true,
+  "course_holdout_outcomes_at_selection": 0,
+  "forbid_selection_using_accuracy_or_goal_success": true,
+  "native_quantized_conditions_must_remain_separate": true,
+  "different_device_requires_new_record_and_excluded_benchmark_before_holdout": "MPS_cannot_be_silently_pooled_with_this_CPU_condition",
+  "allow_full_RQ4_sweep_now": false,
+  "required_before_full_agent_or_steering_runs": "measured_runtime_plan_with_delivery_reserve_and_all_controls"
+}

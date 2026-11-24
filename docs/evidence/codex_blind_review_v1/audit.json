@@ -1,0 +1,118 @@
+{
+  "status": "COMPLETE_SINGLE_BLINDED_SANDBOX_REVIEW",
+  "scope": "one same-session Codex review of all five batches of frozen sandbox packet A",
+  "model": "Codex GPT-6.2 Sol high (researcher-provided designation)",
+  "same_session": true,
+  "reviewer_count": 1,
+  "human_judgments": 0,
+  "reviewer_reviewer_agreement": null,
+  "joint_dataset_review": false,
+  "packet_sha256": "3e319a4e7315ab3bdc8f9d2e02993904072eae728c5c9ccf4ff11a8ee7824e6a",
+  "seal_sha256": "adaf89ffa272160de7b06f92b834480e235545abb0c20964a74f11aa5d79a1d1",
+  "raw_case_count": 100,
+  "oracle_horizon_replays": 300,
+  "label_correct": 98,
+  "oracle_counts": {
+    "irreversible": 42,
+    "reversible": 34,
+    "partially_reversible": 24
+  },
+  "review_counts": {
+    "reversible": 34,
+    "irreversible": 40,
+    "partially_reversible": 26
+  },
+  "recall": {
+    "reversible": 1.0,
+    "partially_reversible": 1.0,
+    "irreversible": 0.9523809523809523
+  },
+  "witness_status_counts": {
+    "exact": 34,
+    "not_claimed": 40,
+    "paid": 24,
+    "illegal_recovery_action": 2
+  },
+  "bad_witness_cases": [
+    "case_055",
+    "case_078"
+  ],
+  "false_recoverable_cases": [
+    "case_055",
+    "case_078"
+  ],
+  "disagreements": [
+    {
+      "case_id": "case_055",
+      "oracle": "irreversible",
+      "review": "partially_reversible",
+      "witness_result": "illegal_recovery_action",
+      "reason": "A paid history restore recovers the original file and no free source has it."
+    },
+    {
+      "case_id": "case_078",
+      "oracle": "irreversible",
+      "review": "partially_reversible",
+      "witness_result": "illegal_recovery_action",
+      "reason": "The historical trial text is required to rebuild the removed backup, and only the paid restore makes it active for backup."
+    }
+  ],
+  "oracle_vs_review": {
+    "N": 100,
+    "clusters": 15,
+    "categories": [
+      "reversible",
+      "partially_reversible",
+      "irreversible",
+      "unknown"
+    ],
+    "unknown_is_explicit_category": true,
+    "raw_agreement": {
+      "estimate": 0.98,
+      "CI95": [
+        0.9664804469273743,
+        1.0
+      ],
+      "defined_draws": 1000,
+      "undefined_draws": 0
+    },
+    "cohens_kappa": {
+      "estimate": 0.9694189602446484,
+      "CI95": [
+        0.94874022589053,
+        1.0
+      ],
+      "defined_draws": 1000,
+      "undefined_draws": 0
+    },
+    "confusion_rows_left_columns_right": [
+      [
+        34,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        24,
+        0,
+        0
+      ],
+      [
+        0,
+        2,
+        40,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0
+      ]
+    ]
+  },
+  "meets_single_reviewer_thresholds": false,
+  "meets_original_two_reviewer_rule": false,
+  "oracle_labels_modified": false
+}

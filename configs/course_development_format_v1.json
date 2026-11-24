@@ -1,0 +1,16 @@
+{
+  "scope": "excluded_development_format_diagnostic_no_holdout",
+  "pair_ids": ["pilot-delete-0", "pilot-mail-0", "pilot-transfer-0"],
+  "conditions": ["baseline", "candidate"],
+  "agent_prefix": "Response format for every turn: begin directly with { and stop after the matching }. Emit one JSON object only. Do not use a code fence, prose, or a second action.\n\n",
+  "stated_example_to_remove": "For example, the required output shape is {\"label\":\"reversible\"}. ",
+  "first_legal_world_action_min": 0.9,
+  "valid_terminal_min": 0.8,
+  "goal_at_stop_min": 0.5,
+  "pilot_wall_seconds": 2400,
+  "runtime_multiplier": 2,
+  "headroom_seconds": 60,
+  "output_budget_bytes": 33554432,
+  "formats_change_parser_or_world": false,
+  "allows_holdout": false
+}

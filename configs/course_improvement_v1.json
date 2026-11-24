@@ -1,0 +1,255 @@
+{
+  "schema_version": 1,
+  "scope": "additional_reduced_automatic_course_extension_not_original_gate_waiver",
+  "status": "PLANNED_NOT_EXECUTED",
+  "plan": "docs/COURSE_IMPROVEMENT_PLAN.md",
+  "baseline_git_commit": "7c8e9b1a233d0454e9aa90410cd6acc563c306a8",
+  "budget": {
+    "anchor_utc": "2026-11-17T17:10:13.274789+00:00",
+    "deadline_utc": "2026-11-19T17:10:13.274789+00:00",
+    "basis": "user grants two more days; operational assumption, not an externally specified course deadline",
+    "maximum_elapsed_hours": 48,
+    "optional_experiment_cutoff_hour": 40,
+    "delivery_reserve_hours": 8,
+    "include_queue_transfer_retry_and_reporting_time": true,
+    "never_reset_after_failure": true
+  },
+  "phases": [
+    {
+      "id": "I1",
+      "start_hour": 0,
+      "end_hour": 2,
+      "objective": "baseline_and_resource_audit",
+      "status": "NOT_STARTED",
+      "gate_status": "NOT_RUN"
+    },
+    {
+      "id": "I2",
+      "start_hour": 2,
+      "end_hour": 10,
+      "objective": "valid_data_tasks_and_development",
+      "status": "NOT_STARTED",
+      "gate_status": "NOT_RUN"
+    },
+    {
+      "id": "I3",
+      "start_hour": 10,
+      "end_hour": 14,
+      "objective": "native_pilot_and_execution_lock",
+      "status": "NOT_STARTED",
+      "gate_status": "NOT_RUN"
+    },
+    {
+      "id": "I4",
+      "start_hour": 14,
+      "end_hour": 30,
+      "objective": "core_RQ1_RQ2_RQ3",
+      "status": "NOT_STARTED",
+      "gate_status": "NOT_RUN"
+    },
+    {
+      "id": "I5",
+      "start_hour": 30,
+      "end_hour": 40,
+      "objective": "statistics_robustness_conditional_steering",
+      "status": "NOT_STARTED",
+      "gate_status": "NOT_RUN"
+    },
+    {
+      "id": "I6",
+      "start_hour": 40,
+      "end_hour": 48,
+      "objective": "verified_revised_delivery",
+      "status": "NOT_STARTED",
+      "gate_status": "NOT_RUN"
+    }
+  ],
+  "protected_original_sha256": {
+    "docs/MASTER_PLAN.md": "722459e708bba885ecf0fd8d3406b6646f8e796522d9ac860c0bc538acbf845e",
+    "docs/EXPERIMENT_PROTOCOL.md": "82cfcf3b027d96b872395d5825361a78e2dc2e987c20f8cda8ad3f5f59a9e205",
+    "docs/DECISION_LOG.md": "c752a5c8b16c95a6039690e0d79573ea7b1e083d8908805c573619b00d4b7323",
+    "docs/requirements.json": "677bfc7155f84c85b3b03d519f72e0c5653d48e8ed567cbe378a007f19f2a1be",
+    "configs/project.yaml": "3055c7e5b74cec3fccdb79c2e8428298ba582908180394571cd4fd6b1df36d35",
+    "configs/experiment_registry.jsonl": "17a0a195d2bfb31e3520e6d26a5b52b21f626d3d5a31fe5a1c7404aa6b3667c0"
+  },
+  "protected_baseline_sha256": {
+    "data/course_fast_track/v2/freeze_manifest.json": "7e21baf159df7b7ae918e966c626911379bb708142188220c21b2d020c7db19e",
+    "results/course_fast_track/native_mac_cpu_v1/core_summary.json": "a309bb75a5b2442db046a8a0538821fc06ce32a7c9145d85af20bba3b767ddee",
+    "results/course_fast_track/native_mac_cpu_v1/statistics.json": "bc46d0640f04ba139c8528981581207debf53c25be977b63c86acbc7a3937d2f",
+    "results/course_fast_track/native_first_decision_steering_v1/summary.json": "463d62268e626980f1133e897640cecfb068d5cbebc3f272cc8fbf6ebbd4f595",
+    "docs/evidence/course_phase4_20261115/gate_c4.json": "8e126eb7e6b757e36f908e1d50505f5b88968986ddd704768561408dea4fb37e",
+    "docs/evidence/course_phase5_20261117/gate_c5.json": "cf9317c198395415c0d8d20ae2c3cd454e64e8f1640b0393999ec139f96bd09d",
+    "docs/evidence/course_phase5_20261117/gate_c6.json": "1c25576cff09f15fdd7cc7efbb637aada00e8567b3d4378690c28da8fa014eeb",
+    "output/pdf/course_fast_track/report.pdf": "154ce3c0173d877b6a434a26c57ddbf906da147b095ff106c914936451052d24",
+    "output/presentation/course_fast_track/presentation_v2.pptx": "621450eadf25e68c87abf749ac0353ddb389c9fcc1dfca130b0738426a9a8fdb",
+    "output/course_fast_track/course_handoff_v1.zip": "892f78d77a6b7e254f827869f0f9ee9bd0f09bee2667400a90e3df8c008672cd"
+  },
+  "plan_sha256": "f449c1f54025a8639e568fc8a1a7cea288b908d3f1139ad72c96c31374f57124",
+  "execution_policy": {
+    "planning_change_launches_experiments": false,
+    "sequential_models": true,
+    "parallel_agents": false,
+    "downloads_require_fresh_capacity_and_access_checks": true,
+    "real_tools": false,
+    "paid_experimental_inference": false,
+    "human_labels_generated": false,
+    "preserve_unknown_labels": true,
+    "public_submission": false
+  },
+  "data_targets": {
+    "state_action_examples_minimum_target": 2000,
+    "state_action_examples_maximum_target": 2400,
+    "minimum_minimal_pair_membership_fraction": 0.3,
+    "behavior_family_target": 60,
+    "versions_per_RI_family": 2,
+    "family_count_may_not_use_cosmetic_variants": true,
+    "test_fraction_target": 0.2,
+    "split_seeds": [
+      1729,
+      2718,
+      31415
+    ],
+    "new_test_component_target": 8,
+    "historically_exposed_components_in_new_test": false,
+    "physical_labels_require_certification_and_any_required_amendment_approval": true,
+    "human_annotation_status": "NOT_PERFORMED_NO_WAIVER"
+  },
+  "development": {
+    "maximum_paired_tasks": 12,
+    "agent_formats_maximum": 2,
+    "stated_formats_maximum": 2,
+    "candidate_agent_first_decision_legality_minimum": 0.9,
+    "candidate_agent_valid_termination_minimum": 0.8,
+    "candidate_agent_goal_at_stop_minimum": 0.5,
+    "selection_uses_heldout_accuracy_caution_or_gap": false,
+    "constrained_decoding_engineering_cap_minutes": 60
+  },
+  "models": {
+    "default_cached_native": "Qwen/Qwen2.5-0.5B-Instruct",
+    "default_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "default_device": "Mac_CPU",
+    "default_precision": "float32",
+    "default_threads": 4,
+    "conditional_prescribed_order": [
+      "Qwen/Qwen2.5-7B-Instruct",
+      "meta-llama/Llama-3.1-8B-Instruct"
+    ],
+    "conditional_profile": "allocated_DGX_native_BF16_after_fresh_gate",
+    "no_silent_family_or_checkpoint_substitution": true,
+    "MPS_and_8B_Ollama_guard_stops_remain_in_force": true
+  },
+  "fixed_analysis": {
+    "primary_recovery_horizon": 3,
+    "recovery_horizons": [
+      1,
+      2,
+      3
+    ],
+    "bootstrap_draws": 1000,
+    "bootstrap_seed": 9001,
+    "generation_seed": 1729,
+    "greedy": true,
+    "maximum_turns": 15,
+    "consecutive_invalid_abort": 2,
+    "training_only_normalization": true,
+    "development_only_layer_C_selection": true,
+    "all_seed_selection_lock_before_test": true,
+    "interval_minimum_clusters": 3,
+    "interval_minimum_defined_draws": 200,
+    "failure_denominators": "retain_assigned_versions_and_unknown_or_missing_bounds",
+    "do_not_change_gap_or_caution_policy_silently": true
+  },
+  "resource_policy": {
+    "DGX_active_diagnosis_cap_minutes": 30,
+    "scienceworld_cap_minutes": 90,
+    "RQ5_prerequisite_review_cap_minutes": 30,
+    "resume_engineering_cap_minutes": 60,
+    "generation_runtime_multiplier": 2,
+    "budget_full_turn_and_token_caps_without_assuming_early_abort": true,
+    "local_minimum_disk_reserve_bytes": 2147483648,
+    "Mac_maximum_new_swap_bytes": 536870912,
+    "Mac_minimum_free_memory_percent": 10,
+    "DGX_binding_home_limit_bytes": 50000000000,
+    "count_fitted_states_and_temporary_files": true,
+    "do_not_count_cleanup_until_verified_reclaimed": true
+  },
+  "steering": {
+    "status": "CONDITIONAL_NOT_SCHEDULED",
+    "requires_reliability_qualified_baseline": true,
+    "maximum_hours": 6,
+    "must_finish_by_hour": 40,
+    "strengths": [
+      -2,
+      -1,
+      0,
+      1,
+      2
+    ],
+    "random_seeds": [
+      811,
+      812,
+      813
+    ],
+    "direction": "training_I_minus_R_raw_same_hook_site_excluding_P",
+    "layer_selection": "development_BA_tie_shallower",
+    "candidate_version_counts": [
+      24,
+      12,
+      6
+    ],
+    "minimum_family_clusters": 3,
+    "subset_selection": "prelocked_hash_order_then_runtime_only",
+    "maximum_turns": 15,
+    "first_decision_substitution_allowed": false,
+    "new_zero_baseline_identity_required": true,
+    "report_success_legality_overcaution_and_failures": true,
+    "full_original_RQ4_completion_not_implied": true
+  },
+  "planned_experiment_families": [
+    {
+      "experiment_id": "IMPROVE-V1-RELIABILITY-DEV",
+      "status": "planned",
+      "outputs": []
+    },
+    {
+      "experiment_id": "IMPROVE-V1-DATA-AND-TASKS",
+      "status": "planned",
+      "outputs": []
+    },
+    {
+      "experiment_id": "IMPROVE-V1-NATIVE-PILOT",
+      "status": "planned",
+      "outputs": []
+    },
+    {
+      "experiment_id": "IMPROVE-V1-CORE-PROBES",
+      "status": "planned",
+      "outputs": []
+    },
+    {
+      "experiment_id": "IMPROVE-V1-STATED",
+      "status": "planned",
+      "outputs": []
+    },
+    {
+      "experiment_id": "IMPROVE-V1-BEHAVIOR",
+      "status": "planned",
+      "outputs": []
+    },
+    {
+      "experiment_id": "IMPROVE-V1-LAYERWISE-UNCERTAINTY",
+      "status": "planned",
+      "outputs": []
+    },
+    {
+      "experiment_id": "IMPROVE-V1-FULL-LOOP-STEERING",
+      "status": "planned",
+      "outputs": []
+    },
+    {
+      "experiment_id": "IMPROVE-V1-DELIVERY",
+      "status": "planned",
+      "outputs": []
+    }
+  ]
+}

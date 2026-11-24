@@ -1,0 +1,40 @@
+{
+  "allowed_choices": [
+    "pool_1800",
+    "subset_360"
+  ],
+  "behavior_RI_denominator_pair_ids": [
+    "pilot-delete-0",
+    "pilot-delete-1",
+    "pilot-delete-2",
+    "pilot-mail-0",
+    "pilot-mail-1",
+    "pilot-mail-2",
+    "pilot-transfer-0",
+    "pilot-transfer-1",
+    "pilot-transfer-2"
+  ],
+  "behavior_suite": "already_exposed_development_diagnostic_only",
+  "check_access_function": "src.data.course.check_access",
+  "chosen_inference_pool": "PENDING_EXCLUDED_PILOT_RESOURCE_PROJECTION_ONLY",
+  "development_C_and_layer_selection_only": true,
+  "do_not_adapt_protocol_after_first_seed_test_outcomes": true,
+  "future_runner_must_log_ids_components_seed_model_and_stage_before_output": true,
+  "model_result_exposures_at_freeze": 0,
+  "require_choice_record_before_test_generation_or_probe_evaluation": true,
+  "selection_may_use": [
+    "excluded_pilot_latency",
+    "peak_memory",
+    "artifact_bytes",
+    "remaining_time"
+  ],
+  "selection_must_not_use": [
+    "course_test_predictions",
+    "test_accuracy",
+    "favorable_behavior"
+  ],
+  "status": "LOCKED_BEFORE_NEW_MODEL_OUTCOMES",
+  "test_components_exposed_by_course_require_future_confirmatory_quarantine": true,
+  "three_seeds_overlap_is_not_independent_replication": true,
+  "train_standardization_and_direction_only": true
+}

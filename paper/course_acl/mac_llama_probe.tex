@@ -1,0 +1,22 @@
+\subsection{Retrospective Quantized Llama Probes}
+
+We extracted 29 action-token readouts from Llama 3.2 3B Q4\_K\_M on
+the frozen 360-case subset. Training and development groups determined
+the fits. Every two test partitions shared 60 of 72 cases.
+
+\begin{table}[!htb]
+  \centering\small\setlength{\tabcolsep}{3pt}
+  \begin{tabular}{lrrrr}
+    \toprule
+    Seed & Probe BA & Lexical BA & Both & Stated \\
+    \midrule
+    \input{mac_llama_rows}
+    \bottomrule
+  \end{tabular}
+  \caption{Binary minimal-pair balanced accuracy (BA), both endpoints
+    correct, and three-way stated accuracy. The first two paired
+    estimates have too few components for intervals.}
+\end{table}
+
+The model stated reversible on 84 of 96 unique cases. The gain over
+action text occurred on overlapping tests with just two components.

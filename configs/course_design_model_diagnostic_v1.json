@@ -1,0 +1,25 @@
+{
+  "scope": "three_visible_behavior_designs_development_only",
+  "model_profile": "configs/course_execution_native_mac_cpu_v1.json",
+  "design_receipt": "docs/evidence/course_improvement_v1/i2_behavior_design/verification.json",
+  "adapter_receipt": "docs/evidence/course_improvement_v1/i2_behavior_adapter/verification.json",
+  "case_ids": [
+    "behavior-v1-retire_duplicate-reversible",
+    "behavior-v1-retire_duplicate-irreversible",
+    "behavior-v1-queue_while_preserving_notice-reversible",
+    "behavior-v1-queue_while_preserving_notice-irreversible",
+    "behavior-v1-reduce_pending_aggregate-reversible",
+    "behavior-v1-reduce_pending_aggregate-irreversible"
+  ],
+  "stated_prompt": "existing_three_label_JSON_baseline",
+  "agent_prompt": "existing_strict_tool_JSON_baseline",
+  "max_turns": 15,
+  "agent_tokens": 128,
+  "stated_tokens": 64,
+  "wall_seconds": 2400,
+  "budget_multiplier": 2,
+  "budget_headroom_seconds": 60,
+  "artifact_budget_bytes": 33554432,
+  "maximum_attempts_per_case": 1,
+  "holdout_allowed": false
+}

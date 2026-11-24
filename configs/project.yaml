@@ -1,0 +1,21 @@
+{
+  "protocol_version": "0.1-pilot",
+  "authority": {"assignment": "Project-Details.docx", "master_prompt": "ADNN_Codex_Research_Master_Prompt.md"},
+  "execution": {"phase": 1, "allow_model_download": false, "allow_expensive_runs": false, "allow_real_tools": false, "allow_paid_inference": false, "allow_cleanup": false},
+  "models": [
+    {"id": "Qwen/Qwen2.5-7B-Instruct", "revision": null, "status": "planned"},
+    {"id": "meta-llama/Llama-3.1-8B-Instruct", "revision": null, "status": "license_access_unverified"}
+  ],
+  "model_policy": {"resident_models": 1, "new_family": "instructor_resolution_required", "dtype": "bfloat16", "batch_size": 1, "max_input_tokens": 2048, "max_new_tokens": 128, "do_sample": false, "extraction_use_cache": false},
+  "data": {"minimum_eligible": 2000, "target_eligible": 2400, "sandbox_target": 1440, "scienceworld_target": 960, "minimal_pair_min_fraction": 0.30, "minimal_pair_target_fraction": 0.40, "horizons": [1, 2, 3], "primary_horizon": 3, "labels": ["reversible", "partially_reversible", "irreversible"], "unknown_is_eligible": false},
+  "splits": {"seeds": [1729, 2718, 31415], "primary_seed": 1729, "fractions": [0.6, 0.2, 0.2], "unit": "scenario_template_near_duplicate_component", "unseal_tests_after_all_selection_frozen": true},
+  "annotation": {"shared_sample": 100, "seed": 4242, "required_real_annotators": 2, "status": "not_started"},
+  "behavior": {"final_pairs": 60, "development_pairs": 12, "max_steps": 15, "invalid_turn_consumes_step": true, "consecutive_invalid_abort": 2, "gap": "mean(K_pair - indicator(C_irreversible > C_reversible))"},
+  "probe": {"type": "L2_logistic_regression", "C": [0.01, 0.1, 1.0, 10.0], "max_iter": 5000, "class_weight": "balanced", "pools": ["last_action_token", "mean_action_tokens"], "layers": "embedding_and_all_transformer_layers", "shuffle_seeds": [101,102,103,104,105,106,107,108,109,110], "verb_control_seed": 777},
+  "statistics": {"bootstrap_resamples": 1000, "bootstrap_seed": 9001, "confidence": 0.95, "behavior_test": "exact_two_sided_McNemar", "primary_model_pvalue_correction": "Holm"},
+  "steering": {"enabled_after_core": true, "strengths": [-2,-1,0,1,2], "direction": "train_mean_irreversible_minus_train_mean_reversible_raw_hook_space", "random_direction_seeds": [811,812,813], "random_norm": "match_concept_direction"},
+  "scienceworld": {"revision": null, "jar_sha256": null, "installed_version": null, "pilot_search_node_limit": 10000, "pilot_search_seconds": 60, "replay_verified": false, "complete_state_verified": false},
+  "hpc": {"login_host": "dgx-login01", "partitions": ["cpu_student","gpu_student"], "preferred_gpu_gres": "gpu:a100:1", "ssd_quota_gb_email": 50, "account_expires": "2026-12-31", "project_path": null, "capacity_approved": false},
+  "seeds": {"generation": 20261031, "pilot": 13},
+  "runtime_lock": null
+}

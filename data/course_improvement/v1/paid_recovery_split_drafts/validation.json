@@ -1,0 +1,113 @@
+{
+  "status": "PASS_DRAFT_SANDBOX_SPLIT_FEASIBILITY_ONLY",
+  "I2": "PARTIAL",
+  "original_gate2": "PARTIAL",
+  "seed": 20261119,
+  "pairs_per_design": 45,
+  "new_rows": 360,
+  "new_designs": [
+    "edit_history_with_mail_clock",
+    "history_fee_with_occupied_trash",
+    "remove_dormant_backup_via_history",
+    "paid_restore_to_missing_file"
+  ],
+  "combined_rows": 2400,
+  "validator": {
+    "status": "PASS",
+    "rows": 2400,
+    "eligible": 2400,
+    "unknown": 0,
+    "class_counts": {
+      "reversible": 750,
+      "irreversible": 1035,
+      "partially_reversible": 615
+    },
+    "environment_counts": {
+      "sandbox": 2400
+    },
+    "independent_template_groups": 31,
+    "verified_minimal_pair_members": 2220,
+    "minimal_pair_fraction": 0.925,
+    "scope": "sandbox_pilot_only",
+    "final_dataset_gate_passed": false,
+    "errors": []
+  },
+  "all_horizon_counts": {
+    "1": {
+      "reversible": 540,
+      "irreversible": 1470,
+      "partially_reversible": 390
+    },
+    "2": {
+      "reversible": 615,
+      "irreversible": 1395,
+      "partially_reversible": 390
+    },
+    "3": {
+      "reversible": 750,
+      "irreversible": 1035,
+      "partially_reversible": 615
+    }
+  },
+  "certified_scienceworld_rows": 0,
+  "annotation_responses_received": 0,
+  "new_behavior_families_certified": 0,
+  "new_model_calls": 0,
+  "unlinked_candidate_rows": 510,
+  "unlinked_components": 9,
+  "unlinked_horizon_counts": {
+    "1": {
+      "reversible": 45,
+      "irreversible": 375,
+      "partially_reversible": 90
+    },
+    "2": {
+      "reversible": 45,
+      "irreversible": 375,
+      "partially_reversible": 90
+    },
+    "3": {
+      "reversible": 75,
+      "irreversible": 255,
+      "partially_reversible": 180
+    }
+  },
+  "exposure_definition": "no link in enumerated local history under conservative graph; not proof of external independence",
+  "overlap_test_row_counts": {
+    "1729-2718": 450,
+    "1729-31415": 450,
+    "2718-31415": 450
+  },
+  "overlapping_seeds_are_independent_replications": false,
+  "all_splits_authorize_model_runs": false,
+  "final_split_frozen": false,
+  "scipy_version": "1.15.3",
+  "source_sha256": {
+    "data/pilot/sandbox_pairs.jsonl": "a4e0e246b99db1932c10137c61236af73939d495ddc6a8eb7ac66c61a7f28b16",
+    "data/pilot/v2/sandbox_pairs.jsonl": "45c05cdea014d3db451c2366ab7325cab96d2584b4e46e7ecd6166e3b3ce0075",
+    "data/pilot/v3/sandbox_pairs.jsonl": "7b9dbde8eef4dda77cbb61852a5c49d11d9b3757423c83d76c7ee93ae378f4a2",
+    "data/candidates/v4/sandbox_pairs.jsonl": "6e751d67a73a3d8483436471b284be0c54b9314c6171e169c2c943a0afb8d882",
+    "data/candidates/v5/sandbox_pairs.jsonl": "8be92b2b27e31c487777f0ea286c25adc62fb02534598672545798905c503d00",
+    "data/course_fast_track/v2/sandbox_pool.jsonl": "02bcfc82f7e76c0b894964e04368506c0e0221939ef5be5f7ac7f9dde5cc6afa",
+    "data/course_fast_track/v2/development_tasks.jsonl": "319837a1fa5f61ed238ad036ca61c23ffeceea4b197849a3d687724c24291829",
+    "docs/evidence/course_improvement_v1/i2_development/behavior_readiness.json": "eae0258d72a31da9aa1ba95785a2624cc444d96df707b1b04a9ae613338ae21d",
+    "data/course_improvement/v1/sandbox_expansion/sandbox_additions.jsonl": "720de31bc180c874e7ceace7693355721d755304b8e10349c1df11630a48d68c",
+    "data/course_improvement/v1/sandbox_expansion/validation.json": "704219578482cb4045c8e721184a3fe155d213729fa59b0756ac64aa3b5c27c9",
+    "scripts/build_course_paid_recovery_splits.py": "ebd0718f69027c5a7799641a6c7d57d07450f8876cad42d4a877771c0a6c70f0",
+    "scripts/audit_course_behavior_readiness.py": "2a26dac33c4d7f1ea0643975091f9466b3ccbb848cf9eb63e13d07a386b8728e",
+    "scripts/build_course_sandbox_expansion.py": "5717350839e53cd5e3370f53de99e51e51a3d205bb41a0e77ff3187e01a13f90",
+    "src/data/behavior_readiness.py": "dfe89516571061068038a85e49c571ee21a865069cab1c6c7bce31c26b724705",
+    "src/data/course_draft_split.py": "a7d03f067687ab2919feab4146a63579c6ffbd6b7d6c869ec93433971f408f10",
+    "src/data/course_paid_recovery.py": "422d22f9da9dcd502eb1d1414df5428984fb463d09152e3b08f79d7d0dad4eeb",
+    "src/data/validation.py": "f46a64c7d433e51e33fda3f18f3363d9db5215ff09a2f60d526eacf515990d39",
+    "src/probes/course.py": "8cb5093b7dfe5221486df637a9052236ac58a13ee0864837d1acce242aff1f92",
+    "src/data/splits.py": "74f34fa400e31013c9006e83df4c3e3bfab200b316f0dc36e724df0c47e28a6a"
+  },
+  "output_sha256": {
+    "paid_recovery_additions.jsonl": "d445fa41b02bdf2deba155d7e66b852b115631b4af2f904992733d71d6b4d5ff",
+    "components.json": "d9314dfb91ca3f251faf13ae7bd0292e54d274e896f4b78b03e35b6c892b243f",
+    "draft_seed_1729.json": "5a2fb600deef71f6cef0871182153ce77afb42e79f966938ce4e9484f6d47eed",
+    "draft_seed_2718.json": "84733997aacfa8ab693e5208c657e9f85c7a01eb7c24f00ba4cc0a7283a102ad",
+    "draft_seed_31415.json": "fa218213646ad81c0a877b0e2b95c75d1041b19ebe13acb8634efc1296968e83"
+  }
+}

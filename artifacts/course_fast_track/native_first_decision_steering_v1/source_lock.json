@@ -1,0 +1,82 @@
+{
+  "scope": "exploratory_first_decision_not_full_RQ4",
+  "started_unix": 1794915507.8505542,
+  "execution": {
+    "version": "course-execution-native-mac-cpu-v1",
+    "scope": "reduced_course_study_not_prescribed_BF16_comparison",
+    "selected_at_utc": "2026-11-15T12:06:51.088952+00:00",
+    "selection_receipt": "artifacts/course_fast_track/native_mac_cpu_pilot_v1/native_pilot/pool_decision.json",
+    "selection_receipt_sha256": "c544812504a819ee95d6fd34f84e8beb474f4b43a4ae959cb69381e1e63b6c4f",
+    "checkpoint": "Qwen/Qwen2.5-0.5B-Instruct",
+    "checkpoint_revision": "7ae557604adf67be50417f59c2c2f167def9a775",
+    "device": "cpu",
+    "platform": "Mac_M3_Pro_CPU",
+    "precision": "float32",
+    "attention_backend": "eager",
+    "cpu_threads": 4,
+    "max_context_including_generation": 2048,
+    "agent_max_new_tokens": 128,
+    "stated_max_new_tokens": 64,
+    "sampling": false,
+    "selected_pool": "pool_1800",
+    "selected_dataset": "data/course_fast_track/v2/sandbox_pool.jsonl",
+    "selected_dataset_sha256": "02bcfc82f7e76c0b894964e04368506c0e0221939ef5be5f7ac7f9dde5cc6afa",
+    "split_manifests": {
+      "1729": {
+        "path": "data/course_fast_track/v2/splits/pool_1800/seed_1729.json",
+        "sha256": "c53d34f907838e7368e8f3afc62a3c9f879559ee929b51d72afea4d3924b1fee"
+      },
+      "2718": {
+        "path": "data/course_fast_track/v2/splits/pool_1800/seed_2718.json",
+        "sha256": "dfe78be8b2b162119febf81c51d67a7f3460e817dd470d5f5516eab89268089e"
+      },
+      "31415": {
+        "path": "data/course_fast_track/v2/splits/pool_1800/seed_31415.json",
+        "sha256": "acc874d44bc89cfd40de27ccefdf3a0d4d0fec0689a774fcfc4dd01a13b1eeca"
+      }
+    },
+    "feature_prompt_version": "course_candidate_action_v1",
+    "stated_prompt_version": "course_three_label_json_v1",
+    "stated_system_sha256": "b70dbae3be7923488ad9e2fb9b7574f78b2b3e18aaa5f219a3896af2bb888eb7",
+    "chat_template_sha256": "cd8e9439f0570856fd70470bf8889ebd8b5d1107207f67a5efb46e342330527f",
+    "model_runner_source_sha256": "9bf03f9adf01578279dbdea9f27901d36e8362162872b366a174e55891c7b75e",
+    "pilot_settings": "configs/course_native_pilot_mac_cpu_v1.json",
+    "checkpoint_receipt": "artifacts/course_fast_track/native_mac_cpu_pilot_v1/checkpoint_stage.json",
+    "agent_system_prompt": "data/course_fast_track/v2/agent_system_prompt.txt",
+    "supersedes_for_current_core_runs": "configs/course_execution_native_cpu_v1.json",
+    "original_course_config_remains_historical_plan": true,
+    "course_holdout_outcomes_at_selection": 0,
+    "forbid_selection_using_accuracy_or_goal_success": true,
+    "native_quantized_conditions_must_remain_separate": true,
+    "MPS_status": "STOPPED_AFTER_TWO_GUARD_FAILURES_NO_FURTHER_AUTOMATIC_ATTEMPTS",
+    "allow_full_RQ4_sweep_now": false,
+    "require_measured_bounded_agent_and_steering_plan": true
+  },
+  "assigned_ids": [
+    "pilot-delete-0-on",
+    "pilot-delete-0-off",
+    "pilot-mail-0-on",
+    "pilot-mail-0-off",
+    "pilot-transfer-0-on",
+    "pilot-transfer-0-off"
+  ],
+  "full_15_turn_RQ4": "NOT_RUN",
+  "human_judgments_created": 0,
+  "cells": [],
+  "timing_requests": [],
+  "zero_validations": [],
+  "source_sha256": {
+    "scripts/run_course_first_decision_steering.py": "e24ec5c1c62a70ae583d2aa696be97fac3a93300c6c002a063cb1faa86f0a9e5",
+    "docs/COURSE_FIRST_DECISION_AMENDMENT.md": "ed2dbf526f5ab919ce8009a91602c3bc121f6af5e847732526930e97a55e34d7",
+    "src/probes/steering.py": "1a8f42598a4a22992a53b5ab71fa9ee6934907308319a54c140dff9e265c17ff",
+    "src/models/course_native.py": "9bf03f9adf01578279dbdea9f27901d36e8362162872b366a174e55891c7b75e",
+    "scripts/benchmark_course_steering.py": "b9abcd27dc034cc04e4b72efcf65d8db932d9f866e34ace6b990fc901dae8286"
+  },
+  "packages": {
+    "torch": "2.5.1",
+    "transformers": "4.45.2",
+    "numpy": "1.26.4",
+    "tokenizers": "0.20.3",
+    "safetensors": "0.4.5"
+  }
+}

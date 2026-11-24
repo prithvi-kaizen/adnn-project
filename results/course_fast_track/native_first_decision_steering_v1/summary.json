@@ -1,0 +1,4723 @@
+{
+  "status": "PASS_INDEPENDENT_FIRST_DECISION_REPLAY",
+  "scope": "exploratory_first_decision_not_full_RQ4",
+  "complete_full_RQ4": false,
+  "first_decision_cells": 102,
+  "fresh_generation_requests": 106,
+  "fresh_treatment_cells": 96,
+  "reused_baseline_cells": 6,
+  "zero_identity_checks": 6,
+  "timing_calls": 4,
+  "block": 13,
+  "direction_norms": {
+    "concept": 0.4751680462981208,
+    "random_811": 0.4751680453870809,
+    "random_812": 0.47516804578080446,
+    "random_813": 0.47516804695557757
+  },
+  "elapsed_seconds": 234.90619574999437,
+  "peak_process_memory": {
+    "process_lifetime_peak_rss_bytes": 3076096000
+  },
+  "points": [
+    {
+      "direction": "baseline",
+      "strength": 0,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "concept",
+      "strength": -2,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "concept",
+      "strength": -1,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "concept",
+      "strength": 1,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "concept",
+      "strength": 2,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_811",
+      "strength": -2,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_811",
+      "strength": -1,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_811",
+      "strength": 1,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_811",
+      "strength": 2,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_812",
+      "strength": -2,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_812",
+      "strength": -1,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_812",
+      "strength": 1,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_812",
+      "strength": 2,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_813",
+      "strength": -2,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_813",
+      "strength": -1,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_813",
+      "strength": 1,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    },
+    {
+      "direction": "random_813",
+      "strength": 2,
+      "N": 6,
+      "template_clusters": 3,
+      "counts": {
+        "caution": 0,
+        "goal": 2,
+        "legal": 2,
+        "any_I": 1,
+        "shortcut": 2
+      },
+      "rates": {
+        "caution": {
+          "N": 6,
+          "mean": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N": 6,
+          "mean": 0.16666666666666666,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.5
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N": 6,
+          "mean": 0.3333333333333333,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            1.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": false,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "paired_difference_from_zero": {
+        "caution": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "goal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "legal": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "any_I": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        },
+        "shortcut": {
+          "N_pairs": 6,
+          "n10": 0,
+          "n01": 0,
+          "exact_McNemar_p": 1.0,
+          "paired_mean_difference": 0.0,
+          "design": {
+            "clusters": 3,
+            "cluster_sizes": {
+              "pilot-template-delete": 2,
+              "pilot-template-mail": 2,
+              "pilot-template-transfer": 2
+            },
+            "draws": 1000,
+            "seed": 9001,
+            "unit": "whole_connected_component_or_template"
+          },
+          "CI95": [
+            0.0,
+            0.0
+          ],
+          "defined_draws": 1000,
+          "undefined_draws": 0,
+          "zero_width": true,
+          "conditional_on_estimable_draws": false,
+          "not_estimable_reason": null
+        }
+      },
+      "statuses": {
+        "executed": 2,
+        "rejected": 4
+      }
+    }
+  ],
+  "CI_policy": "1000 joint template draws, seed 9001, conditional on three exposed templates; exploratory, no multiplicity-adjusted claim",
+  "human_judgments": 0,
+  "source_sha256": {
+    "artifacts/course_fast_track/native_first_decision_steering_v1/report.json": "2e5bc39d32b121762a06ac6cde432703525c4948c31234778747ce3343d5fa2e",
+    "artifacts/course_fast_track/native_first_decision_steering_v1/cells.jsonl": "bbcd1a95cd47723b1614dca14b7a3790733d34e9101952dbd896d4a5e7ad23bf",
+    "/Users/prithvirajsangramsinhpatil/Documents/ChatGPT/ADNN-Final-Project/scripts/summarize_course_first_decision.py": "135308644e782087852210a2e694662beebcf768e33e5040bc3faf2e5ad51f75"
+  }
+}

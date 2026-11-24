@@ -1,0 +1,34 @@
+# Credentials and private machine inventories
+.env
+.env.*
+*.pem
+*.key
+docs/evidence/private/
+data/annotation/**/private/
+# Regenerable environments and caches
+.venv/
+.venv-research/
+venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.cache/
+# Large model and activation payloads
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.pth
+artifacts/activations/
+data/raw/bytesized32/
+# Keep source and small audit manifests; do not hide all results.
+.DS_Store
+paper/**/*.aux
+paper/**/*.log
+paper/**/*.out
+paper/**/*.bbl
+paper/**/*.blg
+# Artifact Tool temporary embedded-chart staging; final workbooks are in PPTX.
+.chart-data-*/
+# Local delivery archive; its source snapshot, manifest and receipt are retained.
+output/course_fast_track/*.zip

@@ -1,0 +1,730 @@
+{
+  "annotation_forms": {
+    "all_judgments_blank": true,
+    "different_presentation_orders": true,
+    "final_sample_certified": false,
+    "n": 100,
+    "real_annotations_received": 0,
+    "same_content_by_id": true,
+    "status": "PASS"
+  },
+  "behavior": {
+    "RI_gap_pair_ids": [
+      "pilot-delete-0",
+      "pilot-delete-1",
+      "pilot-delete-2",
+      "pilot-mail-0",
+      "pilot-mail-1",
+      "pilot-mail-2",
+      "pilot-transfer-0",
+      "pilot-transfer-1",
+      "pilot-transfer-2"
+    ],
+    "mechanism_templates": 4,
+    "no_certified_recoverable_shortcut_goal_witness_ids": [
+      "pilot-mail-0-off",
+      "pilot-transfer-0-off",
+      "pilot-mail-1-off",
+      "pilot-transfer-1-off",
+      "pilot-mail-2-off",
+      "pilot-transfer-2-off"
+    ],
+    "non_RI_excluded_pair_ids": [
+      "pilot-edit-0",
+      "pilot-edit-1",
+      "pilot-edit-2"
+    ],
+    "pair_audit": [
+      {
+        "RI_gap_eligible": true,
+        "changed_property": "recycle_enabled",
+        "labels": [
+          "reversible",
+          "irreversible"
+        ],
+        "pair_id": "pilot-delete-0"
+      },
+      {
+        "RI_gap_eligible": true,
+        "changed_property": "recycle_enabled",
+        "labels": [
+          "reversible",
+          "irreversible"
+        ],
+        "pair_id": "pilot-delete-1"
+      },
+      {
+        "RI_gap_eligible": true,
+        "changed_property": "recycle_enabled",
+        "labels": [
+          "reversible",
+          "irreversible"
+        ],
+        "pair_id": "pilot-delete-2"
+      },
+      {
+        "RI_gap_eligible": false,
+        "changed_property": "backups",
+        "labels": [
+          "reversible",
+          "partially_reversible"
+        ],
+        "pair_id": "pilot-edit-0"
+      },
+      {
+        "RI_gap_eligible": false,
+        "changed_property": "backups",
+        "labels": [
+          "reversible",
+          "partially_reversible"
+        ],
+        "pair_id": "pilot-edit-1"
+      },
+      {
+        "RI_gap_eligible": false,
+        "changed_property": "backups",
+        "labels": [
+          "reversible",
+          "partially_reversible"
+        ],
+        "pair_id": "pilot-edit-2"
+      },
+      {
+        "RI_gap_eligible": true,
+        "changed_property": "undo_window_steps",
+        "labels": [
+          "reversible",
+          "irreversible"
+        ],
+        "pair_id": "pilot-mail-0"
+      },
+      {
+        "RI_gap_eligible": true,
+        "changed_property": "undo_window_steps",
+        "labels": [
+          "reversible",
+          "irreversible"
+        ],
+        "pair_id": "pilot-mail-1"
+      },
+      {
+        "RI_gap_eligible": true,
+        "changed_property": "undo_window_steps",
+        "labels": [
+          "reversible",
+          "irreversible"
+        ],
+        "pair_id": "pilot-mail-2"
+      },
+      {
+        "RI_gap_eligible": true,
+        "changed_property": "rollback_enabled",
+        "labels": [
+          "reversible",
+          "irreversible"
+        ],
+        "pair_id": "pilot-transfer-0"
+      },
+      {
+        "RI_gap_eligible": true,
+        "changed_property": "rollback_enabled",
+        "labels": [
+          "reversible",
+          "irreversible"
+        ],
+        "pair_id": "pilot-transfer-1"
+      },
+      {
+        "RI_gap_eligible": true,
+        "changed_property": "rollback_enabled",
+        "labels": [
+          "reversible",
+          "irreversible"
+        ],
+        "pair_id": "pilot-transfer-2"
+      }
+    ],
+    "paired_instances": 12,
+    "probe_pool_structural_overlap_versions": 12,
+    "recoverable_shortcut_goal_witness_versions": 18,
+    "satisfies_60_distinct_behavior_families": false,
+    "scripted_witnesses_are_model_results": false,
+    "status": "PASS_for_development_diagnostic_only",
+    "versions": 24
+  },
+  "by_horizon": {
+    "1": {
+      "irreversible": 1095,
+      "partially_reversible": 255,
+      "reversible": 450
+    },
+    "2": {
+      "irreversible": 1020,
+      "partially_reversible": 255,
+      "reversible": 525
+    },
+    "3": {
+      "irreversible": 780,
+      "partially_reversible": 390,
+      "reversible": 630
+    }
+  },
+  "candidate_source": "data/candidates/v5/sandbox_pairs.jsonl",
+  "candidate_source_sha256": "8be92b2b27e31c487777f0ea286c25adc62fb02534598672545798905c503d00",
+  "certified_physical_labels": 0,
+  "course_gate_C2": "PASS_REDUCED_AUTOMATIC_SANDBOX_SCOPE",
+  "generator": "scripts/freeze_course_phase2.py",
+  "human_agreement": "NOT_PERFORMED",
+  "human_judgments": 0,
+  "model_calls": 0,
+  "new_ScienceWorld_runtime_calls": 0,
+  "original_Gate2": "PARTIAL",
+  "physical_checkpoint": {
+    "engine_adversarial_fixtures": 6,
+    "guarded_searches": 9,
+    "instructor_approval": "PENDING",
+    "methodology_amendment_applied": false,
+    "replay_prefix_settings": 9,
+    "search_unknown_counts": {
+      "replay_execution_not_certified": 3,
+      "search_censored": 4,
+      "search_frontier_censored": 2
+    }
+  },
+  "physical_status": "UNKNOWN_EXCLUDED",
+  "platform": "macOS-27.2-arm64-arm-64bit",
+  "provenance_scope": "single_machine_fresh_regeneration_prior_cross_machine_receipts_only",
+  "python": "3.12.14 (main, Aug 25 2026, 13:50:33) [Clang 22.1.3 ]",
+  "recorded_at_utc": "2026-11-15T08:10:56.722946+00:00",
+  "revalidation": {
+    "class_counts": {
+      "irreversible": 780,
+      "partially_reversible": 390,
+      "reversible": 630
+    },
+    "eligible": 1800,
+    "environment_counts": {
+      "sandbox": 1800
+    },
+    "errors": [],
+    "final_dataset_gate_passed": false,
+    "independent_template_groups": 19,
+    "minimal_pair_fraction": 0.9,
+    "rows": 1800,
+    "scope": "sandbox_pilot_only",
+    "status": "PASS",
+    "unknown": 0,
+    "verified_minimal_pair_members": 1620
+  },
+  "seeded_full_regeneration": "PASS_1800_records_all_fields",
+  "simulator_source_sha256": "5d6ea6405e59be0eda7ab74e5e7d2170919d328c28b8473b1bd15c3f1548c152",
+  "source_commit": "40871154897ff202a75ff4093964e32e4377f01f",
+  "source_sha256": {
+    "configs/course_fast_track.json": "5aa4cc9ee68da0c455f85acd52cf7da6930d7cb6bf1cfbebbcecda93cdda9511",
+    "scripts/freeze_course_phase2.py": "bcf1004e5f4e6383d5aa34684f80986f4636d47aa2380df227e827245f885c80",
+    "src/agent/loop.py": "91863f16d62f40d5e0c945109722c1eafbef2a020b27d36ae12d25bda5e9ba07",
+    "src/data/candidates.py": "b3ff78ba4b94d32b22751e3a2accddbf3b7a5e8d370ff89db2326e3980781f34",
+    "src/data/candidates_v5.py": "3ef45fc5cd5d4a6e9d5b8894e784d10fc8fce15be9b08a997f7c03484b846b46",
+    "src/data/course.py": "9fe7ed322317f224b174b8c19df66a949f157e33313516f0d4adefa9fd5bc362",
+    "src/data/splits.py": "74f34fa400e31013c9006e83df4c3e3bfab200b316f0dc36e724df0c47e28a6a",
+    "src/data/validation.py": "f46a64c7d433e51e33fda3f18f3363d9db5215ff09a2f60d526eacf515990d39",
+    "tests/test_course_data.py": "44ff6602be3d49bad8eb1501a670d1784e68b7c8ba2eba5f5cbd8074c27cf04b"
+  },
+  "splits": {
+    "pool_1800": {
+      "1729": {
+        "component_count": 17,
+        "counts": {
+          "development": 420,
+          "test": 360,
+          "train": 1020
+        },
+        "fractions": {
+          "development": 0.23333333333333334,
+          "test": 0.2,
+          "train": 0.5666666666666667
+        },
+        "summary": {
+          "development": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 180,
+                "partially_reversible": 120,
+                "reversible": 120
+              },
+              "2": {
+                "irreversible": 180,
+                "partially_reversible": 120,
+                "reversible": 120
+              },
+              "3": {
+                "irreversible": 180,
+                "partially_reversible": 120,
+                "reversible": 120
+              }
+            },
+            "components": 3,
+            "rows": 420
+          },
+          "test": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 180,
+                "partially_reversible": 15,
+                "reversible": 165
+              },
+              "2": {
+                "irreversible": 180,
+                "partially_reversible": 15,
+                "reversible": 165
+              },
+              "3": {
+                "irreversible": 150,
+                "partially_reversible": 30,
+                "reversible": 180
+              }
+            },
+            "components": 6,
+            "rows": 360
+          },
+          "train": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 735,
+                "partially_reversible": 120,
+                "reversible": 165
+              },
+              "2": {
+                "irreversible": 660,
+                "partially_reversible": 120,
+                "reversible": 240
+              },
+              "3": {
+                "irreversible": 450,
+                "partially_reversible": 240,
+                "reversible": 330
+              }
+            },
+            "components": 8,
+            "rows": 1020
+          }
+        }
+      },
+      "2718": {
+        "component_count": 17,
+        "counts": {
+          "development": 420,
+          "test": 360,
+          "train": 1020
+        },
+        "fractions": {
+          "development": 0.23333333333333334,
+          "test": 0.2,
+          "train": 0.5666666666666667
+        },
+        "summary": {
+          "development": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 180,
+                "partially_reversible": 120,
+                "reversible": 120
+              },
+              "2": {
+                "irreversible": 180,
+                "partially_reversible": 120,
+                "reversible": 120
+              },
+              "3": {
+                "irreversible": 165,
+                "partially_reversible": 120,
+                "reversible": 135
+              }
+            },
+            "components": 3,
+            "rows": 420
+          },
+          "test": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 180,
+                "partially_reversible": 15,
+                "reversible": 165
+              },
+              "2": {
+                "irreversible": 180,
+                "partially_reversible": 15,
+                "reversible": 165
+              },
+              "3": {
+                "irreversible": 150,
+                "partially_reversible": 30,
+                "reversible": 180
+              }
+            },
+            "components": 6,
+            "rows": 360
+          },
+          "train": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 735,
+                "partially_reversible": 120,
+                "reversible": 165
+              },
+              "2": {
+                "irreversible": 660,
+                "partially_reversible": 120,
+                "reversible": 240
+              },
+              "3": {
+                "irreversible": 465,
+                "partially_reversible": 240,
+                "reversible": 315
+              }
+            },
+            "components": 8,
+            "rows": 1020
+          }
+        }
+      },
+      "31415": {
+        "component_count": 17,
+        "counts": {
+          "development": 420,
+          "test": 360,
+          "train": 1020
+        },
+        "fractions": {
+          "development": 0.23333333333333334,
+          "test": 0.2,
+          "train": 0.5666666666666667
+        },
+        "summary": {
+          "development": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 135,
+                "partially_reversible": 120,
+                "reversible": 165
+              },
+              "2": {
+                "irreversible": 135,
+                "partially_reversible": 120,
+                "reversible": 165
+              },
+              "3": {
+                "irreversible": 135,
+                "partially_reversible": 120,
+                "reversible": 165
+              }
+            },
+            "components": 3,
+            "rows": 420
+          },
+          "test": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 210,
+                "partially_reversible": 15,
+                "reversible": 135
+              },
+              "2": {
+                "irreversible": 195,
+                "partially_reversible": 15,
+                "reversible": 150
+              },
+              "3": {
+                "irreversible": 150,
+                "partially_reversible": 30,
+                "reversible": 180
+              }
+            },
+            "components": 5,
+            "rows": 360
+          },
+          "train": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 750,
+                "partially_reversible": 120,
+                "reversible": 150
+              },
+              "2": {
+                "irreversible": 690,
+                "partially_reversible": 120,
+                "reversible": 210
+              },
+              "3": {
+                "irreversible": 495,
+                "partially_reversible": 240,
+                "reversible": 285
+              }
+            },
+            "components": 9,
+            "rows": 1020
+          }
+        }
+      }
+    },
+    "subset_360": {
+      "1729": {
+        "component_count": 17,
+        "counts": {
+          "development": 84,
+          "test": 72,
+          "train": 204
+        },
+        "fractions": {
+          "development": 0.23333333333333334,
+          "test": 0.2,
+          "train": 0.5666666666666667
+        },
+        "summary": {
+          "development": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 36,
+                "partially_reversible": 24,
+                "reversible": 24
+              },
+              "2": {
+                "irreversible": 36,
+                "partially_reversible": 24,
+                "reversible": 24
+              },
+              "3": {
+                "irreversible": 36,
+                "partially_reversible": 24,
+                "reversible": 24
+              }
+            },
+            "components": 3,
+            "rows": 84
+          },
+          "test": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 36,
+                "partially_reversible": 3,
+                "reversible": 33
+              },
+              "2": {
+                "irreversible": 36,
+                "partially_reversible": 3,
+                "reversible": 33
+              },
+              "3": {
+                "irreversible": 30,
+                "partially_reversible": 6,
+                "reversible": 36
+              }
+            },
+            "components": 6,
+            "rows": 72
+          },
+          "train": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 147,
+                "partially_reversible": 24,
+                "reversible": 33
+              },
+              "2": {
+                "irreversible": 132,
+                "partially_reversible": 24,
+                "reversible": 48
+              },
+              "3": {
+                "irreversible": 90,
+                "partially_reversible": 48,
+                "reversible": 66
+              }
+            },
+            "components": 8,
+            "rows": 204
+          }
+        }
+      },
+      "2718": {
+        "component_count": 17,
+        "counts": {
+          "development": 84,
+          "test": 72,
+          "train": 204
+        },
+        "fractions": {
+          "development": 0.23333333333333334,
+          "test": 0.2,
+          "train": 0.5666666666666667
+        },
+        "summary": {
+          "development": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 36,
+                "partially_reversible": 24,
+                "reversible": 24
+              },
+              "2": {
+                "irreversible": 36,
+                "partially_reversible": 24,
+                "reversible": 24
+              },
+              "3": {
+                "irreversible": 33,
+                "partially_reversible": 24,
+                "reversible": 27
+              }
+            },
+            "components": 3,
+            "rows": 84
+          },
+          "test": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 36,
+                "partially_reversible": 3,
+                "reversible": 33
+              },
+              "2": {
+                "irreversible": 36,
+                "partially_reversible": 3,
+                "reversible": 33
+              },
+              "3": {
+                "irreversible": 30,
+                "partially_reversible": 6,
+                "reversible": 36
+              }
+            },
+            "components": 6,
+            "rows": 72
+          },
+          "train": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 147,
+                "partially_reversible": 24,
+                "reversible": 33
+              },
+              "2": {
+                "irreversible": 132,
+                "partially_reversible": 24,
+                "reversible": 48
+              },
+              "3": {
+                "irreversible": 93,
+                "partially_reversible": 48,
+                "reversible": 63
+              }
+            },
+            "components": 8,
+            "rows": 204
+          }
+        }
+      },
+      "31415": {
+        "component_count": 17,
+        "counts": {
+          "development": 84,
+          "test": 72,
+          "train": 204
+        },
+        "fractions": {
+          "development": 0.23333333333333334,
+          "test": 0.2,
+          "train": 0.5666666666666667
+        },
+        "summary": {
+          "development": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 27,
+                "partially_reversible": 24,
+                "reversible": 33
+              },
+              "2": {
+                "irreversible": 27,
+                "partially_reversible": 24,
+                "reversible": 33
+              },
+              "3": {
+                "irreversible": 27,
+                "partially_reversible": 24,
+                "reversible": 33
+              }
+            },
+            "components": 3,
+            "rows": 84
+          },
+          "test": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 42,
+                "partially_reversible": 3,
+                "reversible": 27
+              },
+              "2": {
+                "irreversible": 39,
+                "partially_reversible": 3,
+                "reversible": 30
+              },
+              "3": {
+                "irreversible": 30,
+                "partially_reversible": 6,
+                "reversible": 36
+              }
+            },
+            "components": 5,
+            "rows": 72
+          },
+          "train": {
+            "by_horizon": {
+              "1": {
+                "irreversible": 150,
+                "partially_reversible": 24,
+                "reversible": 30
+              },
+              "2": {
+                "irreversible": 138,
+                "partially_reversible": 24,
+                "reversible": 42
+              },
+              "3": {
+                "irreversible": 99,
+                "partially_reversible": 48,
+                "reversible": 57
+              }
+            },
+            "components": 9,
+            "rows": 204
+          }
+        }
+      }
+    }
+  },
+  "subset_revalidation": {
+    "class_counts": {
+      "irreversible": 156,
+      "partially_reversible": 78,
+      "reversible": 126
+    },
+    "eligible": 360,
+    "environment_counts": {
+      "sandbox": 360
+    },
+    "errors": [],
+    "final_dataset_gate_passed": false,
+    "independent_template_groups": 19,
+    "minimal_pair_fraction": 0.9,
+    "rows": 360,
+    "scope": "sandbox_pilot_only",
+    "status": "PASS",
+    "unknown": 0,
+    "verified_minimal_pair_members": 324
+  },
+  "subset_selection_uses_model_outcomes": false,
+  "weight_downloads": 0,
+  "worktree_dirty_at_generation": true
+}

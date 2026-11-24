@@ -1,0 +1,32 @@
+{
+  "scope": "cached_ollama_llama_matched_development_followup",
+  "endpoint": "http://127.0.0.1:11434",
+  "ollama_version": "0.40.5",
+  "models": [
+    {
+      "tag": "llama3.2:3b-instruct-q4_K_M",
+      "digest": "a80c4f17acd55265feec403c7aef86be0c25983ab279d83f3bcd3abbcb5b8b72",
+      "family": "Llama"
+    }
+  ],
+  "options": {
+    "temperature": 0,
+    "top_k": 1,
+    "top_p": 1,
+    "repeat_penalty": 1,
+    "seed": 1729,
+    "num_ctx": 8192,
+    "num_thread": 4
+  },
+  "stated_token_cap": 64,
+  "agent_token_cap": 128,
+  "agent_step_cap": 15,
+  "request_seconds": 45,
+  "per_model_seconds": 180,
+  "min_free_memory_percent": 10,
+  "max_added_swap_bytes": 536870912,
+  "logprob_probe": {"prompt": "Reply with just the word ready.", "num_predict": 12},
+  "holdout_access": false,
+  "weight_downloads": false,
+  "fixtures": ["pilot-edit-0", "pilot-mail-0", "pilot-transfer-0"]
+}

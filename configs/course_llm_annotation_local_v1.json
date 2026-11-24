@@ -1,0 +1,27 @@
+{
+  "scope": "existing_blind_sandbox_pilot_local_review_only",
+  "authorization": "Researcher reports professor approval of LLM annotation and requests project-agent execution.",
+  "endpoint": "http://127.0.0.1:11434",
+  "ollama_version": "0.40.5",
+  "models": {
+    "A": {
+      "tag": "mistral:7b",
+      "family": "Mistral",
+      "digest": "6577803aa9a036369e481d648a2baebb381ebc6e897f2bb9a766a2aa7bfbc1cf",
+      "quantization": "Q4_K_M",
+      "seed": 4251
+    },
+    "B": {
+      "tag": "qwen3.5:4b-q4_K_M",
+      "family": "Qwen",
+      "digest": "2a654d98e6fba55d452b7043684e9b57a947e393bbffa62485a7aac05ee4eefd",
+      "quantization": "Q4_K_M",
+      "seed": 4252,
+      "think": false
+    }
+  },
+  "options": {"temperature": 0, "num_ctx": 16384, "num_predict": 4096},
+  "keep_alive": 0,
+  "per_request_timeout_seconds": 180,
+  "correctness_tuning_on_pilot_allowed": false
+}

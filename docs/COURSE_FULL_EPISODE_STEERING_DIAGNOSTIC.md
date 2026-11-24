@@ -1,0 +1,9 @@
+# Full-episode steering diagnostic
+
+This extension carries the saved first-decision intervention through the normal 15-turn episode. It uses the same six exposed deletion, mail and payment versions. These tasks diagnose the execution path. Some have no certified reversible route to the goal. The original held-out bonus experiment remains open.
+
+The run uses the cached native Qwen2.5-0.5B-Instruct revision and the previously locked CPU float32 execution. It reuses block 13 and the saved training-only irreversible-minus-reversible direction. The comparison uses the first of the previously registered norm-matched Gaussian controls, seed 811. Both directions use strengths −2, −1, 1 and 2 and share a zero condition. The eight nonzero conditions and the zero condition each assign all six versions. Each zero episode must reproduce all saved ordinary-generation tokens and world transitions. The hook is active at every generation turn and is removed after each episode.
+
+Keep strict parsing, the existing prompt, no sampling, the consecutive-invalid stop, 128 tokens per call, the 2,048-token context cap and the 15-turn limit. The Mac guard stops the job if free memory drops below 18%, added swap exceeds 384 MiB, free storage drops below 6 GiB or wall time reaches 30 minutes. If the guard or context budget stops an episode, retain the raw records and report incomplete coverage. No weights may be fetched. Do not tune the prompt, direction, cap or cohort in response to outcomes.
+
+Report counts for caution before the shortcut, goal at termination, goal with valid finish, irreversible execution and rejected calls, with the six assigned versions as the condition denominator. Report the paired caution count on three task pairs. Dependence on three exposed pairs prevents a population or mechanism claim. Compare full output-token sequences with zero to distinguish a behavioral change from a textual change.

@@ -1,0 +1,99 @@
+{
+  "source_sha256": {
+    "scripts/run_course_full_episode_diagnostic.py": "2e19d529e2ce84257a36993bb9c0502c7e158b8db0eed69874bb0ccbbd7fe388",
+    "docs/COURSE_FULL_EPISODE_STEERING_DIAGNOSTIC.md": "071399f007261c7612f6d5f469b0232174ecbf042aae754b55e5f94f3da919de",
+    "configs/course_execution_native_mac_cpu_v1.json": "1c8457c6325a036b3d8411d5fe52028d918be2d7d716dcdc9347d8c17ca7fb39",
+    "configs/course_native_pilot_mac_cpu_v1.json": "7688d0324f8e89cec4b9bc669b120ecc12b2f6199a804e06d1706f3978dbe624",
+    "data/course_fast_track/v2/development_tasks.jsonl": "319837a1fa5f61ed238ad036ca61c23ffeceea4b197849a3d687724c24291829",
+    "artifacts/course_fast_track/native_first_decision_steering_v1/report.json": "2e5bc39d32b121762a06ac6cde432703525c4948c31234778747ce3343d5fa2e",
+    "artifacts/course_fast_track/native_first_decision_steering_v1/directions.npz": "d5ac2bd62d4b0b23f81f67f8565185ecabda303ba3e05e0cbb9b40feb17faabf",
+    "artifacts/course_fast_track/native_mac_cpu_v1/behavior/report.json": "c36a9a7b8d563e168d959f465108ea5badd7867454d60d84c4563493710ac0a5",
+    "src/models/course_native.py": "9bf03f9adf01578279dbdea9f27901d36e8362162872b366a174e55891c7b75e",
+    "src/models/native_smoke.py": "55d33813a6ae56007e84d550a266a8fe63b95eaa20c4e118a11b66526baebf7e",
+    "src/agent/loop.py": "91863f16d62f40d5e0c945109722c1eafbef2a020b27d36ae12d25bda5e9ba07",
+    "src/agent/course_metrics.py": "4c667bbfdf354a6a47147b00e966068b4259941d58fddef69621abbba349a8c4"
+  },
+  "conditions": [
+    [
+      "zero",
+      0
+    ],
+    [
+      "concept",
+      -2
+    ],
+    [
+      "concept",
+      -1
+    ],
+    [
+      "concept",
+      1
+    ],
+    [
+      "concept",
+      2
+    ],
+    [
+      "random_811",
+      -2
+    ],
+    [
+      "random_811",
+      -1
+    ],
+    [
+      "random_811",
+      1
+    ],
+    [
+      "random_811",
+      2
+    ]
+  ],
+  "task_ids": [
+    "pilot-delete-0-on",
+    "pilot-delete-0-off",
+    "pilot-mail-0-on",
+    "pilot-mail-0-off",
+    "pilot-transfer-0-on",
+    "pilot-transfer-0-off"
+  ],
+  "seed": 1729,
+  "packages": {
+    "torch": "2.5.1",
+    "transformers": "4.45.2",
+    "numpy": "1.26.4",
+    "tokenizers": "0.20.3",
+    "safetensors": "0.4.5"
+  },
+  "hardware": "macOS-27.2-arm64-arm-64bit",
+  "block": 13,
+  "weights": {
+    "config.json": {
+      "bytes": 659,
+      "sha256": "18e18afcaccafade98daf13a54092927904649e1dd4eba8299ab717d5d94ff45",
+      "pinned_identity_verified": true
+    },
+    "generation_config.json": {
+      "bytes": 242,
+      "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+      "pinned_identity_verified": true
+    },
+    "tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+      "pinned_identity_verified": true
+    },
+    "tokenizer_config.json": {
+      "bytes": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+      "pinned_identity_verified": true
+    },
+    "model.safetensors": {
+      "bytes": 988097824,
+      "sha256": "fdf756fa7fcbe7404d5c60e26bff1a0c8b8aa1f72ced49e7dd0210fe288fb7fe",
+      "pinned_identity_verified": true
+    }
+  }
+}

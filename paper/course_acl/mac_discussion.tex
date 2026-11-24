@@ -1,0 +1,33 @@
+\section{Discussion}
+
+The selected probe gained no balanced accuracy over the action-only
+baseline on matched states at the registered threshold. Some continuous
+scores shifted within pairs. The result therefore concerns the selected
+readout and decision rule.
+
+Correct labels and cautious actions separate at the task level. In the
+cached runs, confirmation often preceded an irreversible action. Both models
+had a zero aggregate gap, although Llama's correct judgment and increased
+caution occurred on different pairs. The code and replay package preserves
+the individual outcomes.
+
+\section{Conclusion}
+
+Matched state changes and replayed tool traces reveal errors that aggregate
+accuracy and goal counts can conceal. The frozen sandbox protocol provides
+a basis for testing those errors across checkpoints and environments.
+
+\section*{Limitations}
+
+The probe uses one native float32 checkpoint. The two quantized models
+have separate development traces without probe features. The probe splits
+overlap, and several estimates have few independent components. The steering
+test covers the first decision. The two-family BF16 study, certified
+ScienceWorld data, and the 60-family behavior evaluation remain open. The
+instructor-approved model review remains pending. Neither cached reviewer
+qualified, and the blind packet stayed unopened.
+
+\section*{Use of AI Assistance}
+
+Codex assisted with code, analysis, writing, and typesetting. Individual
+human contribution and reading attestations remain pending.

@@ -1,0 +1,84 @@
+{
+  "scope": "private_executable_archived_transition_diagnostic_three_games",
+  "upstream_revision": "0d5a741146c9d156f92930d5254c0d5e16facc0d",
+  "archive_sha256": "c9f7adaa7c505bffa06ea60d9b8efc4206ce1c4bf8c71a374b21d24360a43137",
+  "game_source_sha256": {
+    "scale-weigh": "2dce1cdb50834ed4c71f71ae0e2e5e4dd59f02a434f80231c582e380ea39c157",
+    "balance-scale-weigh": "5934841a36aa070fdba4f603263c33c6674ff7969257a5e2df3ad7ac0ed17b73",
+    "balance-scale-heaviest": "17ebfa749f9e897aa11a6964ce929762c1a0a123a4db65b3c7241e4204b02bcd"
+  },
+  "horizon": 3,
+  "games": {
+    "scale-weigh": {
+      "counts": {
+        "archived_rows": 59,
+        "exact_archived_transition_replay": 59,
+        "irreversible": 18,
+        "out_of_scope": 18,
+        "reason_exhausted_superset": 8,
+        "reason_monotonic_game_over": 10,
+        "recovery_branch_engine_errors": 0,
+        "reversible": 3,
+        "reversible_witness_length_1": 3,
+        "unchanged": 20
+      },
+      "audit_record_sha256": "038e6102c693706f3ecd854ea0208012529cdc190d3eb03636c8193dc75d5f43",
+      "by_verb_and_label": {
+        "answer:irreversible": 10,
+        "put:reversible": 1,
+        "take:irreversible": 8,
+        "take:reversible": 2
+      }
+    },
+    "balance-scale-weigh": {
+      "counts": {
+        "archived_rows": 70,
+        "exact_archived_transition_replay": 70,
+        "irreversible": 10,
+        "out_of_scope": 20,
+        "reason_engine_error_in_search": 7,
+        "reason_monotonic_game_over": 10,
+        "recovery_branch_engine_errors": 108,
+        "reversible": 14,
+        "reversible_witness_length_1": 10,
+        "reversible_witness_length_2": 1,
+        "reversible_witness_length_3": 3,
+        "unchanged": 19,
+        "unknown": 7
+      },
+      "audit_record_sha256": "84c24fdb364933fce27c2c4b53b4566d374331db30eb14c07210393cdc7d8470",
+      "by_verb_and_label": {
+        "answer:irreversible": 10,
+        "put:reversible": 10,
+        "take:reversible": 4,
+        "take:unknown": 7
+      }
+    },
+    "balance-scale-heaviest": {
+      "counts": {
+        "archived_rows": 60,
+        "exact_archived_transition_replay": 60,
+        "irreversible": 5,
+        "out_of_scope": 20,
+        "reason_engine_error_in_search": 5,
+        "reason_monotonic_game_over": 5,
+        "recovery_branch_engine_errors": 64,
+        "reversible": 10,
+        "reversible_witness_length_1": 8,
+        "reversible_witness_length_3": 2,
+        "unchanged": 20,
+        "unknown": 5
+      },
+      "audit_record_sha256": "b923909d498900c7d27702d9dcea7f7534d7644de0acdaf982c67721a87e286d",
+      "by_verb_and_label": {
+        "put:irreversible": 5,
+        "put:reversible": 5,
+        "take:reversible": 5,
+        "take:unknown": 5
+      }
+    }
+  },
+  "external_model_calls": 0,
+  "inference_run": false,
+  "private_cases_sha256": "b04f5629bb61355d5775c4eab95ecdbaf296e9d3af3b381ac63898bfca6b2652"
+}

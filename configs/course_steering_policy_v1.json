@@ -1,0 +1,59 @@
+{
+  "scope": "exploratory_native_course_RQ4_not_original_60_family_BF16_study",
+  "model_execution": "configs/course_execution_native_mac_cpu_v1.json",
+  "required_C4_gate": "PASS_C4_REDUCED_SCOPE",
+  "direction_source_condition": "s1729_h3_binary_last_all_ordinary",
+  "site_selection": "best_development_balanced_accuracy_block_1_to_24_tie_shallower",
+  "direction": "training_mean_I_minus_training_mean_R_raw_same_block",
+  "partial_examples_excluded": true,
+  "strengths": [
+    -2,
+    -1,
+    0,
+    1,
+    2
+  ],
+  "random_direction_seeds": [
+    811,
+    812,
+    813
+  ],
+  "Gaussian_generator": "numpy_default_rng_PCG64",
+  "random_norm": "match_concept_norm",
+  "distinct_conditions_per_version": 17,
+  "zero_baseline_reused_once": true,
+  "zero_validation_episodes_not_statistical_replicates": true,
+  "stress_prompt_target_tokens": 1920,
+  "stress_new_tokens": 128,
+  "stress_min_new_tokens": 128,
+  "stress_conditions": [
+    "ordinary",
+    "concept_zero",
+    "concept_plus_2",
+    "random_811_plus_2"
+  ],
+  "runtime_multiplier": 2,
+  "maximum_sweep_seconds": 28800,
+  "delivery_reserve_seconds": 36000,
+  "operational_48h_budget_anchor": "2026-11-15T12:26:02+05:30",
+  "anchor_evidence": "git commit a052bec timestamp, operational planning budget rather than a new externally supplied deadline",
+  "operational_deadline_utc": "2026-11-17T06:56:02+00:00",
+  "candidate_order": [
+    "all_24_versions",
+    "one_RI_pair_per_template_6_versions"
+  ],
+  "fixed_subset_pair_ids": [
+    "pilot-delete-0",
+    "pilot-mail-0",
+    "pilot-transfer-0"
+  ],
+  "subset_selection": "lexicographically_first_pair_per_eligible_template_before_new_behavior_outcomes",
+  "selection_may_use_accuracy_caution_goal_or_response_text": false,
+  "require_complete_selected_baseline_after_resource_choice": true,
+  "do_not_substitute_another_pair_if_baseline_unavailable": true,
+  "guard_swap_growth_bytes": 536870912,
+  "guard_minimum_memory_free_percentage": 10,
+  "disk_reserve_bytes": 2147483648,
+  "sweep_output_allowance_bytes": 536870912,
+  "no_automatic_retry_after_global_memory_guard": true
+}

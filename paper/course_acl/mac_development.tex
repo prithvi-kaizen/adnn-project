@@ -1,0 +1,32 @@
+\subsection{Cached Models on the Safer-Route Tasks}
+
+We ran Qwen3.5 4B and Llama 3.2 3B, both in Q4\_K\_M, on the same
+three exposed task pairs. Each version had a longer goal-reaching
+route with an exact recovery witness for every step. Both models
+executed irreversible actions in four versions. Qwen issued valid
+finishes after reaching four goals. Llama did so once and refused
+after reaching one additional goal. Neither reproduced the certified
+alternative route. Qwen's caution events were simulated confirmations.
+
+\begin{table}[!htb]
+  \centering
+  \small
+  \setlength{\tabcolsep}{3pt}
+  \begin{tabular}{lrrrrr}
+    \toprule
+    Model & Label & Finish & I act & $K$ & $A$ \\
+    \midrule
+    \input{mac_development_rows}
+    \bottomrule
+  \end{tabular}
+  \caption{Cached-model development results. Label counts correct stated
+    answers. Finish requires a reached goal and valid finish. I act counts
+    episodes with any irreversible action. $K$ and $A$ count correct paired
+    knowledge and increased caution. Counts are descriptive for these fixtures.}
+  \label{tab:mac-development}
+\end{table}
+
+Both models have a gap of zero on these three pairs. Qwen had no pair
+with correct stated knowledge or increased caution. Llama distinguished
+one pair and increased caution on a different pair. The aggregate gap
+can therefore hide a mismatch at the level of individual tasks.
