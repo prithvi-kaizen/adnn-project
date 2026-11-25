@@ -127,8 +127,8 @@ function table(s, rows, widths, {x=72,y=223,h=67,font=20}={}){
 function back(s){link(s,'Back to Q&A index',72,656,290,14);}
 
 // Timed talk.
-let s=page('', 'Can this deletion be undone?', 35,
-  'Imagine asking an AI agent to delete a report. Before it acts, can it tell whether we can get the file back? Ask the room for a guess and pause briefly. Our experiment changes one setting while keeping the command fixed. Click the reveal or advance.',{dark:true,cover:true});
+let s=page('', 'Can this deletion be undone?', 25,
+  "Imagine asking an AI agent to delete a report. Before it acts, can it tell whether we can retrieve the file? And if it can tell, does that change what it actually does? Take a quick guess, then click to reveal the two cases.",{dark:true,cover:true});
 text(s,'ADNN COURSE PROJECT',74,72,700,37,{size:16,bold:true,color:c.mint});
 text(s,'Can this deletion\nbe undone?',72,157,795,200,{size:60,bold:true,color:c.white});
 text(s,'Measuring action reversibility\nin a tool-using language model',76,379,730,98,{size:26,color:c.white});
@@ -136,8 +136,8 @@ await icon(s,'file-text',915,170,215,c.mint);
 text(s,'report.txt',882,400,282,43,{size:24,bold:true,color:c.white,align:'center',font:'Menlo'});
 link(s,'Reveal the two cases  ›',76,570,400,2,c.mint);
 
-s=page('THE MATCHED TEST','The recycling setting changes the answer',40,
-  'Reveal both versions. Same file, same command, same goal. In the first, the file can be restored from trash in one move. In the second, there is no trash, backup, or history path. Holding the command fixed means spotting the word delete is insufficient.');
+s=page('PROBLEM STATEMENT','The recycling setting changes the answer',30,
+  "The requested deletion is identical. With recycling on, the file goes to trash and can be restored. With recycling off, the same command removes the only copy. So the problem is whether the model can use the state of the world to tell those cases apart.");
 text(s,'delete_file("report.txt")',72,195,1136,61,{size:31,bold:true,font:'Menlo',align:'center'});
 area(s,73,277,553,276,c.pale);area(s,654,277,553,276,c.blush);
 await icon(s,'archive',108,322,92);
@@ -148,8 +148,8 @@ text(s,'Recycling OFF',806,313,381,58,{size:29,bold:true});
 text(s,'No recovery within 3 actions',806,383,375,70,{size:21,color:c.red,bold:true});
 caption(s,'Minimal pair  /  one state property changes. The command, file and goal stay fixed.');
 
-s=page('GROUND TRUTH','The sandbox checks which actions undo it',40,
-  'Every operation happens in a fictional sandbox. After the candidate action, search up to three further legal operations. Exact free restoration is reversible. A specified recovery fee is partial. An exhausted search with neither makes the action irreversible within this horizon. Incomplete searches are unknown. The frozen sandbox has 1,800 examples and 810 minimal pairs. Related scenarios stay together.');
+s=page('GROUND TRUTH','The sandbox checks which actions undo it',30,
+  "We run all actions in a simulator. After the candidate action, we check for a legal route back within three further steps. Free and exact recovery means reversible. Recovery for a specified fee means partially reversible. Exhausting the search with neither makes it irreversible at that limit. The frozen sandbox has 1,800 examples, including 810 matched pairs.");
 const labelRows=[['Reversible','Restore the exact prior state for free.'],['Partially reversible','Restore it with the specified recovery fee.'],
   ['Irreversible','No qualifying recovery within three actions.']];
 for(const [i,[label,explain]] of labelRows.entries()){
@@ -161,8 +161,8 @@ for(const [i,[label,explain]] of labelRows.entries()){
 text(s,`${integer(N)} labeled examples      ${integer(minPairs)} matched pairs`,73,510,1134,67,{size:32,bold:true});
 caption(s,'The sandbox simulates files, mail and payments. Incomplete searches stay unknown.');
 
-s=page('RQ1  /  METHOD','A linear probe reads the action representation',45,
-  'The model reads the task state and the candidate action. An activation is a vector of numbers produced as it reads. We take the last candidate action token at each layer and train a linear logistic regression to predict the label. Layer and regularization are selected on development data. The lexical baseline gets the same action words with no world state. These controls ask what the signal adds.');
+s=page('RQ1  /  QUESTION AND METHOD','Can a probe read reversibility from the model?',45,
+  "RQ1 asks whether we can read reversibility from the model’s hidden states. We give Qwen the state and candidate action, and train a small linear classifier on its internal numbers. We fit the classifier using the training scenarios and select the layer on development scenarios. We then test on separate, grouped scenarios. Think of the probe as a reader of the model, separate from the answer the model produces.");
 await icon(s,'layers',85,239,90);
 text(s,'Hidden-state probe',206,226,960,56,{size:30,bold:true});
 text(s,'State + candidate action → one vector per layer → label',206,285,960,54,{size:23});
@@ -172,20 +172,20 @@ text(s,'Action-text baseline',206,393,970,56,{size:30,bold:true});
 text(s,'Bag-of-words from the command → logistic regression',206,451,970,59,{size:23});
 link(s,'All five classification controls  ›',72,649,385,15);
 
-s=page('RQ1  /  RESULT','The probe tied the action-text baseline',65,
-  'Point to the paired bars. On held-out reversible versus irreversible matched examples, balanced accuracy was fifty percent for both approaches in all three scenario-grouped splits. Balanced accuracy gives each class equal weight. The probe correctly classified both members of zero pairs. These results apply to the selected linear readout. The first two splits have only two matched components, so their intervals are not estimable. Move to the direct answer.');
-await plot(s, 5, 'Grouped bars: the hidden-state probe and action-text baseline both scored 50% in all three splits.');
+s=page('RQ1  /  RESULT, BASELINE AND ABLATIONS','The probe tied the action-text baseline',70,
+  "On matched cases, the probe and the action-text baseline both score fifty percent in all three splits. The probe gets both members right in zero pairs. The baseline sees only the command, so this tie matters. We also tested a majority predictor, shuffled training labels, random labels fixed by verb, and the embedding layer. On the larger binary test, using the last action token gave a higher mean score than averaging the tokens. That result uses a different test population. We also varied pair-only training, the recovery horizon, and the number of classes. Two-way ScienceWorld transfer remains open. Now let’s ask the model directly.");
+await plot(s, 5, 'Grouped bars: the hidden-state probe and action-text baseline both scored 50% in all three splits. An ablation on the full binary test compares last action token against mean pooling.');
 
-s=page('RQ2  /  METHOD AND RESULT','Every valid answer said “reversible”',45,
-  'Ask Qwen directly about the candidate action and require one JSON label. In the displayed seed-1729 test split, 359 of 360 responses parsed and every one said reversible. It got 180 right. The illustrative three-class training-majority baseline gets 41.7 percent on these held-out IDs. The model defaulted to a single answer on this prompt. Next, let it act on the same example.');
-await plot(s, 6, 'Point and 95% confidence intervals: stated accuracy 50%, training-majority accuracy 41.7%.');
+s=page('RQ2  /  METHOD AND RESULT','Every valid answer said “reversible”',55,
+  "RQ2 asks whether Qwen can state the right label. We give it the state and action and require one of three labels in JSON. The left plot shows fifty percent accuracy against a 41.7 percent majority baseline, with wide intervals. All 359 valid replies in that split said reversible. In a separate six-case ablation, removing the labeled example dropped JSON compliance from one hundred percent to zero. The literal answer was still reversible in both formats. That test shows an effect on formatting. Next we let Qwen use tools.");
+await plot(s, 6, 'Point and 95% confidence intervals: stated accuracy 50%, training-majority accuracy 41.7%. Removing the labeled example changes format compliance from 100% to 0% on six development cases.');
 
 s=page('RQ3  /  METHOD AND RESULT','An agent can reach the goal and still fail',50,
-  'Start the model in the exact simulated state with a goal. It gets up to fifteen turns. We replay every call, check the final goal, and count irreversible execution and caution before the shortcut. On these twenty-four Qwen development episodes, six reached the goal and three executed an irreversible action. All stopped after two invalid calls and none issued a valid finish. The demo shows why the two outcomes differ.');
+  "RQ3 asks whether the agent is more careful when undoing is impossible. We give it a goal and let it choose tools on both versions. We replay each call for caution, irreversible execution, and goal completion. A quarter of the 24 development episodes reached the goal. Twelve and a half percent executed an irreversible action. Every run hit the invalid-call stop. The demo makes it easier to see how reaching the goal and finishing correctly are different.");
 await plot(s, 7, 'Episode rates: 25% reached the goal, 12.5% executed an irreversible action, 0% issued a valid finish, and 100% stopped on invalid calls.');
 
-s=page('RECORDED SANDBOX REPLAY','Qwen deleted immediately in both versions',55,
-  'Play the 36-second offline recording if ready. Before playback say that this is a replay of saved model outputs. If the video is unavailable, speak to the slide: same deletion; simulator says reversible only with recycling on; Qwen says reversible in both; both deletions execute, and both stop after two invalid replies. Return to the main deck immediately after.');
+s=page('RECORDED SANDBOX REPLAY','Qwen deleted immediately in both versions',50,
+  "This recording replays saved model outputs. Watch what changes when recycling is off, and what Qwen does in response. [Play the 36-second clip.] It deletes in both cases.");
 const frame=await fs.readFile(path.join(out,'presentation-assets/demo-frame.png'));
 image(s,frame,74,212,724,407,'Frame from the actual sandbox replay recording');
 text(s,'What changed',832,235,362,54,{size:23,bold:true});
@@ -194,24 +194,24 @@ text(s,'Qwen said “reversible” and deleted in both runs.',832,391,366,108,{s
 link(s,'Watch the 36-second replay  ›',832,535,370,'https://raw.githubusercontent.com/prithvi-kaizen/adnn-project/main/deliverables/demo-replay.mp4');
 caption(s,'Saved model outputs, replayed against the sandbox. The video is silent and captioned.');
 
-s=page('RQ3  /  PAIRED MEASURE','Why the zero blindness gap is inconclusive',35,
-  'K counts pairs with both stated labels correct. A counts pairs with greater caution on the irreversible side. Both were zero on nine eligible Qwen development pairs. A zero gap could also occur if both were high. Here we saw neither correct pair knowledge nor a rise in caution.');
-await plot(s, 9, 'Both knowledge and increased caution were 0%, giving a zero percentage-point gap.');
+s=page('RQ3  /  PAIRED RESULT AND BASELINES','Why the zero blindness gap is inconclusive',55,
+  "The blindness gap is K minus A. K is the share of pairs where both stated labels are correct. A is the share where the agent is more cautious on the irreversible side. Both were zero in nine exposed pairs, so this pilot gives a zero gap. The scripted baseline confirms that asking permission can leave the same irreversible actions in place. Always refusing avoids those actions but reaches no goals. The planned neutral versus caution prompt comparison has no completed agent result. Next we test a direct intervention inside the model.");
+await plot(s, 9, 'Both knowledge and increased caution were 0%, giving a zero percentage-point gap. Scripted direct action and confirm-then-act policies each execute an irreversible action in 37.5% of versions.');
 
 s=page('BONUS  /  RQ4 ACTIVATION STEERING','Tokens changed. Simulator outcomes held.',60,
-  'We add a reversible-versus-irreversible direction from training to one model layer. The signed strengths are minus two, minus one, zero, one and two. Three unrelated random directions have the same norm and supply specificity controls. Across 102 full episodes, some tokens changed and all simulator trajectories matched the zero baseline. Every episode hit the invalid-call stop, limiting sensitivity to steering.');
+  "RQ4 asks whether steering the model changes caution or goal attainment. We add a direction learned from training to a single layer. We compare the learned direction with zero steering and three random directions of the same size. We vary the intervention from negative through positive strengths. The curves overlap. Goal attainment stays at one third and caution stays at zero across conditions. Some tokens change, but no simulator trajectory changes from zero. Every episode hit the invalid-call limit, so this result describes the development setup we could test.");
 await plot(s, 10, 'Goal attainment remains 33.3% and caution stays 0% across signed steering strengths and norm-matched controls.');
 
-s=page('BONUS  /  RQ5 NEXT-STATE UNCERTAINTY','Uncertainty ranked at chance after matching',45,
-  'Ask the model to predict the next game state and score how surprising its generated tokens are. Compare like with like by grouping by game and action verb. The matched AUROC was 0.50, which is chance-level ranking. None of the 82 outputs satisfied next-state JSON, so this measures uncertainty in generated text.');
+s=page('BONUS  /  RQ5 NEXT-STATE UNCERTAINTY','Uncertainty ranked at chance after matching',55,
+  "RQ5 asks whether prediction uncertainty can flag irreversible actions. We ask Qwen to predict the next game state and score how surprising its output tokens are. The dashed line is the chance baseline. Across all games, uncertainty ranked irreversible examples lower on average. When we compare the same game and action verb, AUROC rises to fifty percent, right at chance, with a wide interval. This sensitivity check matters because the game and action can influence the score. None of the 82 outputs was valid next-state JSON. We measured uncertainty in generated text.");
 await plot(s, 11, 'AUROC with 95% intervals: 26.2% across all cases and 50% within the same game and verb.');
 
 s=page('ENGINEERING  /  RECOVERY CHECK','Backing up preserved task completion',55,
-  'An oracle catches the first irreversible action in a saved trace. Simply stop and you prevent the deletion but lose the goal. A small planner with access to the exact sandbox state finds a reversible route. In all three triggered traces it backs up the file before deleting it. The grouped bars compare goal attainment and irreversible execution. This is a scripted replay.');
+  "For the engineering follow-up, we replay the same 24 traces with a check that can detect an irreversible action before it runs. Blocking and stopping removes all three irreversible executions but sacrifices three goals. Blocking and planning also removes those executions and restores goal attainment to twenty-five percent. In each blocked trace, the planner backs up the file, then deletes. These are replay results from a planner with exact simulator state.");
 await plot(s, 12, 'Grouped bars: original goal attainment 25% and irreversible execution 12.5%. After veto and planning, these rates were 25% and 0%.');
 
-s=page('TAKEAWAY','The same deletion exposed three different failures',45,
-  'Close with the same file. The probe tied action-only text. The model called both versions reversible. The agent carried out both deletions. A sandbox execution safeguard added a backup. Clearly acknowledge that the prescribed BF16 comparison, ScienceWorld transfer and the final 60-family evaluation remain open. Thank the audience and offer the indexed Q&A appendix.',{dark:true});
+s=page('TAKEAWAY','The same deletion exposed three different failures',40,
+  "Take the file example back with you. The probe did no better than the action words. Qwen said reversible in both cases and went ahead in both. A check at execution time found a safer route. This is a sandbox and development study. ScienceWorld transfer, the prescribed BF16 comparison, and the independent 60-family evaluation are still open. We can jump to the controls, ablations or statistics for questions.",{dark:true});
 text(s,'The probe tied the action-text baseline.',74,222,1130,66,{size:30,bold:true,color:c.white});
 text(s,'Qwen called both actions reversible and deleted twice.',74,299,1130,66,{size:30,bold:true,color:c.white});
 text(s,'A recovery check found a way to back up first.',74,375,1130,66,{size:30,bold:true,color:c.mint});
@@ -301,7 +301,7 @@ for (const [i,[asset,label]] of [['layer_accuracy.png','Held-out probe accuracy 
 caption(s,'The first-decision plot and the 102 full-episode diagnostic are separate measurements.',605);
 back(s);
 
-assert.equal(notes.reduce((total,n)=>total+n.seconds,0),615);
+assert.equal(notes.reduce((total,n)=>total+n.seconds,0),620);
 assert.equal(deck.slides.items.length,20);
 await fs.mkdir(build,{recursive:true});
 await (await PresentationFile.exportPptx(deck)).save(path.join(build,'source.pptx'));
@@ -309,8 +309,8 @@ await fs.writeFile(path.join(build,'navigation.json'),JSON.stringify(nav,null,2)
 await fs.writeFile(path.join(build,'plot-descriptions.json'),JSON.stringify(plotDescriptions,null,2)+'\n');
 await fs.writeFile(path.join(out,'speaker-notes.md'),[
   '# ADNN presentation notes', '',
-  'The 13 main slides total 10:15, including the 36-second recording. Hard stop at 11:00.',
-  'Start the closing slide by 9:30 even if a section ran long. Slides 14–20 are for the three-minute Q&A.',
+  'The 13 main slides total 10:20, including the 36-second recording. Hard stop at 11:00.',
+  'Start the closing slide by 9:40 even if a section ran long. Slides 14–20 are for the three-minute Q&A.',
   'Open the offline MP4 in advance. If video playback takes more than five seconds, use the replay slide and keep moving.', '',
   ...notes.flatMap((n,i)=>[`## ${i+1}. ${n.title}`,'',n.timing,'',n.narration,'']),
 ].join('\n'));
@@ -318,4 +318,4 @@ for (const [i, slide] of deck.slides.items.entries()) {
   const p=await deck.export({slide,format:'png',scale:1});
   await fs.writeFile(path.join(build,`slide-${String(i+1).padStart(2,'0')}.png`),new Uint8Array(await p.arrayBuffer()));
 }
-console.log(`Rendered ${notes.length} slides. Main talk ${time(615)}.`);
+console.log(`Rendered ${notes.length} slides. Main talk ${time(620)}.`);

@@ -1,7 +1,9 @@
 """Render percentage plots for the ADNN presentation from saved results."""
 import argparse
+import hashlib
 import json
 from pathlib import Path
+from statistics import mean
 
 from PIL import Image, ImageDraw, ImageFont
 
@@ -112,52 +114,83 @@ def percent(value):
 
 def compare_probe(out, stats):
     p = Plot()
-    yp = p.y_axis()
-    p.legend([("Hidden-state probe", TEAL), ("Action-text baseline", SLATE)])
+    yp = p.y_axis(left=135, right=640, top=108, bottom=366)
+    p.legend([("Hidden-state probe", TEAL), ("Action-text baseline", SLATE)], x=135, y=75, step=228)
+    p.text((76, 23), "Result  ·  Balanced accuracy on matched pairs", 23, INK, True)
     rows = []
     for seed in (1729, 2718, 31415):
         condition = next(c for c in stats["conditions"] if c["id"] == f"s{seed}_h3_binary_last_all_ordinary")
         rows.append(condition["heldout_minimal_pairs"])
-    for i, (row, x) in enumerate(zip(rows, (328, 650, 972)), 1):
+    for i, (row, x) in enumerate(zip(rows, (234, 389, 544)), 1):
         metrics = row["primary_probe_minus_lexical"]
         probe = metrics["metrics"]["balanced_accuracy"]["estimate"]
         lexical = probe - metrics["paired_difference"]["balanced_accuracy"]["estimate"]
-        for position, value, color in ((x-53, probe, TEAL), (x+53, lexical, SLATE)):
-            p.rect((position-42, yp(value), position+42, yp(0)), color)
-            p.text((position, yp(value)-16), percent(value), 19, INK, True, "mm")
-        p.text((x, 408), f"Split {i}  ·  {row['N_pairs']} pairs", 20, INK, False, "mm")
-    p.foot("Balanced accuracy on matched reversible and irreversible examples.",
-           "Difference CI: not estimable for splits 1–2. Split 3: [0, 0] percentage points, conditional on three groups.")
+        for position, value, color in ((x-30, probe, TEAL), (x+30, lexical, SLATE)):
+            p.rect((position-25, yp(value), position+25, yp(0)), color)
+            p.text((position, yp(value)-16), percent(value), 18, INK, True, "mm")
+        p.text((x, 397), f"Split {i}", 19, INK, False, "mm")
+        p.text((x, 423), f"{row['N_pairs']} pairs", 16, MUTED, False, "mm")
+    p.line((683, 22, 683, 440))
+    p.text((716, 23), "Ablation  ·  Which action tokens?", 23, INK, True)
+    p.text((716, 68), "Three-split mean balanced accuracy", 19, MUTED)
+    xp = p.x_axis(left=888, right=1167, top=106, bottom=298)
+    for y, pooling, label, color in [(155, "last", "Last token", TEAL),
+                                     (234, "mean", "Mean of tokens", SLATE)]:
+        r = [c["selected"]["metrics"]["balanced_accuracy"]["estimate"] for c in stats["conditions"]
+             if c["id"].endswith(f"_h3_binary_{pooling}_all_ordinary")]
+        assert len(r) == 3
+        p.text((716, y), label, 19, INK, True)
+        p.hbar(xp, y, mean(r), color)
+    p.text((716, 351), "All binary cases, N = 330 per split", 18, MUTED)
+    p.text((716, 392), "Also tested: pairs-only training, horizons 1–3", 17, MUTED)
+    p.text((716, 418), "and two vs three labels. Transfer remains open.", 17, MUTED)
+    p.foot("Matched difference 95% CI: not estimable in splits 1–2. Split 3: [0, 0] percentage points over three groups.",
+           "The two panels use different test populations. Controls and full ablations are in the Q&A appendix.")
     p.save(out, 5)
 
 
-def stated_results(out, stats, core):
+def stated_results(out, stats, core, format_check):
     p = Plot()
-    xp = p.x_axis()
+    p.text((75, 19), "Question  ·  Can Qwen state whether the action can be undone?", 22, INK, True)
+    p.text((75, 55), "Method  ·  Show state and action. Require one of three labels as JSON.", 20, MUTED)
+    p.text((75, 103), "Result and majority baseline", 22, INK, True)
+    xp = p.x_axis(left=299, right=649, top=127, bottom=344)
     stated = next(r for r in stats["RQ2"] if r["seed"] == 1729 and r["pooling"] == "last")
     majority = next(r for r in stats["conditions"] if r["id"] == "s1729_h3_threeway_last_all_ordinary")
     rows = [("Qwen stated labels", stated["stated_all_ID"]["metrics"]["accuracy"], TEAL),
             ("Training-majority label", majority["majority"]["metrics"]["accuracy"], SLATE)]
-    for y, (label, metric, color) in zip((152, 287), rows):
-        p.text((75, y), label, 23, INK, True)
+    for y, (label, metric, color) in zip((185, 286), rows):
+        p.text((75, y), label, 19, INK, True)
         p.interval(xp, y, metric["estimate"], metric["CI95"], color)
-    p.text((775, 434), "Three-class accuracy with 95% confidence intervals", 19, MUTED, anchor="mm")
+    p.text((475, 402), "Accuracy with 95% confidence intervals", 18, MUTED, anchor="mm")
+    p.line((683, 96, 683, 430))
+    p.text((716, 103), "Ablation  ·  Remove the example", 22, INK, True)
+    p.text((716, 143), "Responses passing the JSON parser", 18, MUTED)
+    xp = p.x_axis(left=893, right=1167, top=167, bottom=344)
+    for y, key, label, color in [(212, "baseline", "With example", TEAL),
+                                 (287, "candidate", "Without example", SLATE)]:
+        row = format_check[key]
+        p.text((716, y), label, 19, INK, True)
+        p.hbar(xp, y, row["valid"]/row["N"], color)
+    p.text((1030, 402), f"Same {format_check['baseline']['N']} exposed cases per format", 18, MUTED, anchor="mm")
     data = next(r for r in core["RQ2"] if r["seed"] == 1729 and r["pooling"] == "last")
     valid = sum(v for k, v in data["confusion_truth_to_stated"].items() if k.endswith(":reversible"))
     p.foot(f"Held-out split, N = {stated['assigned_N']}: all {valid} valid answers said “reversible”.",
-           "The accuracy denominator includes invalid responses.")
+           "Removing the example changed the response format. The literal label stayed “reversible”.")
     p.save(out, 6)
 
 
 def behavior(out, core, steer):
     p = Plot()
-    xp = p.x_axis(top=54)
+    p.text((75, 19), "Question  ·  Does the acting agent become more careful when undoing is impossible?", 22, INK, True)
+    p.text((75, 55), "Method  ·  Give a goal and replay each tool call on both versions of the task.", 20, MUTED)
+    xp = p.x_axis(top=97)
     row = core["RQ3"]
     n = row["assigned_versions"]
     completed = sum(steer["selected_terminal_status_counts"].values())
     assert completed == n
     for y, (label, val, color) in zip(
-        (104, 177, 250, 323),
+        (123, 193, 263, 333),
         [("Goal reached", row["goal_success_versions"], TEAL),
          ("Irreversible action executed", row["executed_irreversible_versions"], RED),
          ("Valid finish", steer["selected_terminal_status_counts"].get("finish", 0), SLATE),
@@ -171,26 +204,44 @@ def behavior(out, core, steer):
     p.save(out, 7)
 
 
-def gap(out, stats):
+def gap(out, stats, refs):
     p = Plot()
-    xp = p.x_axis(top=61, bottom=335)
+    p.text((75, 23), "Result  ·  The paired blindness gap", 23, INK, True)
+    xp = p.x_axis(left=307, right=648, top=90, bottom=315)
     for y, name, label, color in (
-        (131, "K", "K   Both labels correct", TEAL),
-        (251, "A", "A   More cautious on\n     the irreversible side", SLATE),
+        (140, "K", "K   Both labels correct", TEAL),
+        (247, "A", "A   More cautious on\n     the irreversible side", SLATE),
     ):
         metric = stats["RQ3"]["point_and_CI"][name]
-        p.text((75, y-11), label, 22, INK, True)
+        p.text((75, y-10), label, 20, INK, True)
         p.hbar(xp, y, metric["mean"], color)
     value = stats["RQ3"]["point_and_CI"]["gap"]
-    p.text((75, 412), f"Blindness gap  K − A  =  {100*value['mean']:.0f} percentage points", 26, TEAL, True)
-    p.foot(f"N = {value['N']} exposed pairs. The gap interval is [0, 0] points over three templates.",
-           "Here, the zero gap comes from zero correct pair judgments and zero increases in caution.")
+    p.text((75, 384), f"K − A = {100*value['mean']:.0f} percentage points", 25, TEAL, True)
+    p.text((75, 418), f"N = {value['N']} exposed pairs · conditional 95% CI [0, 0] points", 17, MUTED)
+    p.line((683, 22, 683, 439))
+    p.text((716, 23), "Baseline  ·  Scripted policies", 23, INK, True)
+    p.text((716, 65), "Episodes with an irreversible action", 19, MUTED)
+    xp = p.x_axis(left=893, right=1167, top=90, bottom=315)
+    for y, key, label, color in [
+        (128, "direct_shortcut", "Act immediately", RED),
+        (201, "confirmation_then_goal", "Confirm then act", RED),
+        (273, "always_refuse", "Always refuse", SLATE),
+    ]:
+        row = refs[key]
+        p.text((716, y), label, 18, INK, True)
+        p.hbar(xp, y, row["irreversible"]/row["N"], color)
+    p.text((716, 384), "Confirmation left irreversible execution unchanged.", 17, MUTED)
+    p.text((716, 418), f"N = {refs['direct_shortcut']['N']} exposed versions per scripted policy", 17, MUTED)
+    p.foot("Neither correct paired knowledge nor extra caution was observed in the model pilot.",
+           "The planned neutral-vs-caution prompt ablation has no completed agent result.")
     p.save(out, 9)
 
 
 def steering(out, data):
     p = Plot()
-    yp = p.y_axis(top=76, bottom=360)
+    p.text((75, 19), "Question  ·  Can steering change caution or goal attainment?", 22, INK, True)
+    p.text((75, 55), "Method  ·  Add a learned direction to one layer. Vary its signed strength.", 20, MUTED)
+    yp = p.y_axis(top=122, bottom=360)
     xs = {strength: 202 + i*223 for i, strength in enumerate((-2, -1, 0, 1, 2))}
     endpoints = [("Goal reached", "goal", TEAL), ("Caution before action", "caution", SLATE)]
     for label, endpoint, color in endpoints:
@@ -204,29 +255,32 @@ def steering(out, data):
         for x, y in coords:
             p.dot(x, y, color)
         p.text((1130, coords[-1][1]-15), percent(matches[0]), 19, color, True, "rm")
-    p.legend([(label, color) for label, _, color in endpoints], step=259)
+    p.legend([(label, color) for label, _, color in endpoints], y=94, step=259)
     for strength, x in xs.items():
         p.text((x, 390), str(strength).replace("-", "−"), 20, anchor="mm")
     p.text((650, 425), "Signed steering strength", 19, MUTED, anchor="mm")
-    p.foot(f"Concept and three same-norm random directions overlap. N = {data['total_episodes']} development episodes.",
+    p.foot(f"Baseline: zero steering and three same-norm random directions. Curves overlap. N = {data['total_episodes']} development episodes.",
            "All trajectories matched zero strength. All episodes ended at the invalid-call limit.")
     p.save(out, 10)
 
 
 def uncertainty(out, data):
     p = Plot()
-    xp = p.x_axis()
-    for y in range(71, 379, 12):
+    p.text((75, 19), "Question  ·  Does prediction uncertainty flag irreversible actions?", 22, INK, True)
+    p.text((75, 55), "Method  ·  Predict the next game state. Score how surprising the generated tokens are.", 20, MUTED)
+    xp = p.x_axis(top=125)
+    for y in range(125, 379, 12):
         p.line((xp(.5), y, xp(.5), min(y+6, 381)), SLATE)
-    p.text((xp(.5), 52), "Chance", 19, MUTED, anchor="mm")
+    p.text((xp(.5), 104), "Chance baseline", 19, MUTED, anchor="mm")
     scores = data["metrics_irreversible_positive"]["mean_nll"]
-    for y, (key, label, color) in zip((152, 287), [
+    for y, (key, label, color) in zip((201, 309), [
         ("aggregate", "All game cases", SLATE),
-        ("within_game_and_verb", "Same game and action verb", TEAL),
+        ("within_game_and_verb", "Sensitivity check", TEAL),
     ]):
         row = scores[key]
         p.text((75, y-14), label, 22, INK, True)
-        p.text((75, y+17), f"N = {row['scored_case_count']} cases", 18, MUTED)
+        subgroup = "Same game and verb · " if key == "within_game_and_verb" else ""
+        p.text((75, y+17), f"{subgroup}N = {row['scored_case_count']}", 18, MUTED)
         p.interval(xp, y, row["auroc"], row["CI95"], color)
     p.text((775, 434), "AUROC shown as a percentage with 95% confidence intervals", 19, MUTED, anchor="mm")
     p.foot(f"No valid structured next-state predictions among {data['scored_cases']} cases.",
@@ -257,6 +311,39 @@ def recovery(out, data):
     p.save(out, 12)
 
 
+def verified_checks():
+    stored = ROOT / "deliverables/results/talk-comparison-checks.json"
+    format_path = ROOT / "docs/evidence/course_improvement_v1/i2_formats/verification.json"
+    ref_path = ROOT / "artifacts/course_fast_track/native_mac_cpu_v1/references/report.json"
+    if not (format_path.exists() and ref_path.exists()):
+        return json.loads(stored.read_text())
+
+    fmt = json.loads(format_path.read_text())
+    ref = json.loads(ref_path.read_text())
+    assert fmt["status"] == "PASS_DEVELOPMENT_STATED_RECHECK" and fmt["holdout_calls"] == 0
+    assert not fmt["agent_authorized"] and not ref["is_model_result"]
+    checks = {
+        "stated_format": {key: {field: value[field] for field in ("N", "valid", "correct")}
+                          for key, value in fmt["counts"].items()},
+        "scripted_policies": {},
+        "source_sha256": {str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
+                          for p in (format_path, ref_path)},
+    }
+    for policy in ("direct_shortcut", "confirmation_then_goal", "always_refuse"):
+        records = [r["audit"] for r in ref["records"] if r["policy"] == policy]
+        assert len(records) == ref["assigned_versions"]
+        checks["scripted_policies"][policy] = {
+            "N": len(records),
+            "irreversible": sum(r["executed_irreversible_action"] for r in records),
+            "goal": sum(r["goal_success"] for r in records),
+        }
+    if stored.exists():
+        assert checks == json.loads(stored.read_text())
+    else:
+        stored.write_text(json.dumps(checks, indent=2) + "\n")
+    return checks
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("output", type=Path)
@@ -266,10 +353,11 @@ def main():
     stats = read(paths + "statistics.json")
     core = read(paths + "core_summary.json")
     evidence = "deliverables/results/"
+    checks = verified_checks()
     compare_probe(out, stats)
-    stated_results(out, stats, core)
+    stated_results(out, stats, core, checks["stated_format"])
     behavior(out, core, stats["RQ3"])
-    gap(out, stats)
+    gap(out, stats, checks["scripted_policies"])
     steering(out, read(evidence + "full-episode-steering.json"))
     uncertainty(out, read(evidence + "bytesized32-uncertainty.json"))
     recovery(out, read(evidence + "recovery-veto.json"))
