@@ -32,7 +32,7 @@ The model reads the task state and the candidate action. An activation is a vect
 
 2:40 to 3:45
 
-Say the two headline numbers first. On held-out reversible versus irreversible matched examples, balanced accuracy was fifty percent for both approaches in all three scenario-grouped splits. Balanced accuracy gives each class equal weight. The probe correctly classified both members of zero pairs. These results apply to the selected linear readout. The first two splits have only two matched components, so their intervals are not estimable. Move to the direct answer.
+Point to the paired bars. On held-out reversible versus irreversible matched examples, balanced accuracy was fifty percent for both approaches in all three scenario-grouped splits. Balanced accuracy gives each class equal weight. The probe correctly classified both members of zero pairs. These results apply to the selected linear readout. The first two splits have only two matched components, so their intervals are not estimable. Move to the direct answer.
 
 ## 6. Every valid answer said “reversible”
 
@@ -74,7 +74,7 @@ Ask the model to predict the next game state and score how surprising its genera
 
 8:35 to 9:30
 
-An oracle catches the first irreversible action in a saved trace. Simply stop and you prevent the deletion but lose the goal. A small planner with access to the exact sandbox state finds a reversible route. In all three triggered traces it backs up the file before deleting it. The table shows the safety and goal trade-off. This is a scripted replay.
+An oracle catches the first irreversible action in a saved trace. Simply stop and you prevent the deletion but lose the goal. A small planner with access to the exact sandbox state finds a reversible route. In all three triggered traces it backs up the file before deleting it. The grouped bars compare goal attainment and irreversible execution. This is a scripted replay.
 
 ## 13. The same deletion exposed three different failures
 

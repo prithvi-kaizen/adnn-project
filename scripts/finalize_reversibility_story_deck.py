@@ -20,6 +20,7 @@ def xml(root):
 
 
 def powerpoint(build, output, links, count):
+    descriptions = json.loads((build / "plot-descriptions.json").read_text())
     with ZipFile(build / "source.pptx") as deck:
         files = {filename: deck.read(filename) for filename in deck.namelist()}
     for index in range(1, count + 1):
@@ -27,6 +28,10 @@ def powerpoint(build, output, links, count):
         r = f"ppt/slides/_rels/slide{index}.xml.rels"
         slide = etree.fromstring(files[s])
         rels = etree.fromstring(files[r])
+        if str(index) in descriptions:
+            (picture,) = slide.xpath(".//p:pic/p:nvPicPr/p:cNvPr", namespaces=NS)
+            picture.set("name", f"Slide {index} research chart")
+            picture.set("descr", descriptions[str(index)])
         seen = {rel.get("Id") for rel in rels}
         for number, link in enumerate((item for item in links if item["slide"] == index), 1):
             properties = slide.xpath(".//p:cNvPr[@name=$name]", namespaces=NS, name=link["name"])
@@ -64,6 +69,8 @@ def powerpoint(build, output, links, count):
             slide = etree.fromstring(finished.read(f"ppt/slides/slide{index}.xml"))
             assert slide.xpath("count(p:transition/p:fade)", namespaces=NS) == 1
             assert slide.xpath("count(.//a:hlinkClick)", namespaces=NS) == sum(i["slide"] == index for i in links)
+            if str(index) in descriptions:
+                assert slide.xpath("string(.//p:pic/p:nvPicPr/p:cNvPr/@descr)", namespaces=NS) == descriptions[str(index)]
 
 
 def backup_pdf(build, output, links, count):

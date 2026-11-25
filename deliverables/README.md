@@ -2,7 +2,7 @@
 
 ## Present
 
-- [Editable PowerPoint](reversibility-talk.pptx) with clickable navigation, fade transitions, and presenter notes.
+- [Editable PowerPoint](reversibility-talk.pptx) with code-generated percentage charts, clickable navigation, fade transitions, and presenter notes.
 - [Clickable PDF backup](reversibility-talk.pdf).
 - [Timed speaker notes](speaker-notes.md). The 13 main slides total 10:15, including the demo. Use slides 14–20 for the separate three-minute Q&A.
 - [36-second replay video](demo-replay.mp4) and [original transcript](demo-replay.txt). The video captions come from a fresh execution of the saved-model replay. The live option runs the command below in front of the audience. It replays frozen outputs in an isolated sandbox.

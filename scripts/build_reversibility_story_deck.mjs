@@ -13,13 +13,11 @@ const { Presentation, PresentationFile } = await import(pathToFileURL(path.join(
 const sharp = createRequire(path.join(deps, 'adnn-loader.mjs'))('sharp');
 const read = async p => JSON.parse(await fs.readFile(path.join(root, p), 'utf8'));
 
-const [data, stats, core, steering, veto, rq5, blind, models] = await Promise.all([
+const [data, stats, core, steering, blind, models] = await Promise.all([
   read('data/course_fast_track/v2/validation.json'),
   read('results/course_fast_track/native_mac_cpu_v1/statistics.json'),
   read('results/course_fast_track/native_mac_cpu_v1/core_summary.json'),
   read('docs/evidence/presentation_day_extension_v1/steering_controls.json'),
-  read('docs/evidence/presentation_day_extension_v1/recovery_veto.json'),
-  read('docs/evidence/mac_bytesized_rq5_v1/summary.json'),
   read('docs/evidence/codex_blind_review_v1/audit.json'),
   read('docs/evidence/mac_comparable_models_20261125.json'),
 ]);
@@ -39,10 +37,6 @@ const b = core.RQ3;
 const stated = core.RQ2.find(r => r.seed === 1729 && r.pooling === 'last');
 const validR = Object.entries(stated.confusion_truth_to_stated).filter(([k]) => k.endsWith(':reversible'))
   .reduce((n, [, v]) => n + v, 0);
-const statedCorrect = stated.confusion_truth_to_stated['reversible:reversible'];
-const threeway = stats.conditions.find(r => r.id === 's1729_h3_threeway_last_all_ordinary');
-const statedMajority = threeway.majority.metrics.accuracy.estimate;
-const uncertainty = rq5.metrics_irreversible_positive.mean_nll.within_game_and_verb;
 const control = condition(1729);
 const N = data.revalidation.rows;
 const minPairs = data.revalidation.minimal_pair_fraction * N / 2;
@@ -61,7 +55,7 @@ const deck = Presentation.create({slideSize:{width:1280,height:720}});
 const c = { bg:'#F7F5EF', ink:'#132A2A', mute:'#536663', rule:'#CBD3CA', jade:'#07654F',
   pale:'#E1EFE7', red:'#A63424', blush:'#F3E4DD', dark:'#102E2C', white:'#FCFAF3', mint:'#A5E5C7',
   photo:'#132335' };
-const notes = [], nav = [];
+const notes = [], nav = [], plotDescriptions = {};
 const g = (left,top,width,height) => ({left,top,width,height});
 function text(s,str,x,y,w,h, o={}) {
   const sh=s.shapes.add({geometry:'textbox',name:o.name||str.slice(0,70), position:g(x,y,w,h),
@@ -111,9 +105,11 @@ function page(section,title,sec,narration,{dark=false,cover=false}={}){
   return s;
 }
 function caption(s,str, y=641, color=c.mute){text(s,str,72,y,1136,38,{size:16,color});}
-function number(s,value,label,x,y,w,{color=c.jade,small=false}={}){
-  text(s,value,x,y,w,small?73:117,{size:small?47:75,bold:true,color});
-  text(s,label,x,y+(small?76:127),w,49,{size:22,bold:true});
+async function plot(s, slide, alt) {
+  const name = 'adnn-plot-' + String(slide).padStart(2, '0') + '.png';
+  const bytes = await fs.readFile(path.join(out, 'presentation-assets', name));
+  image(s, bytes, 0, 185, 1280, 520, alt);
+  plotDescriptions[slide] = alt;
 }
 function table(s, rows, widths, {x=72,y=223,h=67,font=20}={}){
   let yy=y;
@@ -177,30 +173,16 @@ text(s,'Bag-of-words from the command → logistic regression',206,451,970,59,{s
 link(s,'All five classification controls  ›',72,649,385,15);
 
 s=page('RQ1  /  RESULT','The probe tied the action-text baseline',65,
-  'Say the two headline numbers first. On held-out reversible versus irreversible matched examples, balanced accuracy was fifty percent for both approaches in all three scenario-grouped splits. Balanced accuracy gives each class equal weight. The probe correctly classified both members of zero pairs. These results apply to the selected linear readout. The first two splits have only two matched components, so their intervals are not estimable. Move to the direct answer.');
-number(s,'50.0%','Hidden-state probe',73,219,540);
-number(s,'50.0%','Action-text baseline',654,219,550,{color:c.mute});
-rule(s,73,431,1134);
-text(s,'Both labels right on a matched pair',73,454,750,62,{size:24});
-text(s,'0 pairs',845,456,362,62,{size:34,bold:true,color:c.red,align:'right'});
-caption(s,'Matched reversible vs. irreversible examples. Three scenario-grouped splits.');
+  'Point to the paired bars. On held-out reversible versus irreversible matched examples, balanced accuracy was fifty percent for both approaches in all three scenario-grouped splits. Balanced accuracy gives each class equal weight. The probe correctly classified both members of zero pairs. These results apply to the selected linear readout. The first two splits have only two matched components, so their intervals are not estimable. Move to the direct answer.');
+await plot(s, 5, 'Grouped bars: the hidden-state probe and action-text baseline both scored 50% in all three splits.');
 
 s=page('RQ2  /  METHOD AND RESULT','Every valid answer said “reversible”',45,
   'Ask Qwen directly about the candidate action and require one JSON label. In the displayed seed-1729 test split, 359 of 360 responses parsed and every one said reversible. It got 180 right. The illustrative three-class training-majority baseline gets 41.7 percent on these held-out IDs. The model defaulted to a single answer on this prompt. Next, let it act on the same example.');
-await icon(s,'messages-square',75,209,94);
-text(s,'Given the state and action, return one recovery label.',195,213,1010,66,{size:23});
-number(s,`${validR}/360`,'Valid answers',74,327,520);
-number(s,`${statedCorrect}/360`,'Correct labels',655,327,550,{color:c.mute});
-caption(s,`Three-class stated accuracy 50.0%. Training-majority baseline ${pct(statedMajority)}. Seed 1729.`);
+await plot(s, 6, 'Point and 95% confidence intervals: stated accuracy 50%, training-majority accuracy 41.7%.');
 
 s=page('RQ3  /  METHOD AND RESULT','An agent can reach the goal and still fail',50,
   'Start the model in the exact simulated state with a goal. It gets up to fifteen turns. We replay every call, check the final goal, and count irreversible execution and caution before the shortcut. On these twenty-four Qwen development episodes, six reached the goal and three executed an irreversible action. All stopped after two invalid calls and none issued a valid finish. The demo shows why the two outcomes differ.');
-await icon(s,'terminal',74,214,75);
-text(s,'Give the agent a goal. Replay every tool call.',174,220,1028,62,{size:25,bold:true});
-number(s,`${b.goal_success_versions}/24`,'Goal reached',74,339,362,{small:true});
-number(s,`${b.executed_irreversible_versions}/24`,'Irreversible execution',459,339,378,{color:c.red,small:true});
-number(s,'24/24','Invalid-call stop',846,339,360,{color:c.mute,small:true});
-caption(s,'Exposed Qwen development tasks. Goal attainment and a valid finish are separate outcomes.');
+await plot(s, 7, 'Episode rates: 25% reached the goal, 12.5% executed an irreversible action, 0% issued a valid finish, and 100% stopped on invalid calls.');
 
 s=page('RECORDED SANDBOX REPLAY','Qwen deleted immediately in both versions',55,
   'Play the 36-second offline recording if ready. Before playback say that this is a replay of saved model outputs. If the video is unavailable, speak to the slide: same deletion; simulator says reversible only with recycling on; Qwen says reversible in both; both deletions execute, and both stop after two invalid replies. Return to the main deck immediately after.');
@@ -214,36 +196,19 @@ caption(s,'Saved model outputs, replayed against the sandbox. The video is silen
 
 s=page('RQ3  /  PAIRED MEASURE','Why the zero blindness gap is inconclusive',35,
   'K counts pairs with both stated labels correct. A counts pairs with greater caution on the irreversible side. Both were zero on nine eligible Qwen development pairs. A zero gap could also occur if both were high. Here we saw neither correct pair knowledge nor a rise in caution.');
-number(s,'0/9','K  /  both labels correct',74,216,543);
-number(s,'0/9','A  /  greater caution',660,216,547,{color:c.mute});
-rule(s,74,438,1132);
-text(s,'Blindness gap = K − A = 0',74,465,1129,78,{size:34,bold:true});
-caption(s,'Nine eligible exposed pairs across three templates.');
+await plot(s, 9, 'Both knowledge and increased caution were 0%, giving a zero percentage-point gap.');
 
 s=page('BONUS  /  RQ4 ACTIVATION STEERING','Tokens changed. Simulator outcomes held.',60,
   'We add a reversible-versus-irreversible direction from training to one model layer. The signed strengths are minus two, minus one, zero, one and two. Three unrelated random directions have the same norm and supply specificity controls. Across 102 full episodes, some tokens changed and all simulator trajectories matched the zero baseline. Every episode hit the invalid-call stop, limiting sensitivity to steering.');
-text(s,'Concept direction + 3 same-norm random directions',74,214,1130,56,{size:24,bold:true});
-text(s,'Four nonzero strengths per direction and one shared zero',74,274,1130,51,{size:20,color:c.mute});
-number(s,`0/${S}`,'Simulator trajectories changed',74,340,550,{small:true});
-number(s,`${S}/${S}`,'Stopped after invalid calls',654,340,552,{color:c.red,small:true});
-caption(s,'17 conditions on six exposed versions. Three random directions were matched in norm.');
+await plot(s, 10, 'Goal attainment remains 33.3% and caution stays 0% across signed steering strengths and norm-matched controls.');
 
 s=page('BONUS  /  RQ5 NEXT-STATE UNCERTAINTY','Uncertainty ranked at chance after matching',45,
   'Ask the model to predict the next game state and score how surprising its generated tokens are. Compare like with like by grouping by game and action verb. The matched AUROC was 0.50, which is chance-level ranking. None of the 82 outputs satisfied next-state JSON, so this measures uncertainty in generated text.');
-number(s,uncertainty.auroc.toFixed(2),'AUROC within game and action verb',74,224,620);
-number(s,`${rq5.output_counts.json}/${rq5.scored_cases}`,'Valid next-state JSON',704,224,502,{color:c.red});
-caption(s,`Matched comparison  /  ${uncertainty.scored_case_count} cases. 95% game-bootstrap CI [${uncertainty.CI95.map(v=>v.toFixed(2)).join(', ')}].`);
+await plot(s, 11, 'AUROC with 95% intervals: 26.2% across all cases and 50% within the same game and verb.');
 
 s=page('ENGINEERING  /  RECOVERY CHECK','Backing up preserved task completion',55,
-  'An oracle catches the first irreversible action in a saved trace. Simply stop and you prevent the deletion but lose the goal. A small planner with access to the exact sandbox state finds a reversible route. In all three triggered traces it backs up the file before deleting it. The table shows the safety and goal trade-off. This is a scripted replay.');
-const v=veto.outcomes;
-table(s,[['On the same 24 saved traces','Goal attained','Irreversible execution'],
-  ['Saved model traces',`${v.baseline.goal}/24`,`${v.baseline.irreversible}/24`],
-  ['Veto and stop',`${v.veto.goal}/24`,`${v.veto.irreversible}/24`],
-  ['Veto and plan',`${v.veto_with_planner.goal}/24`,`${v.veto_with_planner.irreversible}/24`]], [543,257,336],{y:219,h:65,font:23});
-await icon(s,'shield-check',77,501,65);
-text(s,'All three blocked cases used backup before deletion.',169,505,1032,63,{size:25,bold:true,color:c.jade});
-caption(s,'Scripted intervention on saved development traces with an exact sandbox oracle.');
+  'An oracle catches the first irreversible action in a saved trace. Simply stop and you prevent the deletion but lose the goal. A small planner with access to the exact sandbox state finds a reversible route. In all three triggered traces it backs up the file before deleting it. The grouped bars compare goal attainment and irreversible execution. This is a scripted replay.');
+await plot(s, 12, 'Grouped bars: original goal attainment 25% and irreversible execution 12.5%. After veto and planning, these rates were 25% and 0%.');
 
 s=page('TAKEAWAY','The same deletion exposed three different failures',45,
   'Close with the same file. The probe tied action-only text. The model called both versions reversible. The agent carried out both deletions. A sandbox execution safeguard added a backup. Clearly acknowledge that the prescribed BF16 comparison, ScienceWorld transfer and the final 60-family evaluation remain open. Thank the audience and offer the indexed Q&A appendix.',{dark:true});
@@ -341,6 +306,7 @@ assert.equal(deck.slides.items.length,20);
 await fs.mkdir(build,{recursive:true});
 await (await PresentationFile.exportPptx(deck)).save(path.join(build,'source.pptx'));
 await fs.writeFile(path.join(build,'navigation.json'),JSON.stringify(nav,null,2)+'\n');
+await fs.writeFile(path.join(build,'plot-descriptions.json'),JSON.stringify(plotDescriptions,null,2)+'\n');
 await fs.writeFile(path.join(out,'speaker-notes.md'),[
   '# ADNN presentation notes', '',
   'The 13 main slides total 10:15, including the 36-second recording. Hard stop at 11:00.',
