@@ -4,11 +4,11 @@ This ADNN course project studies whether language models represent action revers
 
 ## Course deliverables
 
-- [ACL paper](output/pdf/course_acl_mac_v4/report.pdf) and [portable LaTeX source](output/pdf/course_acl_mac_v4/latex_source.zip)
-- [15-minute presentation](output/presentation/course_acl_final/reversibility_talk.pptx) and [speaker notes](output/presentation/course_acl_final/speaker_notes.md)
-- [Sandbox dataset](data/course_fast_track/v2/sandbox_pool.jsonl), [split manifests](data/course_fast_track/v2/splits), and [data card](docs/COURSE_DATA_CARD.md)
-- [Core results](results/course_fast_track/native_mac_cpu_v1/statistics.json), [cached Llama analysis](docs/MAC_LLAMA_RETROSPECTIVE_RESULTS.md), and [steering results](docs/COURSE_FULL_EPISODE_STEERING_RESULTS.md)
-- [Blinded Codex review aggregate](docs/evidence/codex_blind_review_v1/audit.json), [ByteSized32 uncertainty results](docs/MAC_BYTESIZED_RQ5_RESULTS.md), and [contribution record](docs/CONTRIBUTIONS.md)
+The latest [submission folder](deliverables/) contains the ACL paper, the 11-minute interactive presentation, the recorded replay, and the rubric evidence map.
+
+- [PowerPoint](deliverables/reversibility-talk.pptx) · [PDF backup](deliverables/reversibility-talk.pdf) · [Timed notes](deliverables/speaker-notes.md)
+- [Replay video](deliverables/demo-replay.mp4) · [ACL paper](deliverables/report.pdf) · [Portable LaTeX](deliverables/paper-source.zip)
+- [Dataset and splits](data/course_fast_track/v2) · [Rubric evidence](deliverables/rubric-evidence.md) · [Additional result receipts](deliverables/results)
 
 ## Replay the demos
 
